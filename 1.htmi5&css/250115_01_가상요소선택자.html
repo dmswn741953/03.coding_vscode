@@ -1,68 +1,49 @@
 <!DOCTYPE html>
-<html lang="Ko">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>연습</title>
+    <title>Document</title>
     <style>
-      p:first-child {
+      h1:first-child {
         color: red;
       }
-      p::first-line {
-        color: aqua;
-      }
-      h1:first-of-type {
-        color: red;
-      }
-      p:last-child {
-        color: red;
-      }
-      /* 라이브 서버에서만 표시 안됨 */
+
       h1:last-of-type {
         color: red;
       }
-      p#one:nth-of-type(3) {
+      /* p:nth-child(3) { */
+      p:first-of-type {
+        color: red;
+      }
+      p:nth-of-type(2) {
         color: blue;
       }
-      p:nth-child(6) {
-        color: palevioletred;
+      h1::first-letter {
+        color: green;
+      }
+      ::first-line {
+        color: blueviolet;
       }
       h1::before {
-        content: "행복";
-        color: deepskyblue;
+        content: "가상요소 앞";
       }
       h1::after {
-        content: "네잎클로버";
-        color: darkgreen;
+        content: "가상요소 뒤";
+        color: brown;
       }
-      p#one::before {
-        content: url(../애플.jpg);
-      }
-      p#one::after {
-        content: url(./images/photo4.jpg);
+      p::before {
+        content: url(./images/photo1.jpg);
       }
       p:not(a) {
-        color: orangered;
+        color: aqua;
       }
     </style>
   </head>
   <body>
-    <p>안녕</p>
     <h1>Lorem Ipsum</h1>
-    <p>반가워</p>
     <h1>Lorem Ipsum</h1>
-    <p id="one">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially
-      unchanged. It was popularised in the 1960s with the release of Letraset
-      sheets containing Lorem Ipsum passages, and more recently with desktop
-      publishing software like Aldus PageMaker including versions of Lorem
-      Ipsum.
-    </p>
     <p>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text ever since the
@@ -85,6 +66,18 @@
       publishing software like Aldus PageMaker including versions of Lorem
       Ipsum.
     </p>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </p>
+    <h1>Lorem Ipsum</h1>
     <p>
       <a href="">링크태그</a>
       <a href="">링크태그</a>

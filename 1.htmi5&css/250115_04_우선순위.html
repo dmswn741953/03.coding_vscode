@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우선순위</title>
+    <style>
+      p {
+        color: red !important;
+        /* (다른 것보다 !important가 가장 최우선) */
+      }
+      p.classs {
+        color: blue;
+      }
+      /* p태그<클래스 */
+      p#idd {
+        color: green;
+      }
+      /* p태그<클래스<아이디 */
+    </style>
+  </head>
+  <body>
+    <p class="classs" id="idd" style="color: yellow">css우선순위</p>
+    <!-- p태그<클래스<아이디<인라인 스타일(잘 안씀) -->
+    <p>문단태그</p>
+  </body>
+</html>
