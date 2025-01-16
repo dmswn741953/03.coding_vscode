@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성중공업_ver2</title>
+    <style>
+      div.zero {
+        width: 1400px;
+        margin: 0 auto;
+
+        overflow: hidden;
+      }
+
+      body > div:nth-child(2n + 1) .one {
+        float: left;
+      }
+      body > div:nth-child(2n + 1) .one:first-child {
+        margin-right: 10%;
+      }
+      body > .zero:nth-child(2n) .one {
+        float: right;
+        width: 45%;
+      }
+      body > .zero:nth-child(2n) .one:first-child {
+        float: right;
+        margin-left: 10%;
+      }
+      body > .zero:nth-child(2n) .one:nth-child(2) {
+        text-align: right;
+      }
+
+      div h1 {
+        margin: 50px 0;
+        position: relative;
+      }
+      div h1::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 1px;
+        bottom: -10px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="zero">
+      <p class="one">
+        <img
+          src="https://www.samsungshi.com/images/sub/green_esd_air.png"
+          alt="SAVER Air"
+        />
+      </p>
+      <div class="one">
+        <h1>SAVER Air</h1>
+        <p>
+          SAVER Air는 선박의 바닥면에 공기를 분사하여 선박 저항 중 <br />
+          60~70%를 차지하는 마찰저항을 저감시키는 장치로 종래의 <br />
+          고정식 연료절감장치와는 달리 실제 시스템 사용 유무에 따른 <br />
+          효과를 확인할 수 있는 능동형 연료절감장치입니다.
+        </p>
+      </div>
+    </div>
+    <div class="zero">
+      <p class="one">
+        <img
+          src="https://www.samsungshi.com/images/sub/green_esd_wind-c.png"
+          alt="SAVER Wind(C)"
+        />
+      </p>
+      <div class="one">
+        <h1>SAVER Wind(C)</h1>
+        <p>
+          SAVER Wind(C)는 컨테이너운반선 선수부에 구조물을 설치하여 <br />
+          적재되어 있는 컨테이너의 정체압을 완화시킴으로써 <br />
+          선박 운항 중 공기 저항을 감소시키는 장치입니다.
+        </p>
+      </div>
+    </div>
+    <div class="zero">
+      <p class="one">
+        <img
+          src="https://www.samsungshi.com/images/sub/green_esd_wind-l.png"
+          alt="SAVER Wind(L)"
+        />
+      </p>
+      <div class="one">
+        <h1>SAVER Wind(L)</h1>
+        <p>
+          SAVER Wind(C)는 컨테이너운반선 선수부에 구조물을 설치하여 <br />
+          적재되어 있는 컨테이너의 정체압을 완화시킴으로써 <br />
+          선박 운항 중 공기 저항을 감소시키는 장치입니다.
+        </p>
+      </div>
+    </div>
+    <div class="zero">
+      <p class="one">
+        <img
+          src="https://www.samsungshi.com/images/sub/green_esd_saver-fin.png"
+          alt="SAVER Fin"
+        />
+      </p>
+      <div class="one">
+        <h1>SAVER Fin</h1>
+        <p>
+          SAVER Wind(C)는 컨테이너운반선 선수부에 구조물을 설치하여 <br />
+          적재되어 있는 컨테이너의 정체압을 완화시킴으로써 <br />
+          선박 운항 중 공기 저항을 감소시키는 장치입니다.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
