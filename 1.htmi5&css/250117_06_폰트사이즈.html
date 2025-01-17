@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fontsiza</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .out {
+        font-size: 50px;
+      }
+      .inner {
+        font-size: 32px;
+      }
+      .con {
+        border: 1px solid;
+        width: 50%;
+        height: 50%;
+        /* (높이는 퍼센테이지를 가지지 못함, 차일드요소가 가지는 크기만큼만 올라감) */
+        /* width: 50vw;
+        height: 50vh; */
+      }
+      /* 100%=16px(기본)=1em */
+    </style>
+  </head>
+  <body>
+    <div class="out">
+      <div class="inner">
+        <div class="con">em단위</div>
+      </div>
+    </div>
+  </body>
+</html>
