@@ -4,26 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>인스토리</title>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
+      ul {
+        list-style: none;
+      }
       body {
         background: #d3232a;
       }
       #wrap {
+        /* width: 1000px;
+        margin: 0 auto; */
+      }
+      .top {
         width: 1000px;
         margin: 0 auto;
+        overflow: hidden;
+      }
+      .top ul {
+        float: right;
+      }
+      .top ul li {
+        float: left;
+      }
+      .top ul li a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 20px;
+        font-size: 14px;
+        margin: 0 10px;
+      }
+      .top ul li:last-child a {
+        margin-right: 0;
       }
       .top > p {
         float: right;
+      }
+      .top ul li a:hover {
+        color: yellow;
+        text-decoration: nuderline;
       }
       .pattern {
         clear: both;
         background: url(./images/pattern.gif);
         height: 82px;
+      }
+      .pattern P {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .main {
+        width: 1000px;
+        margin: 0 auto;
       }
       .main > div {
         float: left;
@@ -33,17 +70,38 @@
         width: 514px;
         background: url(./images/index_main_02.gif);
       }
+      .main ul {
+        position: relative;
+        top: -400px;
+        left: 50px;
+      }
+      .main ul li a {
+        color: #000;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 20px;
+      }
       .foot {
         clear: both;
         height: 100px;
         background: #fff;
+      }
+      .foot p {
+        width: 1000px;
+        margin: 0 auto;
       }
     </style>
   </head>
   <body>
     <div id="wrap">
       <div class="top">
-        <p><img src="./images/index_top.gif" alt="탑메뉴" /></p>
+        <ul>
+          <li><a href="#">KOREAN</a></li>
+          <li><a href="#">english</a></li>
+          <li><a href="#">japanese</a></li>
+          <li><a href="#">chinese</a></li>
+          <li><a href="#">italian</a></li>
+        </ul>
       </div>
       <div class="pattern">
         <p><img src="./images/index_pattern.gif" alt="패턴1" /></p>
@@ -51,6 +109,14 @@
       <div class="main">
         <div>
           <p><img src="./images/index_main_01.gif" alt="" /></p>
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">instort</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">product</a></li>
+            <li><a href="#">illustrater</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
         </div>
         <div>
           <p>메인페이지입니다.</p>
