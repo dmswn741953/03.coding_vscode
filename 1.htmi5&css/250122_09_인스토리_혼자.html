@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        padding: 0 100px;
+        width: 1100px;
+        height: 900px;
+        background-color: #d3232a;
+        border: 1px solid black;
+      }
+
+      .one > p {
+        float: right;
+        margin: ;
+      }
+      .two {
+        position: relative;
+        font-size: 0;
+      }
+      .two > p:nth-child(2) {
+        position: absolute;
+        z-index: 1;
+        top: 30px;
+      }
+      .thr > p {
+        float: left;
+      }
+
+      .four {
+        clear: both;
+        background-color: aliceblue;
+        width: 1000px;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="one">
+        <p><img src="./images/index_top.gif" alt="인덱스" /></p>
+      </div>
+      <div class="two">
+        <p><img src="./images/pattern.gif" alt="패턴" /></p>
+        <p><img src="./images/index_pattern.gif" alt="인텍스패턴" /></p>
+      </div>
+      <div class="thr">
+        <p><img src="./images/index_main_01.gif" alt="메인1" /></p>
+        <p><img src="./images/index_main_02.gif" alt="메인2" /></p>
+      </div>
+      <div class="four">
+        <p><img src="./images/copyright.gif" alt="카피" /></p>
+      </div>
+    </div>
+  </body>
+</html>

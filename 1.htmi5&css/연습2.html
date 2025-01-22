@@ -10,39 +10,33 @@
         margin: 0;
         padding: 0;
       }
-      div {
-        position: relative;
-        border: 1px solid;
-        width: 500px;
-        height: 500px;
-        left: 500px;
+      @font-face {
+        font-family: MaruBuri_B;
+        src: url(./webfonts/MaruBuri_Bold.woff2) format(woff2);
       }
-      p {
-        background-color: red;
+      .wrap {
+        margin: 500px 0;
       }
-      div p {
-        position: absolute;
-        right: 0;
-        bottom: 0;
+      .con {
+        width: 1897px;
+        height: 710px;
+        background: url(https://sungsimdang.co.kr/theme/responsive_sungsimdang/include/img/main_banner.jpg)
+          center/cover fixed;
       }
-      ul {
-        position: relative;
-      }
-      ul li:last-child {
-        position: absolute;
-        top: 0;
-        opacity: 0.5;
+      .con > h3 {
+        font-family: MaruBuri_B;
+        font-size: 42px;
+        text-align: center;
+        color: white;
+        padding-top: 300px;
       }
     </style>
   </head>
   <body>
-    <p>문단태그</p>
-    <div>
-      <p>문단태그</p>
+    <div class="wrap">
+      <div class="con">
+        <h3>" 모든 이가 다 좋게 여기는 일을 하도록 하십시오 "</h3>
+      </div>
     </div>
-    <ul>
-      <li><img src="./images/photo1.jpg" alt="" /></li>
-      <li><img src="./images/photo2.jpg" alt="" /></li>
-    </ul>
   </body>
 </html>

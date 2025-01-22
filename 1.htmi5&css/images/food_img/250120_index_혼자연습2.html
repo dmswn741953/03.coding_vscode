@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 0;
+      }
+      .head {
+        height: 24px;
+      }
+      .nav {
+        height: 13px;
+        overflow: hidden;
+      }
+      .nav > div {
+        float: left;
+      }
+      .nav > div:last-child {
+        float: right;
+      }
+      .nav > div:nth-child(2) {
+        font-size: 10px;
+        margin-left: 150px;
+        text-transform: uppercase;
+      }
+
+      .nav > div:nth-child(2) ul li {
+        float: left;
+      }
+      .nav > div:nth-child(2) ul li a {
+        margin: 0 20px;
+        color: black;
+      }
+      .nav > div:nth-child(2) ul li a:hover {
+        text-decoration: underline red;
+        color: aqua;
+      }
+      .con {
+        clear: both;
+        height: 744px;
+      }
+      .con > div {
+        float: left;
+      }
+      .con > div:nth-child(3) {
+        margin-top: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+        <p><img src="./top.gif" alt="top" /></p>
+      </div>
+      <div class="nav">
+        <div>
+          <p><img src="./food_01.gif" alt="food_01" /></p>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">autust / 2023</a></li>
+            <li><a href="#">summer</a></li>
+            <li><a href="#">special</a></li>
+            <li><a href="#">e·magazine</a></li>
+          </ul>
+        </div>
+        <div>
+          <p><img src="./food_02.gif" alt="food_02" /></p>
+        </div>
+      </div>
+      <div class="con">
+        <div>
+          <p><img src="./note.gif" alt="note" /></p>
+        </div>
+        <div>
+          <p><img src="./image.gif" alt="image" /></p>
+        </div>
+        <div>
+          <div>
+            <p><img src="./number.gif" alt="number" /></p>
+            <p><img src="./navigation.gif" alt="navigation" /></p>
+          </div>
+        </div>
+        <div>
+          <p><img src="./page.gif" alt="page" /></p>
+        </div>
+      </div>
+      <div class="foot">
+        <p><img src="./bottom.gif" alt="bottom" /></p>
+      </div>
+    </div>
+  </body>
+</html>

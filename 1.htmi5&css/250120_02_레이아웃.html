@@ -4,63 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>연습1</title>
+    <title>레이아웃</title>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
-      .wrap {
-        color: white;
-        margin: 0 auto;
-        width: 1200px;
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+        color: #fff;
       }
-      .header {
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      header {
+        /* position: absolute;
+        left: 0; */
+        /* width: 100%; */
         height: 100px;
         background-color: red;
       }
-      .nav {
+      nav {
         height: 100px;
         background-color: blue;
       }
-      .section {
+      .con {
         height: 500px;
       }
-      .section > div {
+      .con > div {
         float: left;
         height: 100%;
       }
-      .section > div:first-child {
+      .con div:first-child {
         width: 20%;
         background-color: green;
       }
-
-      .section > div:nth-child(2) {
+      .con div:nth-child(2) {
         width: 70%;
         background-color: pink;
       }
-      .section > div:last-child {
+      .con div:last-child {
         width: 10%;
         background-color: green;
       }
-      .footer {
+      footer {
         height: 100px;
         background-color: blue;
       }
     </style>
   </head>
   <body>
-    <div class="wrap">
-      <div class="header">
-        <div><h1>가로크기는 1200px 세로크기는 100px</h1></div>
-      </div>
-      <div class="nav"><h1>가로크기는 1200px 세로크기는 100px</h1></div>
-      <div class="section">
+    <div id="wrap">
+      <header>
+        <h1>가로크기는 1200px 세로크기는 100px</h1>
+      </header>
+      <nav>
+        <h1>가로크기는 1200px 세로크기는 100px</h1>
+      </nav>
+      <section class="con">
         <div><h2>가로크기는 20% 세로크기는 500px</h2></div>
         <div><h2>가로크기는 70% 세로크기는 500px</h2></div>
         <div><h2>가로크기는 10% 세로크기는 500px</h2></div>
-      </div>
-      <div class="footer"><h1>가로크기는 1200px 세로크기는 100px</h1></div>
+      </section>
+      <footer>
+        <h1>가로크기는 1200px 세로크기는 100px</h1>
+      </footer>
     </div>
   </body>
 </html>
