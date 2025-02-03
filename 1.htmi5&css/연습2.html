@@ -4,30 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>그린스터디2</title>
+    <title>레이아웃 연습</title>
     <style>
-      table {
-        border-collapse: collapse;
-        width: 1080px;
+      * {
+        margin: 0;
+        padding: 0;
       }
-
-      td {
+      ul {
+        list-style: none;
+        width: 1200px;
         border: 1px solid;
-        padding: 10px;
-        border-left: none;
-        border-right: none;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 0;
       }
-      tr td:nth-child(2) img {
-        width: 18px;
+      ul li {
+        display: inline-block;
+        background-color: red;
+        width: 100px;
+        font-size: 16px;
+        margin-left: 450px;
       }
-      span {
-        padding: 0 30px;
+      ul li:first-child {
+        margin-left: 0;
       }
     </style>
   </head>
   <body>
-    <table>
-      <tr></tr>
-    </table>
+    <ul>
+      <li>왼쪽</li>
+      <li>가운데</li>
+      <li>오른쪽</li>
+    </ul>
   </body>
 </html>

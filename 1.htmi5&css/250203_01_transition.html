@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        margin: 20px;
+        /* transition-property: width, height; */
+        /* transition-duration: 1s, 2s; */
+        /* transition-duration: 1000ms, 2s;
+        transition-timing-function: linear;
+        transition-delay: -1s, 2s; */
+        /* transition: width 1s linear 1s, hight 2s; */
+        /* transition: all 1s; */
+        transition: 2s;
+      }
+      P:hover {
+        width: 200px;
+        height: 400px;
+        /* transition-duration: 0s; (p에 줘도 되고 p:hover에 줘도 됨) */
+      }
+      ul li {
+        width: 100px;
+        background: #ccc;
+        margin: 20px;
+      }
+      ul:hover li {
+        width: 200px;
+      }
+      ul li:first-child {
+      }
+      ul li:nth-child(2) {
+        transition-timing-function: ease;
+      }
+      ul li:nth-child(3) {
+        transition-timing-function: ease-in;
+      }
+      ul li:nth-child(4) {
+        transition-timing-function: ease-out;
+      }
+      ul li:nth-child(5) {
+        transition-timing-function: ease-in-out;
+      }
+      ul li:nth-child(6) {
+        transition-timing-function: linear;
+      }
+      ul li:nth-child(7) {
+        transition-timing-function: cubic-bezier(0.22, 0.87, 0.76, 0.2);
+      }
+      a {
+        background-color: #ccc;
+        padding: 1px 10px 5px;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+      }
+      a:hover {
+        background-color: #ff0088;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <ul>
+      <li>default</li>
+      <li>ease</li>
+      <li>easein</li>
+      <li>easeout</li>
+      <li>easeinout</li>
+      <li>linear</li>
+      <li>cubicbezier</li>
+    </ul>
+    <a href="">GO!</a>
+  </body>
+</html>

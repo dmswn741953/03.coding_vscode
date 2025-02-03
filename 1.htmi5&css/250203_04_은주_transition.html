@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        height: 181px;
+        list-style: none;
+        overflow: hidden;
+      }
+      ul li {
+        margin: 20px 100px;
+        float: left;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+        position: relative;
+      }
+      ul li img {
+        position: absolute;
+      }
+      ul li:hover {
+        top: -240px;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><img src="./images/bg_info_m02.png" alt="" /></li>
+      <li><img src="./images/bg_info_m03.png" alt="" /></li>
+      <li><img src="./images/bg_info_m04.png" alt="" /></li>
+      <li><img src="./images/bg_info_m06.png" alt="" /></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        margin: 50px auto;
+        list-style: none;
+        width: 1330px;
+      }
+      ul li {
+        float: left;
+        width: 380px;
+        cursor: pointer;
+      }
+      ul li:hover {
+        transform: translateY(-20px);
+        transition: 0.5s;
+      }
+      ul li img {
+        width: 100%;
+        height: 494px;
+      }
+      ul li img:hover {
+        box-shadow: 10px 10px 30px rgb(0, 0, 0);
+      }
+      ul li:nth-child(1) {
+        margin: 15% 30px;
+      }
+      ul li:nth-child(3) {
+        margin: 15% 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <p>자코모 소개</p>
+        <h1>About</h1>
+        <img
+          src="https://www.jakomosofa.com/inc/img/main/info_sect_1.jpg"
+          alt="소개"
+        />
+      </li>
+      <li>
+        <p>자코모 이야기</p>
+        <h1>Story</h1>
+        <img
+          src="https://www.jakomosofa.com/inc/img/main/info_sect_2.jpg"
+          alt="이야기"
+        />
+      </li>
+      <li>
+        <p>자코모 제품 철학</p>
+        <h1>Philosophy</h1>
+        <img
+          src="https://www.jakomosofa.com/inc/img/main/info_sect_3.jpg"
+          alt="철학"
+        />
+      </li>
+      <li></li>
+    </ul>
+  </body>
+</html>

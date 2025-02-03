@@ -10,57 +10,40 @@
         margin: 0;
         padding: 0;
       }
-      .wrap {
-        color: white;
-        margin: 0 auto;
+      .big {
         width: 1200px;
+        border: 1px solid;
+        overflow: hidden;
+        padding: 100px;
+        margin: 100px;
       }
-      .header {
-        height: 100px;
+      p {
+        width: 20%;
         background-color: red;
       }
-      .nav {
-        height: 100px;
-        background-color: blue;
-      }
-      .section {
-        height: 500px;
-      }
-      .section > div {
+      p:first-child {
         float: left;
-        height: 100%;
       }
-      .section > div:first-child {
-        width: 20%;
-        background-color: green;
+      p:last-child {
+        float: right;
       }
-
-      .section > div:nth-child(2) {
-        width: 70%;
-        background-color: pink;
-      }
-      .section > div:last-child {
-        width: 10%;
-        background-color: green;
-      }
-      .footer {
-        height: 100px;
-        background-color: blue;
+      h1 {
+        clear: both;
+        width: 500px;
+        background-color: yellow;
+        margin: 0 auto;
+        padding: 20px;
       }
     </style>
   </head>
   <body>
-    <div class="wrap">
-      <div class="header">
-        <div><h1>가로크기는 1200px 세로크기는 100px</h1></div>
-      </div>
-      <div class="nav"><h1>가로크기는 1200px 세로크기는 100px</h1></div>
-      <div class="section">
-        <div><h2>가로크기는 20% 세로크기는 500px</h2></div>
-        <div><h2>가로크기는 70% 세로크기는 500px</h2></div>
-        <div><h2>가로크기는 10% 세로크기는 500px</h2></div>
-      </div>
-      <div class="footer"><h1>가로크기는 1200px 세로크기는 100px</h1></div>
+    <div class="big">
+      <p>
+        왼쪽정렬 <br />
+        줄바꿈 <br />입니다
+      </p>
+      <p>오른쪽정렬</p>
     </div>
+    <h1>제목태그</h1>
   </body>
 </html>
