@@ -11,14 +11,15 @@
         padding: 0;
       }
       ul {
-        margin: 50px auto;
         list-style: none;
         width: 1330px;
+        margin: 50px auto;
       }
       ul li {
-        float: left;
         width: 380px;
+        float: left;
         cursor: pointer;
+        margin-right: calc((100% - (380px * 3)) / 2);
       }
       ul li:hover {
         transform: translateY(-20px);
@@ -26,16 +27,13 @@
       }
       ul li img {
         width: 100%;
-        height: 494px;
+        object-fit: cover;
       }
       ul li img:hover {
         box-shadow: 10px 10px 30px rgb(0, 0, 0);
       }
-      ul li:nth-child(1) {
-        margin: 15% 30px;
-      }
-      ul li:nth-child(3) {
-        margin: 15% 30px;
+      ul li:last-child {
+        margin-right: 0;
       }
     </style>
   </head>

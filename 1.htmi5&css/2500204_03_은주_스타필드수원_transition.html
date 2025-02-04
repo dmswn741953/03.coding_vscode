@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      ul.wrap {
+        width: 1180px;
+        margin: 50px auto;
+        display: flex;
+        gap: calc(40px / 2);
+      }
+      ul.wrap li {
+        width: 280px;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.5s;
+      }
+      ul. ul.wrap li > p {
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      ul.wrap li:nth-child(3):not(:hover) p img {
+        width: 280px;
+        transform: 2s;
+      }
+      ul.wrap li:hover img {
+        width: 580px;
+        transform: 2s;
+      }
+      ul.wrap li p img {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+      }
+      ul.wrap li:nth-child(3) p img {
+        width: 580px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="wrap">
+      <li>
+        <p>
+          <img
+            src="https://www.starfield.co.kr/assets/images/starfield/main-library-img01.jpg"
+            alt=""
+          />
+        </p>
+        <div>
+          <p>별마당 도서관</p>
+          <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://www.starfield.co.kr/assets/images/starfield/main-library-img02.jpg"
+            alt=""
+          />
+        </p>
+        <div>
+          <p>별마당 도서관</p>
+          <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://www.starfield.co.kr/assets/images/starfield/main-library-img03.jpg"
+            alt=""
+          />
+        </p>
+        <div>
+          <p>별마당 도서관</p>
+          <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
