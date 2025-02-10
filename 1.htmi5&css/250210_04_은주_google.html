@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(31, 31, 31);
+      }
+      div.one {
+        margin: 10px 0;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .lef li {
+        display: flex;
+      }
+      .lef li p {
+        margin: 0 10px;
+      }
+      .rig li {
+        display: flex;
+      }
+      .rig li p {
+        margin: 0 10px;
+      }
+      .rig li p img {
+        width: 24px;
+        height: 24px;
+      }
+      .two {
+        padding: 10% 40%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <ul class="lef">
+        <li>
+          <a href="#">
+            <p>Google정보</p>
+          </a>
+          <a href="#">
+            <p>스토어</p>
+          </a>
+        </li>
+      </ul>
+      <ul class="rig">
+        <li>
+          <a href="#"> Gmail </a>
+          <a href="#">
+            <p>이미지</p>
+          </a>
+          <p class="app"><img src="./images/app.svg" alt="app" /></p>
+          <a href="#">
+            <p>로그인</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="two">
+      <p>
+        <img
+          src="	https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+          alt=""
+        />
+      </p>
+    </div>
+    <div class="thr"><input type="search" /></div>
+    <div class="for">
+      <ul>
+        <li>
+          <p>Google 검색</p>
+          <p>I’m Feeling Lucky</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
