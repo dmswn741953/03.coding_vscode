@@ -19,16 +19,27 @@
       body {
         background: #ccc;
       }
+      /* header {
+        position: relative;
+      } */
       header .top {
         width: 1480px;
         height: 100px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        /* align-items: center; */
       }
+      header:hover {
+        background: #fff;
+      }
+      header:hover > .top > nav > ul > li > a {
+        color: #000;
+      }
+
       header .top .logo {
         width: 134px;
-        height: 100px;
+        height: 100%;
         display: flex;
         align-items: center;
       }
@@ -39,10 +50,17 @@
         background: url(https://company.ybtour.co.kr/assets/img/logo_sprite-Brn9Kh_o.png)
           left top/ 134px 85px no-repeat;
       }
+      header:hover .top .logo a {
+        background: url(https://company.ybtour.co.kr/assets/img/logo_sprite-Brn9Kh_o.png)
+          left bottom/ 134px 85px no-repeat;
+      }
+
       nav > ul {
         display: flex;
         height: 100%;
+        align-items: center;
       }
+
       nav > ul > li {
         position: relative;
       }
@@ -51,16 +69,60 @@
         font-style: 18px;
         font-weight: bold;
         padding: 0 24px;
+        font-size: 18px;
+        position: relative;
       }
-
+      nav > ul > li > a::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 4px;
+        left: 0;
+        top: 60px;
+        background: #ffc72c;
+        transform: scaleX(0);
+        transition: 1s;
+      }
+      nav > ul > li:hover > a::after {
+        transform: scaleX(1);
+      }
       nav > ul > li .sub {
         position: absolute;
         width: 100%;
-        top: 60px;
+        top: 65px;
         background: #fff;
         text-align: center;
         height: 0;
         overflow: hidden;
+        line-height: 40px;
+        transition: 1s;
+        z-index: 999;
+      }
+
+      nav > ul > li .sub a {
+        color: #333;
+      }
+      nav > ul > li .sub a:hover {
+        color: #ffc72c;
+      }
+      nav > ul:hover > li .sub {
+        height: 300px;
+      }
+      header > div.top > nav > div.bg {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        left: 0;
+        top: 100px;
+        background: #fff;
+        border: 0px solid #ccc;
+        transition: 1s;
+      }
+
+      header > div.top > nav > ul:hover ~ .bg {
+        height: 300px;
+        border-color: #ccc;
+        border: 1px solid transparent;
       }
     </style>
   </head>
@@ -113,6 +175,7 @@
               </ul>
             </li>
           </ul>
+          <div class="bg"></div>
         </nav>
       </div>
     </header>
