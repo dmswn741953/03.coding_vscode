@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>평가2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      ul.zero {
+        width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .zero li {
+        width: 192px;
+        text-align: center;
+      }
+
+      .zero li .aa {
+        width: 100%;
+        height: 256px;
+        transition: 1s;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 30px;
+        border-radius: 20px;
+      }
+      .zero li .aa:hover {
+        background-size: 120%;
+      }
+      .zero li:first-child .aa::before {
+        position: absolute;
+        width: 160px;
+        height: 145px;
+        top: 140px;
+        content: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_shd.png);
+      }
+      .zero li:first-child .aa::after {
+        position: absolute;
+        width: 160px;
+        height: 145px;
+        top: 140px;
+        content: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_obj.png);
+      }
+      .zero li:nth-child(2) .aa::before {
+        position: absolute;
+        width: 160px;
+        height: 145px;
+        top: 140px;
+        content: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_shd.png);
+      }
+      .zero li:nth-child(2) .aa::after {
+        position: absolute;
+        width: 160px;
+        height: 145px;
+        top: 140px;
+        content: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_obj.png);
+      }
+      .zero li:nth-child(3) .aa::before {
+        position: absolute;
+        width: 160px;
+        height: 145px;
+        top: 140px;
+        content: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_shd.png);
+      }
+      .zero li:nth-child(3) .aa::after {
+        position: absolute;
+        width: 160px;
+        height: 145px;
+        top: 140px;
+        content: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_obj.png);
+      }
+      .zero li:nth-child(4) .aa::before {
+        position: absolute;
+        width: 160px;
+        height: 145px;
+        top: 140px;
+        content: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_shd.png);
+      }
+      .zero li:nth-child(4) .aa::after {
+        position: absolute;
+        width: 160px;
+        height: 145px;
+        top: 140px;
+        content: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_obj.png);
+      }
+      .zero li:first-child .aa {
+        background-image: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_bg.png);
+      }
+      .zero li:nth-child(2) .aa {
+        background-image: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_bg.png);
+      }
+      .zero li:nth-child(3) .aa {
+        background-image: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_bg.png);
+      }
+      .zero li:nth-child(4) .aa {
+        background-image: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_bg.png);
+      }
+      .zero li p:nth-child(2) {
+        font-size: 24px;
+      }
+      .zero li p:nth-child(3) {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .zero li p:nth-child(4) {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="zero">
+        <li>
+          <p class="aa"></p>
+          <p>단기카드대출</p>
+          <p>(현금서비스)</p>
+          <p>
+            현금이 급할 때 바로 <br />
+            찾아쓰는, <br />
+            편리한 생활자금 마련방법<br />
+          </p>
+        </li>
+        <li>
+          <p class="aa"></p>
+          <p>장기카드대출</p>
+          <p>(카드론)</p>
+          <p>
+            목돈이 필요할 때,<br />
+            복잡한 심사 과정 없이 <br />
+            간편하게
+          </p>
+        </li>
+        <li>
+          <p class="aa"></p>
+          <p>일부결제금액이월약정</p>
+          <p>(리볼빙)</p>
+          <p>원하는 만큼만 결제하고 매월, 결제금액을 계획적으로 관리<br /></p>
+        </li>
+        <li>
+          <p class="aa"></p>
+          <p>올인원대출</p>
+          <p>(신용대출)</p>
+          <p>우리카드가 없어도 서류없이, 방문없이, 내 신용만으로<br /></p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

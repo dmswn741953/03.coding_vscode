@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>평가3</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        margin: 0 auto;
+        width: 1080px;
+        display: flex;
+        justify-content: space-between;
+      }
+      ul.zero li {
+        width: 184px;
+        height: 364px;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      ul.zero li .aa {
+        height: 247px;
+      }
+      ul.zero li::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 150px;
+        background-color: #ccc;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 245px;
+      }
+      ul.zero li:first-child .aa {
+        width: 310px;
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_1_obj.png)
+          left center / 80% no-repeat;
+      }
+      ul.zero li:nth-child(2) .aa {
+        width: 100%;
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_2_obj.png)
+          15px 0 no-repeat;
+      }
+      ul.zero li:nth-child(3) .aa {
+        width: 100%;
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_3_obj.png);
+      }
+      ul.zero li:nth-child(4) .aa {
+        width: 100%;
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_4_obj.png)
+          no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="zero">
+        <li>
+          <p class="aa"></p>
+          <h2>해외이용의 정석</h2>
+          <p>
+            여행, 직구, 항공 <br />
+            무엇이든 우리카드로
+          </p>
+        </li>
+        <li>
+          <p class="aa"></p>
+          <h2>MY Pick 서비스</h2>
+          <p>
+            혜택도 맞춤! <br />
+            나만을 위한 맞춤 혜택
+          </p>
+        </li>
+        <li>
+          <p class="aa"></p>
+          <h2>우리V클럽</h2>
+          <p>
+            특별함을 원하는 <br />
+            고객을 위한 VIP우대 혜택
+          </p>
+        </li>
+        <li>
+          <p class="aa"></p>
+          <h2>우리 Point</h2>
+          <p>
+            차곡차곡 쌓아 <br />
+            다양한 곳에서 사용가능
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
