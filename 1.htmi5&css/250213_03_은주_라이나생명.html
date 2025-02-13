@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>라이나생명</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.one {
+        width: 1048px;
+        margin: 50px auto;
+        display: flex;
+        /* border: 1px solid; */
+        justify-content: space-around;
+      }
+      .one li {
+        width: 96px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .one li .aa {
+        width: 60px;
+        height: 60px;
+        border: 1px solid#f4f4fc;
+        padding: 10px;
+        border-radius: 20px;
+        background: #f4f4fc;
+        margin-bottom: 15px;
+        transition: 0.2s;
+      }
+      .one li:hover .aa {
+        background: #fff;
+        border: 1px solid #1237c9;
+      }
+      .one li .aa img {
+        width: 100%;
+      }
+
+      .one li:nth-child(4):hover .aa img {
+        content: url(https://www.lina.co.kr/_nuxt/img/icon_cyber_home4_h.5cb36ad44edf9bb68e2e8b95c9329d2f.png);
+      }
+      .one li:nth-child(6):hover .aa img {
+        content: url(https://www.lina.co.kr/_nuxt/img/icon_cyber_home6_h.e4e1b9aa17c953a0bd42256b3b8c2580.png);
+      }
+      .one li:hover p:last-child {
+        color: #1237c9;
+        font-weight: bold;
+      }
+
+      ul.two {
+        width: 752px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+      }
+      ul.two li {
+        width: 173px;
+        /* height: 224px; */
+        text-align: center;
+        /* border: 1px solid; */
+        background: #ebf3ff;
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px rgb(230, 228, 228);
+        transition: 1s;
+      }
+      ul.two li:hover {
+        background: transparent;
+      }
+      ul.two li .bb {
+        margin: 0 auto;
+        /* border: 1px solid; */
+        border-radius: 20px;
+        width: 64px;
+        height: 64px;
+        margin-top: 30px;
+      }
+      ul.two li .bb img {
+        width: 100%;
+      }
+      ul.two li p:nth-child(2) {
+        margin: 20px 0;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      ul.two li p:nth-child(3) {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="one">
+        <li>
+          <p class="aa">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home1.2cec58f55482ea015198eb33efd2f802.png"
+              alt=""
+            />
+          </p>
+          <p>계약조회</p>
+        </li>
+        <li>
+          <p class="aa">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home2.d04206837d8569110aca77dfcb252236.png"
+              alt=""
+            />
+          </p>
+          <p>보험료납입</p>
+        </li>
+        <li>
+          <p class="aa">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home3.626594ef57b2ee5eef8121e0115202a5.png"
+              alt=""
+            />
+          </p>
+          <p>고객정보 변경</p>
+        </li>
+        <li>
+          <p class="aa">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home4.3e0e96c2a849af2e86e5c686985f080b.png"
+              alt=""
+            />
+          </p>
+          <p>
+            지급/변경 <br />
+            구비서류
+          </p>
+        </li>
+        <li>
+          <p class="aa">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home5.1dd9e3a4beafadbe1f49bf27095905ce.png"
+              alt=""
+            />
+          </p>
+          <p>
+            완전판매 <br />
+            해피콜
+          </p>
+        </li>
+        <li>
+          <p class="aa">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home6.fb8a6093d8025686b3e28294e2dd9e29.png"
+              alt=""
+            />
+          </p>
+          <p>
+            보험계약 <br />
+            대출 신청
+          </p>
+        </li>
+        <li>
+          <p class="aa">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home7.96600eb2af93bef8e49d213a6bfd40fc.png"
+              alt=""
+            />
+          </p>
+          <p>
+            만기보험금 <br />
+            조회/신청
+          </p>
+        </li>
+        <li>
+          <p class="aa">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home8.3e82122b41dc126a019ea5b689671969.png"
+              alt=""
+            />
+          </p>
+          <p>
+            증명서 <br />
+            발행 신청
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap2">
+      <ul class="two">
+        <li>
+          <p class="bb">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon-fav-tooth.98d3fc2407843976020ecda76f7fdea8.png"
+              alt="치아"
+            />
+          </p>
+          <p>치아보험</p>
+          <p>
+            개수제한 없는 <br />
+            충전치료 보장
+          </p>
+        </li>
+        <li>
+          <p class="bb">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon-fav-surgery.eae7fca96017691be2940e986b196ed2.png"
+              alt="수술"
+            />
+          </p>
+          <p>수술비보험</p>
+          <p>
+            질병 수술시 '매번' <br />
+            수술비 보장
+          </p>
+        </li>
+        <li>
+          <p class="bb">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon-fav-cancer.368b67881902417709673967b72f198b.png"
+              alt="암"
+            />
+          </p>
+          <p>암보험</p>
+          <p>
+            가입 첫날부터 <br />
+            보장하는 암보험
+          </p>
+        </li>
+        <li>
+          <p class="bb">
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon-fav-brain.6e521e8338a469544e0cedd07881c761.png"
+              alt="치아"
+            />
+          </p>
+          <p>뇌/심장보험</p>
+          <p>
+            뇌/심장 주요질환 <br />
+            집중보장
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

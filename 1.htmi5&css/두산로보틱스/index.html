@@ -25,23 +25,20 @@
       }
       .edu {
         margin: 0 auto;
-        width: 1680px;
+        /* width: 1680px; */
         height: 780px;
         display: flex;
         gap: 24px;
         /* border-radius: 20px;
               overflow: hidden; */
       }
-      .edu > div {
-        flex: 1;
-        background: #ccc;
-      }
+
       .edu > div.left {
         background: url(https://www.doosanrobotics.com/images/services/robot-training-img01.png)
           center/cover;
         border-radius: 20px;
-        border-radius: 20px;
         overflow: hidden;
+        flex: 1;
       }
       .edu > div.right {
         flex: 3;
@@ -52,18 +49,21 @@
         border-radius: 20px;
         overflow: hidden;
       }
-      .edu > div.right > div.inner {
-        width: 100%;
+      .edu > div.right > div {
         flex: 1;
+      }
+      .edu > div.right > div.inner {
+        /* width: 100%; */
         display: flex;
         gap: 24px;
       }
 
       .edu > div.right > div.inner:first-child > div:first-child {
+        flex: 1;
         width: 398px;
         border-radius: 20px;
         background: #fff;
-        padding: 40px;
+        /* padding: 40px; */
         box-sizing: border-box;
         display: flex;
         flex-direction: column;

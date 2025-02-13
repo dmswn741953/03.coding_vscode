@@ -12,102 +12,121 @@
       }
       ul {
         list-style: none;
-        margin: 50px;
       }
-      ul li {
-        display: inline-block;
-        position: relative;
-        background: #f0f0f0;
-        padding: 40px 30px;
+      body {
+        background: #ccc;
       }
-      ul li a {
-        text-decoration: none;
-        color: #222;
+      .edu {
+        margin: 0 auto;
+        width: 1680px;
+        height: 780px;
+        display: flex;
+        gap: 24px;
       }
-      ul li a div span {
-        display: block;
+      .edu > div {
+        flex: 1;
       }
-      ul li a div p {
-        margin: 50px 0;
+      .edu > div.left {
+        background: url(https://www.doosanrobotics.com/images/services/robot-training-img01.png)
+          center/cover;
+        border-radius: 20px;
       }
-      ul li .line {
-        position: absolute;
-        background: #07348c;
+      .edu > div.right {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
       }
-
-      ul li .top {
+      .edu > div.right > div.inner {
         width: 100%;
-        height: 5px;
-        left: 0px;
-        top: 0px;
-        transform: scaleX(0);
-        transform-origin: 0 0;
+        flex: 1;
+        display: flex;
+        gap: 24px;
       }
-      ul li:hover .top {
-        transform: scaleX(1);
-        transition: 0.5s ease-in-out;
+      .edu > div.right > div.inner h1 {
+        font-size: 28px;
       }
-      ul li .right {
-        width: 5px;
+      .edu > div.right > div.inner:first-child > div:first-child {
+        width: 398px;
+        border-radius: 20px;
+        background: #fff;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+      }
+      .edu > div.right > div.inner:first-child > div:first-child,
+      .edu > div.right > div.inner:last-child > div:nth-child(3) .txt {
+        padding: 40px;
+        box-sizing: border-box;
+      }
+      .edu > div.right > div.inner:first-child > div:last-child {
+        flex: 2;
+        background: url(https://www.doosanrobotics.com/images/services/robot-training-img02.png)
+          center/cover;
+        border-radius: 20px;
+      }
+      .edu > div.right > div.inner:last-child > div {
+        flex: 1;
+        border-radius: 20px;
+      }
+      .edu > div.right > div.inner:last-child > div:first-child {
+        background: url(https://www.doosanrobotics.com/images/services/robot-training-img03.png)
+          center/cover;
+      }
+      .edu > div.right > div.inner:last-child > div:nth-child(2) {
+        background: url(https://www.doosanrobotics.com/images/services/robot-training-img04.png)
+          center/cover;
+      }
+      .edu > div.right > div.inner:last-child > div:nth-child(3) {
+        background: #fff;
+      }
+      .edu > div.right > div.inner:last-child > div:nth-child(3) .txt {
         height: 100%;
-        right: 0px;
-        top: 0px;
-        transform: scaleY(0);
-        transform-origin: 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
-      ul li:hover .right {
-        transform: scaleY(1);
-        transition: 0.5s ease-in-out 0.5s;
-      }
-      ul li .bottom {
-        width: 100%;
-        height: 5px;
-        right: 0px;
-        bottom: 0px;
-        transform: scaleX(0);
-        transform-origin: 100% 0;
-      }
-      ul li:hover .bottom {
-        transform: scaleX(1);
-        transition: 0.5s ease-in-out 1s;
-      }
-      ul li .left {
-        width: 5px;
-        height: 100%;
-        left: 0px;
-        top: 0px;
-        transform: scaleY(0);
-        transform-origin: 0 100%;
-      }
-      ul li:hover .left {
-        transform: scaleY(1);
-        transition: 0.5s ease-in-out 1.5s;
+      span {
+        color: rgb(0, 94, 184);
       }
     </style>
   </head>
   <body>
-    <ul>
-      <li>
-        <a href="#"
-          ><div>
-            <h1>언론속의 <span>극동</span></h1>
+    <div class="edu">
+      <div class="left"></div>
+      <div class="right">
+        <div class="inner">
+          <div>
+            <h1>
+              현장에서 바로 적용 가능한 <br />
+              <span>최고의 실습 교육</span>
+            </h1>
             <p>
-              언론에 소개되는 <br />
-              극동의 소식을 안내해드립니다.
+              두산로보틱스에서 개발한 검증된 실무형 교육 <br />
+              커리큘럼으로, 실제 현장에서 바로 적용하며 <br />
+              시시각각 발생하는 다양한 문제를 해결할 수 <br />
+              있도록 설계되었습니다.
             </p>
-            <span>
-              <img
-                src="https://www.kukdong.co.kr/images/common/next_bar_bk.png"
-                alt="arrow"
-              />
-            </span>
           </div>
-          <span class="line top"></span>
-          <span class="line right"></span>
-          <span class="line bottom"></span>
-          <span class="line left"></span>
-        </a>
-      </li>
-    </ul>
+          <div></div>
+        </div>
+        <div class="inner">
+          <div></div>
+          <div></div>
+          <div>
+            <div class="txt">
+              <h1>
+                초보자부터 전문가까지 <br />
+                <span>수준별 교육 제공</span>
+              </h1>
+              <p>
+                초보자부터 현업 엔지니어 및 교수까지 수준별로 <br />
+                들을 수 있는 맞춤형 교육이 마련돼 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

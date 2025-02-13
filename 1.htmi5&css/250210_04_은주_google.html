@@ -56,10 +56,15 @@
         content: "";
         width: 40px;
         height: 40px;
-        left: 5px;
-        top: -5px;
+        left: 2px;
+        top: -7px;
         background-color: #ccc;
-        border-radius: ;
+        border-radius: 50%;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .rig li p:hover:before {
+        opacity: 0.5;
       }
       .two {
         padding: 50px 100px;
@@ -83,10 +88,15 @@
       .four > ul > li {
         width: 584px;
         display: flex;
-        border: 1px solid;
+        /* border: 1px solid; */
+        justify-content: center;
+
+        margin: 50px auto;
       }
       .four > ul > li > p {
-        align-content: space-around;
+        border: 1px solid;
+        padding: 10px;
+        margin: 0 10px;
       }
     </style>
   </head>
