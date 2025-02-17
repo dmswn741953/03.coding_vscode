@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      input {
+        display: none;
+      }
+      .menu {
+        width: 1220px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 30px;
+      }
+      div.con {
+        width: 1220px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .menu label {
+        padding: 20px 140px 20px 0;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .menu label::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 3px;
+        left: 0;
+        top: 62px;
+        background-color: #007dc5;
+        opacity: 0;
+      }
+
+      .txt {
+        background-color: #007dc5;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        bottom: 0px;
+        padding: 60px;
+        display: none;
+      }
+
+      .txt h1 {
+        font-size: 30px;
+        margin: 20px 0;
+      }
+      .txt p {
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 30px;
+      }
+      #list1:checked ~ .menu label:first-child::after,
+      #list2:checked ~ .menu label:nth-child(2)::after,
+      #list3:checked ~ .menu label:nth-child(3)::after,
+      #list4:checked ~ .menu label:nth-child(4)::after,
+      #list5:checked ~ .menu label:nth-child(5)::after,
+      #list6:checked ~ .menu label:nth-child(6)::after {
+        opacity: 1;
+      }
+      div.con p img {
+        display: none;
+      }
+      #list1:checked ~ div.con p:first-child img,
+      #list2:checked ~ div.con p:nth-child(2) img,
+      #list3:checked ~ div.con p:nth-child(3) img,
+      #list4:checked ~ div.con p:nth-child(4) img,
+      #list5:checked ~ div.con p:nth-child(5) img,
+      #list6:checked ~ div.con p:nth-child(6) img {
+        display: block;
+      }
+      #list1:checked ~ .menu label:first-child,
+      #list2:checked ~ .menu label:nth-child(2),
+      #list3:checked ~ .menu label:nth-child(3),
+      #list4:checked ~ .menu label:nth-child(4),
+      #list5:checked ~ .menu label:nth-child(5),
+      #list6:checked ~ .menu label:nth-child(6) {
+        font-weight: bold;
+      }
+      input:checked ~ div.con .txt {
+        display: block;
+      }
+      .txt .fir,
+      .two {
+        display: none;
+      }
+      #list1:checked ~ div.con .txt .fir,
+      #list2:checked ~ div.con .txt .two {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="list" id="list1" />
+    <input type="radio" name="list" id="list2" />
+    <input type="radio" name="list" id="list3" />
+    <input type="radio" name="list" id="list4" />
+    <input type="radio" name="list" id="list5" />
+    <input type="radio" name="list" id="list6" />
+    <div class="menu">
+      <label for="list1">반도체</label>
+      <label for="list2">전기/전자</label>
+      <label for="list3">2차 전지</label>
+      <label for="list4">식음료/제약</label>
+      <label for="list5">화학</label>
+      <label for="list6">기계/금속</label>
+    </div>
+    <div class="con">
+      <p>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-01.jpg"
+          alt="photo1"
+        />
+      </p>
+      <p>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-02.jpg"
+          alt="photo1"
+        />
+      </p>
+      <p>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-03.jpg"
+          alt="photo1"
+        />
+      </p>
+      <p>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-04.jpg"
+          alt="photo1"
+        />
+      </p>
+      <p>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-05.jpg"
+          alt="photo1"
+        />
+      </p>
+      <p>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-06.jpg"
+          alt="photo1"
+        />
+      </p>
+      <div class="txt">
+        <div class="fir">
+          <h1>반도체</h1>
+          <p>
+            반도체 산업은 고사양화로 공정 난이도가 높아져 자동화 시스템에 의한
+            <br />
+            공정 관리가 중요하며, 빅데이터와 AI를 활용해 제조 경쟁력을 <br />
+            향상시키는 추세입니다. 특히 반도체 업종에서는 복잡한 공정과 설비로
+            <br />
+            인해 빅데이터 기반 AI 기술이 활용됩니다.
+          </p>
+        </div>
+        <div class="two">
+          <h1>ㄴ야~</h1>
+          <p>
+            반도체 산업은 고사양화로 공정 난이도가 높아져 자동화 시스템에 의한
+            <br />
+            공정 관리가 중요하며, 빅데이터와 AI를 활용해 제조 경쟁력을 <br />
+            향상시키는 추세입니다. 특히 반도체 업종에서는 복잡한 공정과 설비로
+            <br />
+            인해 빅데이터 기반 AI 기술이 활용됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
