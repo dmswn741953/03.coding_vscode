@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.wrap {
+        text-align: center;
+      }
+
+      div.one {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        padding-top: 5%;
+      }
+      div.two {
+        margin-top: 150px;
+      }
+
+      div.one p:first-child img {
+        animation-name: option1;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+      }
+      div.one p:nth-child(2) img {
+        position: absolute;
+        left: 0;
+        top: 150px;
+        z-index: -1;
+      }
+      @keyframes option1 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-1080deg);
+        }
+      }
+
+      div.two label {
+        border: 1px solid;
+        padding: 10px 20px;
+        border-radius: 100px;
+        cursor: pointer;
+      }
+      #option1:checked ~ .one p img {
+        /* animation: duration timing-function delay iteration-count direction
+          fill-mode; */
+        animation-direction: reverse;
+      }
+      #option2:checked ~ .one p img {
+        animation-direction: normal;
+      }
+      #option3:checked ~ .one p img {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <input type="radio" name="option" id="option1" />
+      <input type="radio" name="option" id="option2" />
+      <input type="radio" name="option" id="option3" />
+      <div class="one">
+        <p><img src="./images/propeller.png" alt="" /></p>
+        <p><img src="./images/pipe.png" alt="" /></p>
+      </div>
+      <div class="two">
+        <label for="option1">Turn Left</label>
+        <label for="option2">Turn Right</label>
+        <label for="option3">off</label>
+      </div>
+    </div>
+  </body>
+</html>

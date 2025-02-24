@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카페베네</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #444;
+      }
+
+      .head {
+        width: 1190px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        font-family: "Roboto", serif;
+        font-family: "Noto Sans KR", serif;
+        text-transform: uppercase;
+        position: relative;
+      }
+      .head .lgg {
+        width: 100%;
+        position: absolute;
+        top: 30px;
+        left: 95%;
+        font-size: 12px;
+        font-weight: bold;
+        color: #707070;
+        font-family: "Noto Sans KR", serif;
+      }
+      .head .lgg::after {
+        content: "";
+        position: absolute;
+        height: 9px;
+        width: 1px;
+        left: 22px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #d4d4d4;
+      }
+      .head ul.menu {
+        display: flex;
+        padding: 50px 0;
+        position: relative;
+        margin-top: 20px;
+      }
+
+      .head ul.menu li {
+        position: relative;
+      }
+
+      .head ul.menu li > a > p {
+        padding: 0 35px;
+        font-weight: bold;
+      }
+      .head ul.menu li:hover a p {
+        color: #3a366a;
+      }
+      .head > a:nth-child(4) p {
+        border: 1px solid;
+        padding: 5px 35px;
+        border-radius: 30px;
+        font-family: "Noto Sans KR", serif;
+        color: #fff;
+        background: #00a5b1;
+        position: relative;
+        margin-top: 20px;
+      }
+      .head ul.menu .nav {
+        width: 2000px;
+        height: 231px;
+        background: #f2f2f2e6;
+        position: absolute;
+        left: -550px;
+        top: 120px;
+        display: none;
+      }
+      .head ul.menu:hover .nav {
+        display: block;
+      }
+      .head ul.menu li .sub {
+        position: absolute;
+        width: 100%;
+        height: 231px;
+        top: 400%;
+        text-align: center;
+        line-height: 35px;
+        font-size: 14px;
+        display: none;
+        z-index: 99;
+      }
+      .head ul.menu:hover li .sub {
+        opacity: 1;
+        display: block;
+      }
+      .head ul.menu li .sub a p:hover {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      .mid {
+        height: 720px;
+        background: url(http://caffebene.co.kr/uploads/banner/20241128813084.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <div class="lgg">
+        <a href=""><span>KR</span></a
+        >&nbsp;&nbsp;
+        <a href=""><span>EN</span></a>
+      </div>
+      <a href="#">
+        <p>
+          <img src="http://caffebene.co.kr/images/common/logo.png" alt="" />
+        </p>
+      </a>
+      <ul class="menu">
+        <li>
+          <a href="#">
+            <p>Caffebene</p>
+            <div class="sub">
+              <a href="">
+                <p>브랜드 스토리</p>
+              </a>
+              <a href="">
+                <p>베네캣 스토리</p>
+              </a>
+              <a href="">
+                <p>카페베네 원두</p>
+              </a>
+              <a href="">
+                <p>카페베네 소식</p>
+              </a>
+              <a href="">
+                <p>매거진</p>
+              </a>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>Menu</p>
+            <div class="sub">
+              <a href="">
+                <p>신메뉴</p>
+              </a>
+              <a href="">
+                <p>커피</p>
+              </a>
+              <a href="">
+                <p>음료</p>
+              </a>
+              <a href="">
+                <p>푸드</p>
+              </a>
+              <a href="">
+                <p>MD상품</p>
+              </a>
+              <a href="">
+                <p>Retail</p>
+              </a>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>Store</p>
+            <div class="sub">
+              <a href="">
+                <p>국내</p>
+              </a>
+              <a href="">
+                <p>해외</p>
+              </a>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>Membership</p>
+            <div class="sub">
+              <a href="">
+                <p>등급&혜택</p>
+              </a>
+              <a href="">
+                <p>가입방법안내</p>
+              </a>
+              <a href="">
+                <p>서비스</p>
+              </a>
+              <a href="">
+                <p>FAQ</p>
+              </a>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>Global</p>
+            <div class="sub">
+              <a href="">
+                <p>해외매장안내</p>
+              </a>
+              <a href="">
+                <p>해외사업소개</p>
+              </a>
+              <a href="">
+                <p>해외가맹&유통문의</p>
+              </a>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>Contents</p>
+            <div class="sub">
+              <a href="">
+                <p>커피</p>
+              </a>
+              <a href="">
+                <p>우리동네</p>
+              </a>
+              <a href="">
+                <p>사람들</p>
+              </a>
+              <a href="">
+                <p>메뉴</p>
+              </a>
+              <a href="">
+                <p>이벤트</p>
+              </a>
+              <a href="">
+                <p>매장</p>
+              </a>
+            </div>
+          </a>
+        </li>
+        <div class="nav"></div>
+      </ul>
+      <a href="">
+        <p>가맹문의</p>
+      </a>
+    </div>
+    <div class="mid"></div>
+  </body>
+</html>

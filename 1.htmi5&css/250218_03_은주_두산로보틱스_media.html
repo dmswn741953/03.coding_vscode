@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      .bg video {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        filter: brightness(50%);
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        padding: 20px;
+        font-size: 18px;
+      }
+
+      header .menu {
+        display: flex;
+      }
+      header .menu p {
+        padding: 0 30px;
+      }
+      header .ser {
+        display: flex;
+      }
+      header .ser p {
+        padding: 0 10px;
+      }
+
+      .txt {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+      .txt h1 {
+        font-size: 68px;
+        padding: 50px;
+      }
+      .txt a {
+        display: inline-block;
+        font-size: 18px;
+        padding: 20px;
+        border: 1px;
+        border-radius: 50px;
+        background: rgba(69, 70, 70, 0.5);
+        transition: 1s;
+        color: #fff;
+      }
+      .txt a:hover {
+        background: #fff;
+        color: #000;
+      }
+      span img {
+        width: 24px;
+        vertical-align: middle;
+        transition: 1s;
+      }
+      .txt a:hover span img {
+        filter: brightness(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="bg">
+        <video autoplay muted loop>
+          <source src="https://www.doosanrobotics.com/media/visual-1.mp4" />
+        </video>
+      </div>
+      <header>
+        <p>
+          <img src="https://www.doosanrobotics.com/images/logo.svg" alt="" />
+        </p>
+        <div class="menu">
+          <p>제품 & 솔루션</p>
+          <p>교육 & 서비스</p>
+          <p>투자정보</p>
+          <p>회사소개</p>
+        </div>
+        <div class="ser">
+          <p>A/S신청</p>
+          <p>파트너 서비스</p>
+          <p>
+            <img
+              src="	https://www.doosanrobotics.com/images/language-globe.svg"
+              alt=""
+            />
+          </p>
+          <p>두산로보틱스</p>
+        </div>
+      </header>
+      <div class="txt">
+        <h1>
+          Innovation In Every Motion, <br />Revolutionizing the Way You Work
+        </h1>
+        <a href="">
+          두산 로봇과 함께 상상을 실현해 보세요
+          <span
+            ><img
+              src="https://www.doosanrobotics.com/images/arrow-right-light.svg"
+              alt=""
+          /></span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

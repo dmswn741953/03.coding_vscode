@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마스크</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        width: 367px;
+        padding: 0 20px;
+        line-height: 80px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        cursor: pointer;
+      }
+      ul li::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background: #000;
+        left: 0;
+        top: 80px;
+      }
+      ul li:hover:after {
+        background: #be8556;
+      }
+      ul li .ico {
+        width: 72px;
+        height: 72px;
+        background-color: #000;
+      }
+
+      ul li p:nth-child(2) {
+        display: flex;
+        font-size: 21px;
+        font-weight: bold;
+        align-items: center;
+      }
+      ul li p:nth-child(2) span:nth-child(2) {
+        display: flex;
+        width: 42px;
+        height: 42px;
+      }
+      ul li p span:first-child {
+        padding: 0 10px 0 0;
+      }
+      ul li:nth-child(1) .ico {
+        mask-image: url(./images/ico_business_item01.svg);
+      }
+      ul li:nth-child(1):hover .ico {
+        /* mask-image: url(./images/ico_business_item01.svg); */
+        background-color: #be8556;
+      }
+      ul li:nth-child(2) .ico {
+        mask-image: url(./images/ico_business_item02.svg);
+      }
+      ul li:nth-child(2):hover .ico {
+        background-color: #be8556;
+      }
+      ul li:nth-child(3) .ico {
+        mask-image: url(./images/ico_business_item03.svg);
+      }
+      ul li:nth-child(3):hover .ico {
+        background-color: #be8556;
+      }
+      ul li:nth-child(4) .ico {
+        mask-image: url(./images/ico_business_item04.svg);
+      }
+      ul li:nth-child(4):hover .ico {
+        background-color: #be8556;
+      }
+      ul li:nth-child(5) .ico {
+        mask-image: url(./images/ico_business_item05.svg);
+      }
+      ul li:nth-child(5):hover .ico {
+        background-color: #be8556;
+      }
+      ul li:nth-child(6) .ico {
+        mask-image: url(./images/ico_business_item06.svg);
+      }
+      ul li:nth-child(6):hover .ico {
+        background-color: #be8556;
+      }
+
+      ul li:hover p:nth-child(2) span:first-child {
+        color: #be8556;
+      }
+      ul li:hover p:nth-child(2) span:nth-child(2) {
+        content: url(./images/ico_circle_arrow_active.png);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <p class="ico"></p>
+        <p>
+          <span>건축</span
+          ><span><img src="./images/ico_circle_arrow.png" alt="" /></span>
+        </p>
+      </li>
+      <li>
+        <p class="ico"></p>
+        <p>
+          <span>선박·해양플랜트</span
+          ><span><img src="./images/ico_circle_arrow.png" alt="" /></span>
+        </p>
+      </li>
+      <li>
+        <p class="ico"></p>
+        <p>
+          <span>플랜트</span
+          ><span><img src="./images/ico_circle_arrow.png" alt="" /></span>
+        </p>
+      </li>
+      <li>
+        <p class="ico"></p>
+        <p>
+          <span>자동차</span
+          ><span><img src="./images/ico_circle_arrow.png" alt="" /></span>
+        </p>
+      </li>
+      <li>
+        <p class="ico"></p>
+        <p>
+          <span>전자·가전·전기</span
+          ><span><img src="./images/ico_circle_arrow.png" alt="" /></span>
+        </p>
+      </li>
+      <li>
+        <p class="ico"></p>
+        <p>
+          <span>산업 기타</span
+          ><span><img src="./images/ico_circle_arrow.png" alt="" /></span>
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

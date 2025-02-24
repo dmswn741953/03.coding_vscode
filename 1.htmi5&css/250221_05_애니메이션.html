@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>애니메이션</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        width: 1200px;
+        display: flex;
+        margin: 100px auto;
+        justify-content: space-between;
+      }
+      .wrap ul li {
+        width: 216px;
+        border: 1px solid rgb(229, 229, 229);
+        border-radius: 20px;
+        padding: 30px;
+        color: #000;
+        position: relative;
+        transition: 0.3s;
+        transform: translateY(0);
+      }
+      .wrap ul li::after {
+        position: absolute;
+        content: url(./images/신한카드/download.png);
+        left: 80%;
+        top: 5%;
+        transform: rotate(-90deg) scale(0.5);
+      }
+
+      .wrap ul li:hover {
+        border-color: rgb(53, 108, 255);
+        background: rgb(247, 248, 252);
+        transform: translateY(-30px);
+        box-shadow: 0 10px 15px rgb(240, 238, 238);
+      }
+      .wrap ul li p:first-child {
+        font-size: 20px;
+      }
+      .wrap ul li p:nth-child(2) {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .wrap ul li p:nth-child(3) {
+        width: 120px;
+        height: 120px;
+        margin: 30px auto;
+      }
+      .wrap ul li p:nth-child(4) {
+        width: 100%;
+        padding: 5px 10px;
+        background: rgb(241, 244, 251);
+        font-size: 18px;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px solid 0;
+        border-radius: 30px;
+        transition: 0.5s;
+      }
+      .wrap ul li:hover p:nth-child(4) {
+        background: #fff;
+      }
+      .wrap ul li:hover p:nth-child(3) {
+        animation: ani 3s steps(91) infinite;
+      }
+      .wrap ul:nth-child(2) li:hover p:nth-child(3) {
+        animation: ani 3s steps(92) infinite;
+      }
+      .wrap a:first-child ul li p:nth-child(3) {
+        background: url(./images/신한카드/img01.png);
+      }
+      .wrap a:first-child ul li:hover p:nth-child(3) {
+        background: url(./images/신한카드/img01_bg.png);
+      }
+      .wrap a:nth-child(2) ul li p:nth-child(3) {
+        background: url(./images/신한카드/img02.png);
+      }
+      .wrap a:nth-child(2) ul li:hover p:nth-child(3) {
+        background: url(./images/신한카드/img02_bg.png);
+      }
+      .wrap a:nth-child(3) ul li p:nth-child(3) {
+        background: url(./images/신한카드/img03.png);
+      }
+      .wrap a:nth-child(3) ul li:hover p:nth-child(3) {
+        background: url(./images/신한카드/img03_bg.png);
+      }
+      .wrap a:nth-child(4) ul li p:nth-child(3) {
+        background: url(./images/신한카드/img04.png);
+      }
+      .wrap a:nth-child(4) ul li:hover p:nth-child(3) {
+        background: url(./images/신한카드/img04_bg.png);
+      }
+      @keyframes ani {
+        0 {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a href="#">
+        <ul>
+          <li>
+            <p>다양한</p>
+            <p>Data 서비스</p>
+            <p></p>
+            <p>Data One-Stop Service</p>
+          </li>
+        </ul>
+      </a>
+      <a href="#">
+        <ul>
+          <li>
+            <p>혁신적인</p>
+            <p>솔루션서비스</p>
+            <p></p>
+            <p>상권분석, 시장 모니터링</p>
+          </li>
+        </ul>
+      </a>
+      <a href="#">
+        <ul>
+          <li>
+            <p>스마트한</p>
+            <p>광고서비스</p>
+            <p></p>
+            <p>최적의 고객 타겟팅</p>
+          </li>
+        </ul>
+      </a>
+      <a href="#">
+        <ul>
+          <li>
+            <p>탁월한</p>
+            <p>API서비스</p>
+            <p></p>
+            <p>Data 실시간 활용</p>
+          </li>
+        </ul>
+      </a>
+    </div>
+  </body>
+</html>

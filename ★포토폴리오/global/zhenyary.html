@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: GTWalsheim_R;
+        src: url(./webfonts/GTWalsheim_R.woff2) format("woff2");
+      }
+      @font-face {
+        font-family: GTWalsheim_L;
+        src: url(./webfonts/GTWalsheim_L.woff2) format("woff2");
+      }
+      * {
+        margin: 0;
+        top: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .main {
+        background: #dbd5c9;
+        height: 100vh;
+      }
+      .main .nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 45px;
+      }
+      .main .nav > div > a p {
+        padding: 0 40px;
+        color: black;
+      }
+      .main .nav > div > a p:first-child {
+        font-family: GTWalsheim_R;
+        font-size: 42px;
+      }
+      .main .nav > div > a p:nth-child(2) {
+        font-family: GTWalsheim_L;
+        font-size: 12px;
+      }
+      .main .nav .nleft {
+        display: flex;
+      }
+      .main .nav .nright {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <div class="nleft">
+          <a href="https://zhenyary.com/about"
+            ><p>Info</p>
+            <p>ABOUT ME</p></a
+          >
+          <a href="https://zhenyary.com/work"
+            ><p>Work</p>
+            <p>some cases</p></a
+          >
+        </div>
+        <div class="nright">
+          <a href="https://zhenyary.com/about"
+            ><p>Workflow</p>
+            <p>All the processes</p></a
+          >
+          <a href="https://zhenyary.com/work"
+            ><p>Contact me</p>
+            <p>For any collaborations</p></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
