@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        cursor: url(./images/Untitled-2.png), auto;
+      }
+      div {
+        height: 110vh;
+        background: #ffd678;
+        position: relative;
+      }
+      div p:first-child {
+        width: 888px;
+        height: 886px;
+        animation: solve 20s linear infinite;
+        margin: 0 auto;
+      }
+      @keyframes solve {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      div p:first-child img {
+        width: 100%;
+        height: 100%;
+      }
+      div p:nth-child(2) {
+        width: 750px;
+        height: 750px;
+        left: 50%;
+        top: 7%;
+        transform: translateX(-50%);
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        text-align: center;
+      }
+      div p:nth-child(2) span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid;
+        width: 272px;
+        height: 78px;
+        font-size: 20px;
+        border-radius: 50px;
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translateX(-50%);
+        transition: 0.5s;
+      }
+      div p:nth-child(2) span:hover {
+        background: #000;
+        color: #fff;
+      }
+      div p:nth-child(3) {
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        transform: translateX(-50%);
+        animation: hand 2s linear infinite;
+      }
+      @keyframes hand {
+        0%,
+        100% {
+          /* transform: translateX(-50%) translateY(0); */
+          top: 20%;
+        }
+        50% {
+          /* transform: translateX(-50%) translateY(20px); */
+          top: 15%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p><img src="https://solvek.co.kr/css/img/c-txt-box.png" alt="" /></p>
+      <p><span>JOUN US!</span></p>
+      <p><img src="https://solvek.co.kr/css/img/y-bg.png" alt="" /></p>
+    </div>
+  </body>
+</html>

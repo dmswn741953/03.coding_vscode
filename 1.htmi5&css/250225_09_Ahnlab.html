@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        background: rgb(0, 0, 0);
+        width: 1903px;
+        height: 1080px;
+        color: #fff;
+      }
+      div.main {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        padding: 190px 0 0 0;
+      }
+
+      div.main .left .tit p:nth-child(2) {
+        font-size: 32px;
+        padding: 30px 0 100px;
+      }
+      div.main .left .list {
+      }
+      div.main .left .list p {
+        font-size: 20px;
+        padding-bottom: 40px;
+        position: relative;
+        color: #989898;
+        transition: 0.5s;
+      }
+      #one {
+        color: #2970ff;
+      }
+      .main .left .list p:hover {
+        font-size: 24px;
+        color: #fff;
+      }
+      div.main .left .list p::after {
+        content: "";
+        position: absolute;
+        width: 472px;
+        height: 1px;
+        background: #989898;
+        left: 0;
+        top: 70%;
+      }
+      div.main .left .list p:hover:after {
+        background: #fff;
+        height: 2px;
+      }
+      div.main .left .list p:first-child:after {
+        background: #fff;
+        height: 2px;
+      }
+      div.main .left .list p span {
+        position: absolute;
+        left: 160%;
+        opacity: 0;
+        /* display: none; */
+      }
+      div.main .left .list p span:nth-child(2) {
+        width: 598px;
+        margin-top: 150px;
+        font-size: 18px;
+      }
+      div.main .left .list p:first-child span {
+        top: -100%;
+      }
+      div.main .left .list p:nth-child(2) span {
+        top: -200%;
+      }
+      div.main .left .list p:nth-child(3) span {
+        top: -300%;
+      }
+      div.main .left .list p:nth-child(4) span {
+        top: -400%;
+      }
+      div.main .left .list p:nth-child(5) span {
+        top: -500%;
+      }
+      div.main .left .list p:nth-child(6) span {
+        top: -600%;
+      }
+      div.main .left .list p:hover span {
+        /* display: block; */
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="main">
+        <div class="left">
+          <div class="tit">
+            <p>
+              <img
+                src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fassets%252Fimages%252Fko%252Fahn-plus.png&w=1920&q=75"
+                alt=""
+              />
+            </p>
+            <p>디지털 비즈니스 혁신을 위한<br />최적의 보안 플랫폼</p>
+          </div>
+
+          <div class="list">
+            <p id="one">
+              AhnLab CONNECT PLUS
+              <span
+                ><img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132320382.png&w=1920&q=75"
+                  alt=""
+              /></span>
+              <span
+                >AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+                <br />
+                연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안
+                플랫폼입니다.</span
+              >
+            </p>
+            <p>
+              AhnLab CONNECT PLUS
+              <span
+                ><img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132376103.png&w=1920&q=75"
+                  alt=""
+              /></span>
+              <span>
+                AhnLab CLOUD PLUS는 클라우드 워크로드 보안 플랫폼(CWPP)부터
+                <br />
+                클라우드 최적화 방화벽, IPS 등 최상의 기술력을 갖춘 솔루션을
+                통해 <br />
+                고객의 디지털 혁신 기반을 마련합니다.</span
+              >
+            </p>
+            <p>
+              AhnLab CONNECT PLUS
+              <span
+                ><img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132477178.png&w=1920&q=75"
+                  alt=""
+              /></span>
+              <span>
+                AhnLab ENDPOINT PLUS는 PC, 서버, 모바일, OT 기기 등 여러
+                엔드포인트 <br />
+                자산에 대한 위협을 체계적으로 방어하는 엔드포인트 보안
+                플랫폼입니다.</span
+              >
+            </p>
+            <p>
+              AhnLab CONNECT PLUS
+              <span
+                ><img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132654111.png&w=1920&q=75"
+                  alt=""
+              /></span>
+              <span>
+                AhnLab NETWORK PLUS는 방화벽, IPS, 디도스 대응, 샌드박스 등
+                <br />
+                여러 솔루션들이 유기적으로 연동하여 최상의 보안 역량을 제공하는
+                <br />
+                네트워크 보안 플랫폼입니다.</span
+              >
+            </p>
+            <p>
+              AhnLab CONNECT PLUS
+              <span
+                ><img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132733452.png&w=1920&q=75"
+                  alt=""
+              /></span>
+              <span>
+                안랩의 보안 전문가들이 수십 년간 축적해온 경험과 노하우를 <br />
+                바탕으로 br 최상의 보안 서비스를 제공해 안전한 비즈니스 환경을
+                조성합니다.</span
+              >
+            </p>
+            <p>
+              AhnLab CONNECT PLUS
+              <span
+                ><img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2407314037297029.png&w=1920&q=75"
+                  alt=""
+              /></span>
+              <span
+                >AhnLab CPS PLUS는 제조, 정유, 운송 등 다양한 산업의 OT
+                엔드포인트와 <br />
+                네트워크, 그리고 OT와 연결된 IT 환경까지 폭 넓게 보호하는 통합
+                CPS 보안 플랫폼입니다.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

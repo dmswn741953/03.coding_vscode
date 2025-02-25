@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mix_blend</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+      }
+      p {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .img1 {
+        filter: blur(10px);
+      }
+      p img {
+        clip-path: inset(0 round 0 0 0 0);
+        /* 왼모서리 오모 오아래모 왼아래모 */
+        transition: 1s;
+      }
+      p:hover img {
+        clip-path: inset(20px round 500px 500px 0 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="imgbox">
+      <img src="./images/photo1.jpg" alt="" class="img1" />
+      <p><img src="./images/photo1.jpg" alt="" /></p>
+    </div>
+  </body>
+</html>

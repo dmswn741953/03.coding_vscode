@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mix_blend</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .imgbox {
+        width: 500px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .img1 {
+        filter: blur(5px);
+      }
+      .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: inset(0);
+        z-index: 2;
+        transition: 0.5s;
+      }
+      .imgbox:hover .box {
+        clip-path: inset(10px 20px round 250px 250px 0 0);
+      }
+      .imgbox img {
+        width: 100%;
+        height: 100%;
+      }
+      .imgbox::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="imgbox">
+      <img src="./images/photo1.jpg" alt="" class="img1" />
+      <p class="box"><img src="./images/photo1.jpg" alt="" /></p>
+    </div>
+  </body>
+</html>

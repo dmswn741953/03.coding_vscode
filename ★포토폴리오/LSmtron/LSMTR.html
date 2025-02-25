@@ -12,20 +12,19 @@
       ul {
         list-style: none;
       }
-      ul li {
-        padding: ;
-      }
-      .head {
+
+      .main {
+        /* width: 1903px; */
         height: 100vh;
         position: relative;
       }
-      .head .bg {
+      .main .bg {
         width: 100%;
         height: 100%;
         position: absolute;
         z-index: -1;
       }
-      .head .bg video {
+      .main .bg video {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -41,33 +40,43 @@
       .nav p {
         width: 113px;
       }
-      .nav .nmid {
+      .nav .menu {
         display: flex;
       }
-      .nav .nmid li {
+      .nav .menu li {
         padding: 0 20px;
       }
-      .nav .nright {
+      .nav .n-right {
         display: flex;
       }
-      .nav .nright li {
+      .nav .n-right li {
         padding: 0 20px;
+        display: flex;
+        align-items: center;
       }
-      .nright label {
+      .n-right label {
         background: rgb(250, 0, 45);
         padding: 20px;
       }
-      .nright label > span {
+      .n-right label > span {
         display: block;
         width: 26px;
       }
-      .nright label > span img {
-        width: 100%;
-      h100%}
+      .n-right .mn > p {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        background: #fa002d;
+      }
+      .n-right .mn > p img {
+        width: 26px;
+        height: 20px;
+      }
     </style>
   </head>
   <body>
-    <div class="head">
+    <div class="main">
       <div class="bg">
         <video autoplay muted loop>
           <source
@@ -78,23 +87,21 @@
       </div>
       <div class="nav">
         <p><img src="./imges/logo.svg" alt="logo" /></p>
-        <ul class="nmid">
+        <ul class="menu">
           <li>COMPANY</li>
           <li>BUSINESS</li>
           <li>SUSTAINABILITY</li>
           <li>RECRUIT</li>
           <li>PR</li>
         </ul>
-        <ul class="nright">
+        <ul class="n-right">
           <li>CUSTOMER</li>
           <li>KOR</li>
-          <input type="checkbox" name="botton" id="menu" />
-          <label for="menu">
-            <span><img src="./imges/menu.svg" alt="menu" /></span>
-          </label>
+          <div class="mn">
+            <p><img src="./imges/menu.svg" alt="" /></p>
+          </div>
         </ul>
       </div>
-      <p class="tit">Leading Solution For You</p>
     </div>
   </body>
 </html>

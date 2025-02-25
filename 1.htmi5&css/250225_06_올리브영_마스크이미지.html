@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>올영_마스크이미지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 960px;
+        height: 640px;
+        mask-image: url(./images/shape1.svg);
+        mask-size: 100% 100%; /*가로 세로*/
+        mask-position: center;
+        transition: 1s;
+      }
+      p img {
+        width: 100%;
+        height: 100%;
+      }
+      p:hover {
+        mask-size: 900% 900%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        <img
+          src="https://corp.oliveyoung.com/img/main/key_msg_back-90998f6de42a777977aa140f5864b7f6.jpg;jsessionid=E250917B65F38F32A8CA316162474950"
+          alt=""
+        />
+      </p>
+    </div>
+  </body>
+</html>
