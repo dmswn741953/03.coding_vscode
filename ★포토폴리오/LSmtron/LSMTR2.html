@@ -12,7 +12,9 @@
       ul {
         list-style: none;
       }
-
+      a {
+        text-decoration: none;
+      }
       .main {
         /* width: 1903px; */
         height: 100vh;
@@ -33,13 +35,16 @@
         width: 1903px;
         display: flex;
         align-items: center;
+        justify-content: center;
         height: 100px;
         background: rgba(0, 0, 0, 0.5);
         font-size: 18px;
         color: #fff;
       }
-      .nav p {
+      .nav > div p {
         width: 113px;
+        margin-right: 50px;
+        margin-right: 200px;
       }
       .nav .menu {
         display: flex;
@@ -47,32 +52,11 @@
       .nav .menu li {
         padding: 0 20px;
       }
-      .nav .n-right {
+      .nav .menu2 {
         display: flex;
       }
-      .nav .n-right li {
+      .nav .menu2 li {
         padding: 0 20px;
-        display: flex;
-        align-items: center;
-      }
-      .n-right label {
-        background: rgb(250, 0, 45);
-        padding: 20px;
-      }
-      .n-right label > span {
-        display: block;
-        width: 26px;
-      }
-      .n-right .mn > p {
-        width: 100px;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        background: #fa002d;
-      }
-      .n-right .mn > p img {
-        width: 26px;
-        height: 20px;
       }
     </style>
   </head>
@@ -87,13 +71,23 @@
         </video>
       </div>
       <div class="nav">
-        <p><img src="./imges/logo.svg" alt="logo" /></p>
-        <ul class="menu">
-          <li>COMPANY</li>
-          <li>BUSINESS</li>
-          <li>SUSTAINABILITY</li>
-          <li>RECRUIT</li>
-          <li>PR</li>
+        <div class="logo">
+          <a href="#">
+            <p><img src="./imges/logo.svg" alt="logo" /></p>
+          </a>
+        </div>
+        <div>
+          <ul class="menu">
+            <li>COMPANY</li>
+            <li>BUSINESS</li>
+            <li>SUSTAINABILITY</li>
+            <li>RECRUIT</li>
+            <li>PR</li>
+          </ul>
+        </div>
+        <ul class="menu2">
+          <li>CUSTOMER</li>
+          <li>KOR</li>
         </ul>
       </div>
     </div>

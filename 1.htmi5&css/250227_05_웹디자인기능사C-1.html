@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C-1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid-container1 {
+        width: 1000px;
+        display: grid;
+        background: #fff;
+        grid-template-columns: 200px 200px 200px 200px 200px;
+        grid-template-areas: "toplogo slid slid slid slid" "toplogo slid slid slid slid" "toplogo notice notice banner go" "toplogo footlogo footmenu footmenu footmenu" "toplogo footlogo copy copy copy ";
+        grid-template-rows: 40px 310px 200px 50px 50px;
+      }
+      .toplogo {
+        grid-area: toplogo;
+        background: #aaa;
+      }
+      .slid {
+        grid-area: slid;
+        background: #bbb;
+      }
+      .notice {
+        grid-area: notice;
+        background: #ccc;
+      }
+      .banner {
+        grid-area: banner;
+        background: #ddd;
+      }
+      .go {
+        grid-area: go;
+        background: #aaa;
+      }
+
+      .footlogo {
+        grid-area: footlogo;
+        background: #bbb;
+      }
+      .footmenu {
+        grid-area: footmenu;
+        background: #ccc;
+      }
+
+      .copy {
+        grid-area: copy;
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container1">
+      <div class="toplogo">toplogo</div>
+      <div class="slid">slid</div>
+      <div class="notice">notice</div>
+      <div class="banner">banner</div>
+      <div class="go">바로가기</div>
+      <div class="footlogo">로고</div>
+      <div class="footmenu">하단메뉴</div>
+      <div class="copy">copy</div>
+    </div>
+  </body>
+</html>

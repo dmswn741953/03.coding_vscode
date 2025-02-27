@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid-container1 {
+        display: grid;
+        width: 1200px;
+        margin: 0 auto;
+        grid-template-areas: "do aa te te" "to aa to to " "ro aa ki ki" "ki copyright copyright copyright sns";
+        grid-template-rows: 100px 300px 200px 100px;
+      }
+
+      .toplogo {
+        grid-area: toplogo;
+        background: #aaa;
+      }
+      .do {
+        grid-area: do;
+        background: #bbb;
+      }
+      .te {
+        grid-area: te;
+        background: #ccc;
+      }
+      .to {
+        grid-area: to;
+        background: #ddd;
+      }
+      .aa {
+        grid-area: aa;
+        background: #aaa;
+      }
+      .ro {
+        grid-area: ro;
+        background: #bbb;
+      }
+      .roo {
+        grid-area: roo;
+        background: #ccc;
+      }
+      .ki {
+        grid-area: ki;
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container1">
+      <div class="do">현관문</div>
+      <div class="te">테라스</div>
+      <div class="to">화장실</div>
+      <div class="aa">복도</div>
+      <div class="ro">손님방</div>
+      <div class="roo">소연방</div>
+      <div class="ki">부엌</div>
+    </div>
+  </body>
+</html>

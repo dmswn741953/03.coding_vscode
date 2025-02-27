@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid-container1 {
+        display: grid;
+        width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: repeat(6, 200px);
+        grid-template-areas: "toplogo nav nav nav nav nav" "slid slid slid slid slid slid" "notice notice banner banner go go" "footlogo copyright copyright copyright copyright sns";
+        grid-template-rows: 100px 300px 200px 100px;
+      }
+
+      .toplogo {
+        grid-area: toplogo;
+        background: #aaa;
+      }
+      .menu {
+        grid-area: nav;
+        background: #bbb;
+      }
+      .slid {
+        grid-area: slid;
+        background: #ccc;
+      }
+      .notice {
+        grid-area: notice;
+        background: #ddd;
+      }
+      .banner {
+        grid-area: banner;
+        background: #aaa;
+      }
+      .go {
+        grid-area: go;
+        background: #bbb;
+      }
+      .footlogo {
+        grid-area: footlogo;
+        background: #ccc;
+      }
+      .copyright {
+        grid-area: copyright;
+        background: #ddd;
+      }
+      .sns {
+        grid-area: sns;
+        background: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container1">
+      <div class="toplogo">logo</div>
+      <div class="menu">menu</div>
+      <div class="slid">slid</div>
+      <div class="notice">공지사항/갤러리</div>
+      <div class="banner">배너</div>
+      <div class="go">바로가기</div>
+      <div class="footlogo">logo</div>
+      <div class="copyright">copyright</div>
+      <div class="sns">sns</div>
+    </div>
+  </body>
+</html>
