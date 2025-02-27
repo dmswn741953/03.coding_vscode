@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        background: #f7f7f7;
+      }
+      .grid {
+        width: 1680px;
+        margin: 0 auto;
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(4, 402px);
+        grid-template-rows: repeat(2, 378px);
+        grid-template-areas: "one two thr thr" "one four five six";
+      }
+      .grid > div {
+        border-radius: 20px;
+      }
+      .one {
+        grid-area: one;
+        background: #aaa;
+      }
+      .two {
+        grid-area: two;
+      }
+
+      .two,
+      .six {
+        background: #fff;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .two p,
+      .six p {
+        font-size: 18px;
+      }
+      .two span,
+      .six span {
+        color: #005eb8;
+      }
+      .thr {
+        grid-area: thr;
+        background: #ccc;
+      }
+      .four {
+        grid-area: four;
+        background: #ddd;
+      }
+      .five {
+        grid-area: five;
+        background: #eee;
+      }
+      .six {
+        grid-area: six;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="one">
+        <p>
+          <img
+            src="https://www.doosanrobotics.com/images/services/robot-training-img01.png"
+            alt=""
+          />
+        </p>
+      </div>
+      <div class="two">
+        <h1>
+          현장에서 바로 적용 가능한 <br />
+          <span>최고의 실습 교육</span>
+        </h1>
+        <p>
+          두산로보틱스에서 개발한 검증된 실무형 교육 <br />
+          커리큘럼으로, 실제 현장에서 바로 적용하며 <br />
+          시시각각 발생하는 다양한 문제를 해결할 수 <br />
+          있도록 설계되었습니다.
+        </p>
+      </div>
+      <div class="thr">
+        <p>
+          <img
+            src="https://www.doosanrobotics.com/images/services/robot-training-img02.png"
+            alt=""
+          />
+        </p>
+      </div>
+      <div class="four">
+        <p>
+          <img
+            src="https://www.doosanrobotics.com/images/services/robot-training-img03.png"
+            alt=""
+          />
+        </p>
+      </div>
+      <div class="five">
+        <p>
+          <img
+            src="https://www.doosanrobotics.com/images/services/robot-training-img04.png"
+            alt=""
+          />
+        </p>
+      </div>
+      <div class="six">
+        <h1>
+          초보자부터 전문가까지 <br />
+          <span>수준별 교육 제공</span>
+        </h1>
+        <p>
+          초보자부터 현업 엔지니어 및 교수까지 수준별로 <br />
+          들을 수 있는 맞춤형 교육이 마련돼 있습니다.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

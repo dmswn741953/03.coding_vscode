@@ -74,8 +74,11 @@
         overflow: hidden;
         background: #fff;
         transition: 1s;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
       }
-      .menu > ul:hover > li .sub {
+
+      .menu > ul > li:hover .sub {
         height: 160px;
         border-bottom: 1px solid #333;
       }
@@ -84,13 +87,7 @@
         display: block;
         width: 100%;
       }
-      .menu > ul > li:first-child .sub {
-        border-left: 1px solid #333;
-      }
-      .menu > ul > li:last-child .sub {
-        border-right: 1px solid #333;
-        padding-right: 1px;
-      }
+
       .slid {
         grid-area: slid;
         background: #ccc;
