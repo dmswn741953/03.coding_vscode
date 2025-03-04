@@ -1,0 +1,130 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
+  grid-template-areas: "logo menu menu menu menu menu" "slide slide slide slide slide slide" "notice notice banner banner go go" "ftlogo copy copy copy copy sns";
+  grid-template-rows: 100px 300px 200px 100px;
+}
+.logo {
+  grid-area: logo;
+  background: #aaa;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  line-height: 100px;
+}
+.menu {
+  grid-area: menu;
+  position: relative;
+  background: #bbb;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu > ul {
+  display: flex;
+  width: 600px;
+  height: 50px;
+}
+.menu > ul > li {
+  position: relative;
+  width: 25%;
+  border: 1px solid #333;
+  border-left: none;
+  text-align: center;
+}
+.menu > ul > li:first-child {
+  border-left: 1px solid #333;
+}
+.menu > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: #000;
+  line-height: 50px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.menu > ul > li .sub {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 1;
+}
+.menu > ul:hover > li .sub {
+  height: 120px;
+}
+.menu > ul > li .sub > li {
+  padding-top: 4px;
+}
+.menu > ul > li:hover > a,
+.menu > ul > li .sub > li:hover {
+  background: rgb(243, 141, 141);
+  color: #fff;
+}
+.menu > ul > li .sub > li > a {
+  color: #fff;
+}
+.menu > ul > li .sub > li:hover > a {
+  color: #fff;
+}
+.menu > .bg {
+  position: absolute;
+  background: rgb(233, 192, 192);
+  width: 1200px;
+  height: 0;
+  left: -200px;
+  top: 75px;
+  transition: 0.5s;
+}
+.menu > ul:hover ~ .bg {
+  height: 120px;
+}
+.slide {
+  grid-area: slide;
+  background: #ccc;
+}
+.notice {
+  grid-area: notice;
+  background: #ddd;
+}
+.notice > input {
+  display: none;
+}
+
+.banner {
+  grid-area: banner;
+  background: #eee;
+}
+.go {
+  grid-area: go;
+  background: #aaa;
+}
+.ftlogo {
+  grid-area: ftlogo;
+  background: #bbb;
+}
+.copy {
+  grid-area: copy;
+  background: #ccc;
+}
+.sns {
+  grid-area: sns;
+  background: #ddd;
+}
