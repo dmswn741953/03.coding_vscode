@@ -19,25 +19,70 @@
         clip-path: url(#path);
         width: 100%;
         height: 100%;
+        background: url(https://www.otoki.com/images/common/clip2_1.jpg)
+          center/cover;
       }
       section p img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        animation: ani 4s infinite alternate;
       }
-      svg {
+      @keyframes ani {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      svg.path {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
       }
+      div {
+        width: 450px;
+        height: 500px;
+        position: relative;
+      }
+      div > p {
+        clip-path: url(#one);
+        width: 100%;
+        height: 100%;
+        background: url(https://www.otoki.com/images/common/clip1.jpg)
+          center/cover;
+      }
+      div > p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: con 5s infinite;
+      }
+      @keyframes con {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+      div svg.con {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
     </style>
   </head>
   <body>
     <section>
-      <p><img src="./images/photo1.jpg" alt="photo1" /></p>
-      <svg>
+      <p>
+        <img src="https://www.otoki.com/images/common/clip2.jpg" alt="photo1" />
+      </p>
+      <svg class="path">
         <clipPath id="path" clipPathUnits="objectBoundingBox">
           <path
             class="st0"
@@ -53,5 +98,19 @@
         </clipPath>
       </svg>
     </section>
+    <div>
+      <p>
+        <img src="https://www.otoki.com/images/common/clip1_1.jpg" alt="" />
+      </p>
+      <svg class="con">
+        <clipPath id="one" clipPathUnits="objectBoundingBox">
+          <path
+            class="st0"
+            d="M0.613,1H0.43C0.231,1,0.068,0.837,0.068,0.637V0.363C0.068,0.163,0.231,0,0.43,0h0.183
+                c0.199,0,0.363,0.163,0.363,0.363v0.275C0.976,0.837,0.813,1,0.613,1z"
+          />
+        </clipPath>
+      </svg>
+    </div>
   </body>
 </html>
