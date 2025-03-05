@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body > div {
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+        margin: 20px;
+      }
+      p {
+        width: 200px;
+        height: 200px;
+        border: 1px solid;
+        text-align: center;
+      }
+      div.con1 {
+        position: relative;
+      }
+      div.con1 p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      div.con1 p span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      div.con2,
+      div.con2 p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div.con3,
+      div.con3 p {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        /* place-content: center center; */
+      }
+      /* div.con3 p {
+        display: grid;
+        align-items: center;
+      } */
+      .con4 {
+        display: grid;
+        height: 100px;
+        border: 1px solid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        /* justify-content: center; */
+        align-content: center;
+      }
+      .con4 a {
+        display: block;
+        width: 200px;
+        border: 1px solid;
+      }
+      article {
+        display: grid;
+        justify-content: center;
+        /* justify-items: center; */
+      }
+      article a {
+        display: block;
+        /* width: 200px; */
+        border: 1px solid;
+      }
+
+      /*justify-items,  align-items 는 아이템이 하나일때 혹은 여러 아이템의 크기가 전부 동일할 때는 content와 다른 점이 없음. 다수의 아이템의 크기가 각 다를때 justify-items,  align-items를 주면 본연의 크기를 주고 center에 위치할 수 있게 함.*/
+    </style>
+  </head>
+  <body>
+    <div class="con1">
+      <p>
+        <span>position <br />123</span>
+      </p>
+    </div>
+    <div class="con2">
+      <p>flex<br />123eewqeqwew</p>
+    </div>
+    <div class="con3">
+      <p>grid<br />123dfsdffd</p>
+    </div>
+    <section class="con4">
+      <a href="#">grid<br />123dfsdffd<br />123dfsdffd</a>
+      <a href="#">grid<br />123dfsdffd</a>
+      <a href="#">grid<br />123dfsdffd<br />123dfsdffd</a>
+      <a href="#">grid<br />123dfsdffd</a>
+    </section>
+    <article>
+      <a href="#">123456789</a>
+      <a href="#">123456</a>
+      <a href="#">1234</a>
+      <a href="#">12</a>
+    </article>
+  </body>
+</html>
