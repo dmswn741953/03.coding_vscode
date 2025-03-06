@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>svg_clippath</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      input {
+        display: none;
+      }
+      .wrap {
+        width: 1520px;
+        margin: 100px auto;
+      }
+      label {
+        display: block;
+        font-size: 32px;
+        font-weight: bold;
+        padding: 30px;
+        border-top: 1px solid rgb(235, 235, 235);
+        border-bottom: 1px solid rgb(235, 235, 235);
+        position: relative;
+      }
+      ul li:first-child label {
+        border-top: 1px solid;
+      }
+      ul li:first-child label::before,
+      ul li:nth-child(3) label::before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 3px;
+        right: 50px;
+        top: 50%;
+        background: #000;
+      }
+      ul li:first-child label::after,
+      ul li:nth-child(3) label::after {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 3px;
+        right: 50px;
+        top: 50%;
+        background: #000;
+        transform: rotate(90deg);
+        transition: 0.5s;
+      }
+
+      img {
+        width: 100%;
+        padding: 20px 0;
+        height: 0;
+        transform: translateY(-20px);
+        transition: 1s;
+      }
+      #power:checked ~ ul li:nth-child(2) > img,
+      #total:checked ~ ul > li:nth-child(4) > img {
+        transform: translateY(10px);
+        height: 100%;
+      }
+      #power:not(checked) ~ ul li:nth-child(2) > img,
+      #total:not(checked) ~ ul > li:nth-child(4) > img {
+        height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a href="#"
+        ><img src="https://www.gsenergy.co.kr/pub/images/logo_g.png" alt=""
+      /></a>
+      <input type="radio" name="option" id="power" />
+      <input type="radio" name="option" id="total" />
+      <ul>
+        <li><label for="power">GS파워</label></li>
+
+        <li>
+          <img
+            src="https://www.gsenergy.co.kr/pub/images/img_collective_a01.jpg"
+            alt="gsenergy1"
+          />
+        </li>
+
+        <li>
+          <label for="total">인천종합에너지</label>
+        </li>
+
+        <li>
+          <img
+            src="https://www.gsenergy.co.kr/pub/images/img_collective_b01.jpg"
+            alt="gsenergy2"
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
