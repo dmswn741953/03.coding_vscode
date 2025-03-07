@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신세계푸드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      section {
+        width: 95%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      header {
+        margin: 100px 0;
+        text-align: center;
+      }
+      header > h2 {
+        font-size: 40px;
+        padding-bottom: 100px;
+        position: relative;
+      }
+
+      header > h2::after {
+        position: absolute;
+        content: "";
+        height: 4px;
+        width: 121px;
+        background: #000;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%);
+      }
+      header > p {
+        font-size: 22px;
+      }
+      div {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      div p {
+        flex: 1 1 40%;
+        padding-top: 31%;
+        border-radius: 20px;
+      }
+      div p:first-child {
+        background: url(https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg)
+          center/cover;
+      }
+      div p:nth-child(2) {
+        background: url(https://www.shinsegaefood.com/images/business/business_item_vecchiaEnuovo.jpg)
+          center/cover;
+      }
+      div p:nth-child(3) {
+        background: url(https://www.shinsegaefood.com/images/business/business_item_olbaan.jpg)
+          center/cover;
+      }
+      div p:nth-child(4) {
+        background: url(https://www.shinsegaefood.com/images/business/business_item_ywe.jpg)
+          center/cover;
+      }
+      div p:nth-child(5) {
+        background: url(https://www.shinsegaefood.com/images/business/business_item_betterMeat.jpg)
+          center/cover;
+      }
+      div p:nth-child(6) {
+        background: url(https://www.shinsegaefood.com/images/business/business_item_brand.jpg)
+          center/cover;
+      }
+      div p:nth-child(7) {
+        background: url(https://www.shinsegaefood.com/images/business/business_item_recette.jpg)
+          center/cover;
+      }
+      @media screen and (max-width: 960px) {
+        header {
+          margin: 50px 0;
+        }
+        header > h2 {
+          font-size: 20px;
+          padding-bottom: 30px;
+        }
+        header > p {
+          font-size: 15px;
+        }
+        header > h2::after {
+          content: none;
+        }
+        div {
+          gap: 10px;
+        }
+        br {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h2>
+          생활 속에서 함께하는 <br />
+          식품 제조 선도 기업
+        </h2>
+        <p>
+          신세계푸드는 글로벌 수준의 R&D센터와 식품 제조 인프라를 갖추고
+          있습니다. <br />
+          프리미엄 가정 간편식, 베이커리, Fresh Food, 대안식품 등을 <br />
+          직접 연구개발 및 생산하며 식품시장을 선도해 가고 있습니다.
+        </p>
+      </header>
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </section>
+  </body>
+</html>
