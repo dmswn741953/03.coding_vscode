@@ -12,7 +12,11 @@
       }
       @font-face {
         font-family: Pretendard-B;
-        src: url(./webfonts/Pretendard-Bold.c8dc160f.woff2);
+        src: url(./webfonts/Pretendard-Bold.c8dc160f.woff2) format("woff2");
+      }
+      @font-face {
+        font-family: Pretendard-S;
+        src: url(./webfonts/Pretendard-SemiBold.0b651bef.woff2) format("woff2");
       }
       ul {
         list-style: none;
@@ -53,12 +57,15 @@
         display: flex;
         align-items: center;
         padding: 0 0 0 45px;
-        border: 1px solid;
         box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 18px;
       }
       div.nav > a p {
         width: 113px;
         height: 25px;
+        padding-right: 146px;
       }
       div.nav > a p img {
         width: 100%;
@@ -67,28 +74,32 @@
       div.nav ul {
         display: flex;
         justify-content: center;
-        font-family: Pretendard-B;
+        font-family: Pretendard-B, sans-serif;
       }
       div.nav .menu {
         width: 1257px;
         margin: 0 auto;
       }
       div.nav .menu li {
-        padding: 0 30px;
+        padding: 0 24px;
       }
-      div.nav .menu li:last-child {
-        padding-right: 0;
+
+      div.nav .service {
+        font-family: Pretendard-S, sans-serif;
       }
-      /* div.nav .service {
-        align-items: center;
-      } */
       div.nav .service li {
         padding-right: 35px;
         align-self: center;
+        position: relative;
       }
-      div.nav .service li:last-child {
-        padding-right: 0;
+      div.nav .service li::after {
+        content: url(./imges/arrow1.svg);
+        position: absolute;
+        width: 8px;
+        top: -2px;
+        right: 20px;
       }
+
       div.nav .service p {
         position: relative;
         width: 100px;
