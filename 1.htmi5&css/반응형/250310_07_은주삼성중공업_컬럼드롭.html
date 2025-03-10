@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>컬럼드롭</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #wrap {
+        width: 90%;
+        max-width: 1720px;
+        margin: 30px auto;
+      }
+      #wrap ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        /* border: 1px solid; */
+        flex-wrap: wrap;
+      }
+
+      #wrap ul li {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2%;
+        box-sizing: border-box;
+        padding-bottom: 20px;
+      }
+
+      #wrap ul li .txt {
+        flex: 1;
+      }
+      #wrap ul li .txt h3 {
+        font-size: 30px;
+        padding-bottom: 20px;
+      }
+      #wrap ul li .txt p {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 1280px) {
+        #wrap ul li:first-child,
+        #wrap ul li:nth-child(2) {
+          flex: 1;
+        }
+        #wrap ul li:nth-child(3) {
+          flex-basis: 100%;
+        }
+        br {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        #wrap ul li:first-child,
+        #wrap ul li:nth-child(2) {
+          flex-basis: 100%;
+        }
+        #wrap ul li .txt h3 {
+          font-size: 24px;
+        }
+        #wrap ul li .txt p {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <ul>
+        <li>
+          <div class="txt">
+            <h3>오픈소싱</h3>
+            <p>
+              내부 심의를 통해 선정된 업체는 당사의 <br />
+              아웃소싱 데이터베이스로 관리합니다.
+            </p>
+          </div>
+          <p>
+            <img
+              src="https://www.samsungshi.com/images/main/icon_source.png"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <div class="txt">
+            <h3>방문신청</h3>
+            <p>
+              내부 심의를 통해 선정된 업체는 당사의 <br />
+              아웃소싱 데이터베이스로 관리합니다.
+            </p>
+          </div>
+          <p>
+            <img
+              src="https://www.samsungshi.com/images/main/icon_visit.png"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <div class="txt">
+            <h3>윤리경영/제보</h3>
+            <p>
+              내부 심의를 통해 선정된 업체는 당사의 <br />
+              아웃소싱 데이터베이스로 관리합니다.
+            </p>
+          </div>
+          <p>
+            <img
+              src="https://www.samsungshi.com/images/main/icon_suggest.png"
+              alt=""
+            />
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

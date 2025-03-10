@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>푸드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: NanumGothic-B;
+        src: url(../webfonts/NanumGothic-Bold.woff) format("woff");
+      }
+      @font-face {
+        font-family: NanumGothic-R;
+        src: url(../webfonts/NanumGothic-Regular.woff) format("woff");
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      div.wrap1 {
+        background: #eee;
+      }
+      div.esg {
+        width: 100%;
+        max-width: 889px;
+        margin: 0 auto;
+        text-align: center;
+        font-family: "NanumBarunGothic";
+      }
+
+      div.esg h3 {
+        padding: 40px 0;
+        font-size: 25px;
+        font-family: NanumGothic-B;
+      }
+      div.esg p {
+        width: 100%;
+      }
+      div.esg p img {
+        width: 100%;
+      }
+      div.wrap2 {
+        margin: 50px;
+      }
+      div.con {
+        width: 96%;
+        max-width: 940px;
+        margin: 0 auto;
+      }
+      div.con h3 {
+        font-size: 25px;
+        text-align: center;
+        padding-bottom: 40px;
+        font-family: NanumGothic-B;
+      }
+      div.con ul {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+      div.con ul li {
+        width: calc((100% - 40px) / 2);
+      }
+      div.con ul li .one {
+        width: 100%;
+      }
+
+      div.con ul li .one img {
+        width: 100%;
+        border: 1px solid rgb(172, 172, 172);
+      }
+      div.con ul li .txt {
+        margin-top: 30px;
+        margin-left: 20px;
+        line-height: 25px;
+        color: rgb(68, 68, 68);
+        position: relative;
+        font-family: NanumGothic-R;
+      }
+      div.con ul li .txt::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        left: -20px;
+        top: 0;
+        background-color: rgb(203, 203, 203);
+      }
+      div.con ul li:first-child .txt::after {
+        height: 95%;
+      }
+      div.con ul li .txt p:first-child {
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      div.con ul li .txt p:nth-child(2) {
+        font-size: 15px;
+      }
+      div.con ul li:first-child .txt a {
+        display: inline-block;
+        background: #bbb;
+        color: #fff;
+        padding: 0 10px;
+        margin-top: 10px;
+        border-radius: 3px;
+      }
+      @media screen and (max-width: 887px) {
+        div.esg h3 {
+          font-size: 16px;
+        }
+        div.con ul li .txt p:first-child,
+        div.con ul li .txt p:nth-child(2) {
+          font-size: 14px;
+        }
+        div.con .txt br {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        div.con ul {
+          gap: 20px;
+        }
+        div.con ul li {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap1">
+      <div class="esg">
+        <h3>친환경경영 의사결정 조직</h3>
+        <p>
+          <img
+            src="https://www.shinsegaefood.com/images/background/bg_evf_graph.png"
+            alt="esg"
+          />
+        </p>
+      </div>
+    </div>
+    <div class="wrap2">
+      <div class="con">
+        <h3>친환경 활동 실천</h3>
+        <ul>
+          <li>
+            <p class="one">
+              <img
+                src="https://www.shinsegaefood.com/images/background/bg_evf_img_01.png"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <p>음성공장 태양열발전</p>
+              <p>
+                음성공장 상부 유휴부지를 활용하여 신재생에너지를 생산하여 <br />
+                가스(LNG)를 대체하여 사용하고 있습니다.
+              </p>
+              <a href="#">태양열 에너지 사용 현황</a>
+            </div>
+          </li>
+          <li>
+            <p class="one">
+              <img
+                src="https://www.shinsegaefood.com/images/background/bg_evf_img_02.png"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <p>친환경패키징 확대</p>
+              <p>
+                식품제조 시 사용되는 용기를 탄소중립형 포장재, <br />
+                대체 플라스틱 적용을 확대하고 있습니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <p class="one">
+              <img
+                src="https://www.shinsegaefood.com/images/background/bg_evf_img_03.png"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <p>대안육제품 개발</p>
+              <p>
+                제품 제조 시 원료육 대신 식물성 원료를 사용하여 가축사육 시
+                <br />
+                발생되는 메탄가스 및 물과 사료의 사용량을 줄여 지속가능한 <br />
+                지구환경에 이바지 하고자 합니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <p class="one">
+              <img
+                src="https://www.shinsegaefood.com/images/background/bg_evf_img_04.png"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <p>(협력회사)친환경 경영 독려</p>
+              <p>
+                2021년부터 (물류 등)협력회사 입찰평가 시 ESG경영 우수 실천
+                <br />
+                협력사 대상 가점 부여를 통해 ESG 영향력 전파에 앞장서고
+                있습니다.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
