@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>작은리스트</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #cor {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      #cor h1 {
+        font-size: 50px;
+        padding: 50px;
+      }
+      #cor .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: calc(10% / 3);
+      }
+      #cor .list li {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+        position: relative;
+      }
+
+      #cor .list li::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background: #000;
+        bottom: -2px;
+      }
+      #cor .list li:nth-child(4):after,
+      #cor .list li:nth-child(5):after,
+      #cor .list li:nth-child(6):after {
+        display: none;
+      }
+      #cor .list li p:first-child {
+        font-size: 22px;
+      }
+      #cor .list li p:last-child {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      #cor .list li:first-child,
+      #cor .list li:nth-child(2),
+      #cor .list li:nth-child(3),
+      #cor .list li:nth-child(4),
+      #cor .list li:nth-child(5),
+      #cor .list li:nth-child(6) {
+        width: 30%;
+      }
+
+      @media screen and (max-width: 878px) {
+        #cor h1 {
+          font-size: 40px;
+        }
+        #cor .list li p:first-child {
+          font-size: 17.6px;
+        }
+        #cor .list li p:last-child {
+          font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #cor .list {
+          gap: calc(10% / 2);
+        }
+        #cor .list li:first-child,
+        #cor .list li:nth-child(2),
+        #cor .list li:nth-child(3),
+        #cor .list li:nth-child(4),
+        #cor .list li:nth-child(5),
+        #cor .list li:nth-child(6) {
+          width: 45%;
+        }
+        #cor .list li:nth-child(4):after,
+        #cor .list li:nth-child(5):after,
+        #cor .list li:nth-child(6):after {
+          display: inline-block;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        #cor .list li {
+          flex-direction: column;
+        }
+      }
+
+      #flex-cor {
+        width: 100%;
+        max-width: 1400px;
+        margin: 100px auto;
+        text-align: center;
+      }
+      #flex-cor h1 {
+        font-size: 50px;
+        padding: 50px;
+      }
+      .list2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .list2 li {
+        display: flex;
+        flex: 0 1 30%;
+        justify-content: space-between;
+        padding: 30px 0;
+        position: relative;
+      }
+      .list2 li:nth-child(3),
+      .list2 li:nth-child(6) {
+        margin-right: 0;
+      }
+      .list2 li::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background: #000;
+        bottom: -2px;
+      }
+      .list2 li p:first-child {
+        font-size: 22px;
+      }
+      .list2 li p:last-child {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      @media screen and (max-width: 840px) {
+        #flex-cor h1 {
+          font-size: 40px;
+        }
+        .list2 li p:first-child {
+          font-size: 17.6px;
+        }
+        .list2 li p:last-child {
+          font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 769px) {
+        .list2 li {
+          flex: 0 1 47%;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        .list2 li {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cor">
+      <h1>삼성중공업 주식회사</h1>
+      <ul class="list">
+        <li>
+          <p>대표이사</p>
+          <p>최성안</p>
+        </li>
+        <li>
+          <p>창립일</p>
+          <p>1974년 8월 5일</p>
+        </li>
+        <li>
+          <p>종업원수</p>
+          <p>9,640명</p>
+        </li>
+        <li>
+          <p>자본금</p>
+          <p>8,801억원</p>
+        </li>
+        <li>
+          <p>매출액</p>
+          <p>79,072억원</p>
+        </li>
+        <li>
+          <p>총자산</p>
+          <p>158,920억원</p>
+        </li>
+      </ul>
+    </div>
+    <div id="flex-cor">
+      <h1>삼성중공업 주식회사</h1>
+      <ul class="list2">
+        <li>
+          <p>대표이사</p>
+          <p>최성안</p>
+        </li>
+        <li>
+          <p>창립일</p>
+          <p>1974년 8월 5일</p>
+        </li>
+        <li>
+          <p>종업원수</p>
+          <p>9,640명</p>
+        </li>
+        <li>
+          <p>자본금</p>
+          <p>8,801억원</p>
+        </li>
+        <li>
+          <p>매출액</p>
+          <p>79,072억원</p>
+        </li>
+        <li>
+          <p>총자산</p>
+          <p>158,920억원</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

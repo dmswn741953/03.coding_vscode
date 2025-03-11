@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성중공업</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: black;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .wrap ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .wrap ul li:first-child {
+        margin-right: 10%;
+        position: relative;
+      }
+      .wrap ul li:first-child .main_txt {
+        position: absolute;
+        left: -20%;
+      }
+      .wrap ul li:first-child .main_txt h1 {
+        font-size: 40px;
+        padding-bottom: 10px;
+      }
+      .wrap ul li:first-child .main_txt p {
+        font-size: 18px;
+        color: rgb(102, 102, 102);
+      }
+      .wrap ul li:first-child > p {
+        padding-top: 30%;
+      }
+      .wrap ul li:nth-child(2) {
+      }
+      .wrap ul li:first-child,
+      .wrap ul li:nth-child(2) {
+        width: 40%;
+      }
+      .wrap ul li:first-child p,
+      .wrap ul li:first-child p img,
+      .wrap ul li:nth-child(2) p,
+      .wrap ul li:nth-child(2) p img {
+        width: 100%;
+      }
+
+      .wrap ul li .txt1 {
+        padding: 5% 0;
+      }
+      .wrap ul li .txt1 h2 {
+        font-size: 30px;
+      }
+      .wrap ul li .txt1 p {
+        padding: 5px 0 20px;
+        font-size: 18px;
+        color: rgb(102, 102, 102);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>
+          <div class="main_txt">
+            <h1>우리의 약속</h1>
+            <p>
+              급격한 대내외 변화에 대응하기 위해 비전과 목표, 체계 등을
+              수립하고,
+              <br />
+              지속적인 개선활동을 수행하여 ESG 경영 실천에 대한 의지를
+              표명하고자 합니다.
+            </p>
+          </div>
+          <p>
+            <img
+              src="https://www.samsungshi.com/ESG/Kor/images/main/promise_e.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt1">
+            <h2>환경</h2>
+            <p>
+              사업 전반에 있어서 환경을 먼저 생각하고, 기후변화 대응에 <br />
+              앞장서겠습니다.
+            </p>
+            <a href="#">자세히 보기</a>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.samsungshi.com/ESG/Kor/images/main/promise_s.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt1">
+            <h2>사회적 책임</h2>
+            <p>이해관계자의 가치를 존중하고, 사회적 책임을 다하겠습니다.</p>
+            <a href="#">자세히 보기</a>
+          </div>
+          <p>
+            <img
+              src="https://www.samsungshi.com/ESG/Kor/images/main/promise_g.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt1">
+            <h2>거버넌스</h2>
+            <p>
+              투명하고 건전한 거버넌스를 확립하여 깨끗한 문화를
+              정착시키겠습니다.
+            </p>
+            <a href="#">자세히 보기</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
