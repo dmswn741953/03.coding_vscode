@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성중공업</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font-size: 10px;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1797px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .main {
+        width: 100%;
+        background: #aaa;
+        padding-top: 24%;
+        background: url(https://www.spc.co.kr/files/banner/2024/07/139ff3d8-2021-485a-bb9a-cbda0065a6c8.webp)
+          center/cover;
+      }
+      .grid-container1 {
+        display: grid;
+        width: 100%;
+        gap: 2rem;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "heri way esg";
+      }
+      .grid-container2 {
+        display: grid;
+        width: 100%;
+        gap: 2rem;
+        grid-template-columns: 889px 1fr 1fr;
+        grid-template-rows: 444px 444px;
+        grid-template-areas: "eat brand_txt samlim" "eat paris ice";
+      }
+      .heri {
+        grid-area: heri;
+        background: #bbb;
+        padding-bottom: 100%;
+        background: url(https://www.spc.co.kr/img/front/main/history.webp)
+          center/cover;
+        border-radius: 20px;
+      }
+      .way {
+        grid-area: way;
+        background: #ccc;
+        background: url(https://www.spc.co.kr/img/front/main/spcway.webp)
+          center/cover;
+        border-radius: 20px;
+      }
+      .esg {
+        grid-area: esg;
+        background: #ddd;
+        background: url(https://www.spc.co.kr/img/front/main/together.webp)
+          center/cover;
+        border-radius: 20px;
+      }
+      .eat {
+        grid-area: eat;
+      }
+      .eat p {
+        width: 100%;
+        height: 100%;
+      }
+      .eat img {
+        width: 100%;
+        height: 100%;
+      }
+      .brand_txt {
+        grid-area: brand_txt;
+      }
+      .samlim {
+        grid-area: samlim;
+        background: url(https://www.spc.co.kr/files/brand/2024/06/2702a0a8-0b1e-42f7-a055-bd6749696c7c.png)
+          center/ cover;
+        border-radius: 20px;
+      }
+      .paris {
+        grid-area: paris;
+        background: url(https://www.spc.co.kr/files/brand/2024/06/d96a9ce4-a1a7-42a1-836f-fa4580f21f58.jpg)
+          center/ cover;
+        border-radius: 20px;
+      }
+      .ice {
+        grid-area: ice;
+        background: url(https://www.spc.co.kr/files/brand/2024/06/b59cd9b1-6acb-4deb-8d6a-7999988968bb.jpg)
+          center/ cover;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="main"></div>
+      <div class="grid-container1">
+        <div class="heri">헤리티지</div>
+        <div class="way">SPC WAY</div>
+        <div class="esg">ESG</div>
+      </div>
+      <div class="grid-container2">
+        <div class="eat">
+          <p>
+            <img src="https://www.spc.co.kr/img/front/main/eat.webp" alt="" />
+          </p>
+          <div class="eat-txt">
+            <h1>먹고</h1>
+            <h1>마시고</h1>
+            <h1>즐기자</h1>
+          </div>
+        </div>
+        <div class="brand_txt"></div>
+        <div class="samlim"></div>
+        <div class="paris"></div>
+        <div class="ice"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -10,138 +10,73 @@
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-      }
-      input {
-        display: none;
-      }
-
-      .head {
-        background: url(https://www.doosanrobotics.com/images/sub/sub-bg13.jpg)
-          center/cover;
-        position: relative;
-      }
-      .head h1 {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        font-size: 70px;
-      }
-      .head .menu {
-        height: 900px;
-        display: flex;
-        align-items: flex-end;
-        padding-bottom: 50px;
-      }
-      .head .menu nav {
-        width: 500px;
-        margin: 0 auto;
-        height: 60px;
-        background: rgba(16, 16, 16, 0.5);
-        border-radius: 8px;
-        /* color: #fff; */
-      }
-      .head .menu nav > ul {
-        display: flex;
-        text-align: center;
-      }
-      .head .menu nav > ul li {
-        position: relative;
-      }
-      .head .menu nav > ul > li:first-child {
-        padding: 0 20px;
-      }
-      .head .menu nav > ul > li:not(:first-child) {
-        flex: 1;
-      }
-      .head .menu nav > ul > li > a {
-        color: #fff;
-        line-height: 60px;
-      }
-      .head .menu nav > ul > li .sub {
-        position: absolute;
-
-        /* (이거 포지션 왜 줘야 하는지.. 안줘도 같은데 왜 필요하지?) */
+      .wrap {
         width: 100%;
-        background: #fff;
-        height: 0;
+        padding: 0 54px;
+        box-sizing: border-box;
+        margin-top: 100px;
+      }
+      .wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* vertical-align: middle; */
+
+        --> 왜 top이미지가 내려가는게 아닌지
+      }
+
+      .con1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 20px;
+        margin: 20px 0;
+      }
+      .con1 div {
+        border-radius: 25px;
         overflow: hidden;
-        border: 0px solid #ccc;
-        transition: 0.5s;
       }
-      .head .menu nav > ul > li .sub li a {
-        color: #333;
-        line-height: 30px;
+      .con1 div p {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid; */
       }
-      #service:checked ~ .head .menu > nav > ul > li:nth-child(2) > ul.sub,
-      #robot:checked ~ .head .menu > nav > ul > li:nth-child(3) > ul.sub {
-        height: 120px;
-        border: 1px solid #ccc;
-        /* (보더 겹침이슈) */
-      }
-      #service:checked ~ .head .menu > nav > ul > li:nth-child(2) label img,
-      #robot:checked ~ .head .menu > nav > ul > li:nth-child(3) label img {
-        transform: rotate(180deg);
+      .con1 div p > img {
       }
     </style>
   </head>
   <body>
-    <input type="radio" name="drop" id="service" />
-    <input type="radio" name="drop" id="robot" />
-    <div class="head">
-      <h1>두산 로봇 교육</h1>
-      <div class="menu">
-        <nav>
-          <ul>
-            <li>
-              <a href="#"
-                ><p>
-                  <img
-                    src="https://www.doosanrobotics.com/images/icon-home.svg"
-                    alt="home"
-                  /></p
-              ></a>
-            </li>
-            <li>
-              <a href=""
-                ><label for="service"
-                  >교육&서비스
-                  <span>
-                    <img
-                      src="https://www.doosanrobotics.com/images/arrow-down-light.svg"
-                      alt="" /></span></label
-              ></a>
-              <ul class="sub">
-                <li><a href="#">제품 & 솔루션</a></li>
-                <li><a href="#">교육 & 서비스</a></li>
-                <li><a href="#">투자정보</a></li>
-                <li><a href="#">회사소개</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href=""
-                ><label for="robot"
-                  >두산 로봇 교육
-                  <span>
-                    <img
-                      src="https://www.doosanrobotics.com/images/arrow-down-light.svg"
-                      alt="" /></span></label
-              ></a>
-              <ul class="sub">
-                <li><a href="#">두산 로봇 교육</a></li>
-                <li><a href="#">다운로드 센터</a></li>
-                <li><a href="#">S 신청</a></li>
-                <li><a href="#">파트너 서비스</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+    <div class="wrap">
+      <div class="top">
+        <img
+          src="https://www.spc.co.kr/files/banner/2024/07/acaeb8ad-c255-4b81-afe8-9ba5683912c6.webp"
+          alt=""
+        />
+      </div>
+      <div class="con1">
+        <div>
+          <p>
+            <img
+              src="https://www.spc.co.kr//img/front/main/history.webp"
+              alt=""
+            />
+          </p>
+        </div>
+        <div>
+          <p>
+            <img
+              src="https://www.spc.co.kr/img/front/main/spcway.webp"
+              alt=""
+            />
+          </p>
+        </div>
+        <div>
+          <p>
+            <img
+              src="https://www.spc.co.kr//img/front/main/history.webp"
+              alt=""
+            />
+          </p>
+        </div>
       </div>
     </div>
   </body>
