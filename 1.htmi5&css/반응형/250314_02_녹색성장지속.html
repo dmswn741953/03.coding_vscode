@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>녹색성장지속</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .warp {
+        width: 95%;
+        max-width: 1800px;
+        margin: 0 auto;
+      }
+      .program {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas: "headtxt aa bb" "cc dd ee";
+        gap: 24px;
+      }
+      .program > div {
+        border-radius: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .program > div > a {
+        display: inline-block;
+        border: 1px solid;
+        height: 100%;
+        width: 100%;
+      }
+
+      .program > div:nth-child(1) {
+        grid-area: headtxt;
+        padding-left: 27px;
+      }
+      .program > div:nth-child(1) h1 {
+        font-size: 64px;
+        color: rgb(34, 34, 34);
+      }
+      .program > div:nth-child(1) p {
+        line-height: 40px;
+        font-size: 20px;
+        color: rgb(93, 93, 93);
+      }
+      .program > div:nth-child(1) p span {
+        color: rgb(0, 162, 135);
+      }
+
+      .program > div:nth-child(2) {
+        grid-area: aa;
+        width: 100%;
+        height: 100%;
+        background: url(https://gggs.kaist.ac.kr/html/images/main/sec03_tab01.png)
+          center/cover;
+        background-size: 100%;
+        padding-bottom: 80%;
+      }
+
+      .program > div:nth-child(3) {
+        grid-area: bb;
+        background: url(https://gggs.kaist.ac.kr/html/images/main/sec03_tab02.png)
+          center/cover;
+        background-size: 100%;
+      }
+
+      .program > div:nth-child(4) {
+        grid-area: cc;
+        background: url(https://gggs.kaist.ac.kr/html/images/main/sec03_tab03.png)
+          center/cover;
+        background-size: 100%;
+      }
+      .program > div:nth-child(5) {
+        grid-area: dd;
+        background: url(https://gggs.kaist.ac.kr/html/images/main/sec03_thumb.png)
+          center/cover;
+        background-size: 100%;
+      }
+      .program > div:nth-child(6) {
+        grid-area: ee;
+        background: url(https://gggs.kaist.ac.kr/html/images/main/sec03_tab04.png)
+          center/cover;
+        padding-bottom: 80%;
+        background-size: 100%;
+      }
+      .program > div:nth-child(2),
+      .program > div:nth-child(3),
+      .program > div:nth-child(4),
+      .program > div:nth-child(6) {
+        background-repeat: no-repeat;
+        transition: 1s;
+      }
+
+      .program > div:nth-child(2):hover,
+      .program > div:nth-child(3):hover,
+      .program > div:nth-child(4):hover,
+      .program > div:nth-child(6):hover {
+        background-size: 120%;
+      }
+      @media screen and (max-width: 1340px) {
+        .program {
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas: "headtxt headtxt" "aa bb" "cc ee";
+          gap: 21.6px;
+        }
+        .program > div:nth-child(2),
+        .program > div:nth-child(6) {
+          padding-bottom: 45%;
+        }
+        .program > div:nth-child(1) h1 {
+          font-size: 57.6px;
+          color: rgb(34, 34, 34);
+        }
+        .program > div:nth-child(1) p {
+          line-height: 40px;
+          font-size: 18px;
+          color: rgb(93, 93, 93);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="warp">
+      <div class="program">
+        <div>
+          <h1>PROGRAM</h1>
+          <p>
+            <span>KAIST GGGS</span>에서는 녹색성장과 지속가능성 문제해결을 위해
+            <br />
+            탄소중립기후기술 및 정책·금융에 대한 통섭적인 이해를 갖춘 <br />
+            국가 핵심인재를 양성합니다.
+          </p>
+        </div>
+        <div>
+          <a href="#"><p>박사과정</p></a>
+        </div>
+        <div>
+          <a href="#"><p>군학프로그램</p></a>
+        </div>
+        <div>
+          <a href="#"><p>석사과정</p></a>
+        </div>
+        <div></div>
+        <div>
+          <a href="#"><p>외국인전형</p></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

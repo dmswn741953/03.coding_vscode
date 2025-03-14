@@ -44,11 +44,18 @@
         width: 100%;
         display: flex;
         justify-content: flex-end;
+        text-align: center;
       }
-      div.menu > ul li {
+      div.menu > ul > li {
+        width: 25%;
+        border: 1px solid;
       }
-
-      div:nth-child(3) {
+      div.menu > ul > li > a {
+        display: block;
+        width: 100%;
+        border: 1px solid;
+      }
+      div.menu > ul > li .sub div:nth-child(3) {
         grid-area: slid;
         background: #ccc;
       }
@@ -88,7 +95,7 @@
         <ul>
           <li>
             <a href="#">탑</a>
-            <ul>
+            <ul class="sub">
               <li><a href="#">블라우스</a></li>
               <li><a href="#">티</a></li>
               <li><a href="#">셔츠</a></li>
@@ -97,7 +104,7 @@
           </li>
           <li>
             <a href="#">아우터</a>
-            <ul>
+            <ul class="sub">
               <li><a href="#">자켓</a></li>
               <li><a href="#">티</a></li>
               <li><a href="#">셔츠</a></li>
@@ -106,7 +113,7 @@
           </li>
           <li>
             <a href="#">팬츠</a>
-            <ul>
+            <ul class="sub">
               <li><a href="#">귀고리</a></li>
               <li><a href="#">목걸이</a></li>
               <li><a href="#">셔츠</a></li>
@@ -115,7 +122,7 @@
           </li>
           <li>
             <a href="#">악세서리</a>
-            <ul>
+            <ul class="sub">
               <li><a href="#">블라우스</a></li>
               <li><a href="#">티</a></li>
               <li><a href="#">셔츠</a></li>
