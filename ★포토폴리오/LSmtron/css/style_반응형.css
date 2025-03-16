@@ -76,19 +76,23 @@ div.nav > a p img {
 }
 .nav ul.menu {
   width: 1257px;
+  height: 100%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .nav ul.menu li a {
-  width: 100%;
+  display: block;
   height: 100%;
+  line-height: 100px;
   color: #fff;
   text-align: center;
-  padding: 40px 24px;
+  padding: 0 24px;
   transition: 0.5s;
 }
 .nav ul.menu:hover li a {
-  padding: 40px 60px;
+  padding: 0 60px;
   color: #000;
 }
 .nav ul.service {
