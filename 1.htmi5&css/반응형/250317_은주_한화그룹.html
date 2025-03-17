@@ -12,16 +12,22 @@
       }
       .fild {
         width: 100%;
-        max-width: 1905px;
-        height: 100vh;
+        max-width: 1912px;
+        height: 919px;
         margin: 0 auto;
         display: flex;
         gap: 2px;
       }
       .fild article {
+        padding: 0 0 50px 30px;
+        display: flex;
+        align-items: flex-end;
         flex: 1;
+        transition: 1s;
       }
-
+      .fild article:hover {
+        flex-basis: 70%;
+      }
       .fild article:first-child {
         background: url(https://www.hanwha.co.kr/assets/img/pages/main/business-img-1.jpg)
           center/cover;
@@ -39,11 +45,20 @@
         background: url(https://www.hanwha.co.kr/assets/img/pages/main/business-img-4.jpg)
           center/cover;
       }
-      .fild article .txt {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+
+      .fild article .txt .title p:first-child {
+        font-size: 20px;
+      }
+      .fild article .txt .title p:nth-child(2) {
+        font-size: 40px;
+      }
+
+      .fild article .txt .sub-title {
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .fild article:hover .txt .sub-title {
+        font-size: 18px;
       }
     </style>
   </head>
@@ -56,7 +71,6 @@
               <p>우주항공 ∙ 방산 ∙ 기계</p>
               <p>해저에서 우주로</p>
             </div>
-
             <div class="sub-title">
               <p>
                 인류의 미래를 향한 담대한 도전으로 모두가 꿈꾸던 우주 시대를
