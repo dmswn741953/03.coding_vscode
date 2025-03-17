@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>노랑풍선</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 97%;
+        max-width: 1480px;
+        margin: 0 auto;
+      }
+
+      .wrap ul {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 40px;
+      }
+      .wrap ul li {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 104px;
+      }
+      .wrap ul li:nth-child(2n) {
+        justify-content: flex-end;
+      }
+      .wrap ul li .con {
+        width: 720px;
+        height: 440px;
+      }
+      .wrap ul li .con p {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .wrap ul li .con p img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        vertical-align: top;
+      }
+      .wrap ul li .txt {
+        display: flex;
+        width: 440px;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .wrap ul li .txt:nth-child(2n + 1) {
+        text-align: right;
+      }
+      .wrap ul li .txt p {
+        font-size: 24px;
+      }
+      .wrap ul li .txt h1 {
+        font-size: 48px;
+        font-weight: normal;
+      }
+      .wrap ul li .txt h2 {
+        font-size: 48px;
+        color: rgb(255, 199, 44);
+      }
+      /* 1230 */
+
+      @media screen and (max-width: 1479px) {
+        .wrap ul li .con {
+          flex-shrink: 1;
+        }
+        .wrap ul li .txt {
+          flex-shrink: 0;
+        }
+      }
+      @media screen and (max-width: 1023px) {
+        .wrap ul li .con {
+          width: 100%;
+          height: 100%;
+        }
+
+        .wrap ul li .txt {
+          flex-shrink: 1;
+        }
+        .wrap ul li .txt p {
+          font-size: 16px;
+        }
+        .wrap ul li .txt h1,
+        .wrap ul li .txt h2 {
+          font-size: 22px;
+        }
+      }
+      @media screen and (max-width: 749px) {
+        .wrap ul li {
+          flex-direction: column;
+          gap: 12px;
+        }
+        .wrap ul li:nth-child(2n) {
+          flex-direction: column-reverse;
+        }
+        .wrap ul li .txt:nth-child(2n + 1) {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>
+          <div class="con">
+            <p>
+              <img
+                src="https://company.ybtour.co.kr/images/bg/bg_story_1.jpg"
+                alt=""
+              />
+            </p>
+          </div>
+          <div class="txt">
+            <p>여행의 새로운 가치를 알립니다</p>
+            <h1>가치를 전달하는 여행</h1>
+            <h2>Value-Creating</h2>
+          </div>
+        </li>
+
+        <li>
+          <div class="txt">
+            <p>고객의, 고객에 의한, 고객을 위한</p>
+            <h1>신뢰를 받는 여행</h1>
+            <h2>Trustworthy</h2>
+          </div>
+          <div class="con">
+            <p>
+              <img
+                src="https://company.ybtour.co.kr/images/bg/bg_story_2.jpg"
+                alt=""
+              />
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="con">
+            <p>
+              <img
+                src="https://company.ybtour.co.kr/images/bg/bg_story_3.jpg"
+                alt=""
+              />
+            </p>
+          </div>
+          <div class="txt">
+            <p>일상의 가장 반짝이는 순간을 만듭니다</p>
+            <h1>즐거움을 선사하는 여행</h1>
+            <h2>Joyful</h2>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <p>다양한 여행상품으로 여행 문화를 선도합니다</p>
+            <h1>혁신적인 여행</h1>
+            <h2>Innovative</h2>
+          </div>
+          <div class="con">
+            <p>
+              <img
+                src="https://company.ybtour.co.kr/images/bg/bg_story_4.jpg"
+                alt=""
+              />
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
