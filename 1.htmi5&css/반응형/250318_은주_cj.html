@@ -18,14 +18,16 @@
         display: flex;
         max-width: 1420px;
         margin: 0 auto;
-        border: 1px solid;
         gap: 20px;
       }
+      .notice ul {
+        flex: 1;
+      }
       .notice .con-left {
-        height: 100%;
+        width: 40%;
       }
       .notice .con-left li:first-child {
-        width: 580px;
+        width: 100%;
         height: 580px;
       }
       .notice .con-left li:first-child a p {
@@ -41,25 +43,36 @@
         padding-top: 40%;
         background: #21a100;
       }
-      .notice .con-left li:nth-child(2) a {
-      }
       .notice .con-right {
+        width: 60%;
+      }
+      .notice .con-right li:first-child {
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        gap: 20px;
+        padding-bottom: 20px;
+      }
+      .notice .con-right li:nth-child(2) {
+        display: flex;
         gap: 20px;
       }
-      .notice .con-right li {
-        width: 400px;
+      .notice .con-right li div {
+        width: 100%;
       }
-      .notice .con-right li p,
-      .notice .con-right li p img {
+      .notice .con-right li div p,
+      .notice .con-right li div p img {
         width: 100%;
         height: 100%;
         vertical-align: middle;
       }
-
-      .notice .con-right li.end div:first-child {
+      .notice .con-right div.end {
+        display: flex;
+        flex-direction: column;
+      }
+      .notice .con-right div.end p:first-child {
         margin-bottom: 20px;
+      }
+      @media screen and () {
       }
     </style>
   </head>
@@ -73,7 +86,7 @@
           >
             <p>
               <img
-                src="https://d10yximrhdxai4.cloudfront.net/news/27d81b37a05a4ad8b0c1a97e27c81c37.jpg"
+                src="https://d10yximrhdxai4.cloudfront.net/news/3dd65217bdf34f638a4f254a167f3b5f.jpg"
                 alt=""
               />
             </p>
@@ -91,34 +104,10 @@
       </ul>
       <ul class="con-right">
         <li>
-          <p>
-            <img
-              src="https://d10yximrhdxai4.cloudfront.net/main/7b5dbf7a86404f02b8b6b89b2a240764.png"
-              alt=""
-            />
-          </p>
-        </li>
-        <li>
-          <p>
-            <img
-              src="https://d10yximrhdxai4.cloudfront.net/main/7b5dbf7a86404f02b8b6b89b2a240764.png"
-              alt=""
-            />
-          </p>
-        </li>
-        <li>
-          <p>
-            <img
-              src="https://d10yximrhdxai4.cloudfront.net/main/cc48516239e44721a7581f99e233691b.jpg"
-              alt=""
-            />
-          </p>
-        </li>
-        <li class="end">
           <div>
             <p>
               <img
-                src="https://d10yximrhdxai4.cloudfront.net/main/47c4ba7410c54746a729b9e5fdaf4a8e.png"
+                src="https://d10yximrhdxai4.cloudfront.net/main/7b5dbf7a86404f02b8b6b89b2a240764.png"
                 alt=""
               />
             </p>
@@ -126,8 +115,33 @@
           <div>
             <p>
               <img
+                src="https://d10yximrhdxai4.cloudfront.net/news/626a0bc1a6994af99ceaec1ebc110184.jpg"
+                alt=""
+              />
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <img
+                src="https://d10yximrhdxai4.cloudfront.net/main/cc48516239e44721a7581f99e233691b.jpg"
+                alt=""
+              />
+            </p>
+          </div>
+          <div class="end">
+            <p>
+              <img
+                src="https://d10yximrhdxai4.cloudfront.net/main/47c4ba7410c54746a729b9e5fdaf4a8e.png"
+                alt=""
+              />
+            </p>
+
+            <p>
+              <img
                 src="https://d10yximrhdxai4.cloudfront.net/main/0c6040745df847a4a40377f1dc573a19.png
-                "
+                  "
                 alt=""
               />
             </p>
