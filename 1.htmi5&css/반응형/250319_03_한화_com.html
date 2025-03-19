@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한화company</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+      div.company {
+        width: 100%;
+        padding: 0 80px;
+        box-sizing: border-box;
+      }
+      div.company ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1vw;
+      }
+      div.company ul li {
+        flex: 1 1 30%;
+        padding: 1% 1.5%;
+        border: 1px solid;
+        border-radius: 10px;
+        border-color: rgb(229, 229, 229);
+        box-sizing: border-box;
+      }
+      div.company ul li p::after {
+        content: url(../images/arrow2.svg);
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: 1px solid rgb(229, 229, 229);
+        transition: 0.5s;
+      }
+      /* div.company ul li p::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        right: -1px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: 1px solid rgb(229, 229, 229);
+        background-image: url(../images/arrow2.svg);
+        background-repeat: no-repeat;
+        background-size: 10px;
+        background-position: center;
+        transition: 0.5s;
+      } */
+
+      div.company ul li:hover p::after {
+        background-color: #f37321;
+      }
+      div.company ul li p {
+        position: relative;
+        width: 100%;
+      }
+      div.company ul li p img {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 767px) {
+        div.company ul li {
+          flex: 1 1 40%;
+        }
+        div.company ul li:hover p::after {
+          background-color: transparent;
+        }
+      }
+      @media screen and (max-width: 669px) {
+        div.company ul li {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="company">
+      <ul>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="	https://www.hanwha.com/upload/company/20240422/1713775631479.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="		https://www.hanwha.com/upload/company/20240423/1713869856042.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="	https://www.hanwha.com/upload/company/20240423/1713874192354.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713874567467.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713874779700.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713874951317.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713871679059.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713875088485.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713875259067.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713875384846.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240521/1716268151833.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713875509763.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713875629246.jpg"
+                alt="solution"
+              />
+            </p>
+          </a>
+        </li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>

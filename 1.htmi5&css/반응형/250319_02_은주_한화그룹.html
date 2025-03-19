@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>갤러리</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 100%;
+        padding: 0 80px;
+        margin: 0 auto;
+        background: rgb(246, 240, 236);
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .wrap .main-txt {
+        font-size: 40px;
+      }
+      .wrap div.content {
+        display: flex;
+        gap: 1%;
+      }
+      .wrap div.content div.con {
+        flex: 1;
+        background: rgb(239, 232, 228);
+        padding: 4% 3%;
+      }
+      .wrap div.content div.con p {
+        height: 200px;
+      }
+      .wrap div.content div.con p img {
+        width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+      }
+      ul.con-txt {
+        margin-top: 48px;
+      }
+      ul.con-txt li.txt-B {
+        font-size: 32px;
+        font-weight: bold;
+      }
+      ul.con-txt li.txt-B span {
+        color: rgb(243, 115, 33);
+      }
+      ul.con-txt li.txt-r {
+        font-size: 20px;
+        margin-top: 32px;
+        padding-top: 32px;
+        color: rgb(97, 97, 97);
+      }
+      ul.con-txt li.txt-r br.mo {
+        display: none;
+      }
+      @media screen and (max-width: 767px) {
+        .wrap .main-txt {
+          font-size: 20px;
+        }
+        .wrap div.content {
+          flex-direction: column;
+        }
+        .wrap div.content div.con {
+          display: flex;
+        }
+        .wrap div.content div.con > p {
+          width: 100px;
+          height: 137px;
+        }
+        .wrap div.content div.con p img {
+          width: 100%;
+          height: 100%;
+        }
+        .wrap div.content div.con .con-txt {
+          text-align: left;
+          margin-top: 0;
+          padding-left: 30px;
+        }
+        ul.con-txt li.txt-B {
+          font-size: 17px;
+        }
+        .wrap div.content div.con:nth-child(3) .con-txt br {
+          display: none;
+        }
+        .wrap div.content div.con .con-txt .txt-r {
+          margin-top: 8px;
+          padding-top: 8px;
+          font-size: 13px;
+        }
+        .wrap div.content div.con .con-txt .txt-r br {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="main-txt"><h1>Our Brand Values</h1></div>
+      <div class="content">
+        <div class="con">
+          <p>
+            <img
+              src="https://www.hanwha.com/assets/img/main/sustainable-and-inclusive-growth.svg"
+              alt=""
+            />
+          </p>
+          <ul class="con-txt">
+            <li class="txt-B">
+              Sustainable and <br />
+              Inclusive <span>Growth</span>
+            </li>
+            <li class="txt-r">
+              We strive for social, economic, and <br />
+              environmental prosperity for all
+            </li>
+          </ul>
+        </div>
+        <div class="con">
+          <p>
+            <img
+              src="https://www.hanwha.com/assets/img/main/technology-and-solution-driven-innovation.svg"
+              alt=""
+            />
+          </p>
+          <ul class="con-txt">
+            <li class="txt-B">
+              Technology and <br />Solution-driven <span>Innovation</span>
+            </li>
+            <li class="txt-r">
+              Through technological innovation, <br />
+              we provide solutions from people to <br class="mo" />
+              planet
+            </li>
+          </ul>
+        </div>
+        <div class="con">
+          <p>
+            <img
+              src="https://www.hanwha.com/assets/img/main/hanwha-enhances-lives.svg"
+              alt=""
+            />
+          </p>
+          <ul class="con-txt">
+            <li class="txt-B">
+              Enhancing <br />
+              <span>Lives</span>
+            </li>
+            <li class="txt-r">
+              We lay the foundation for a fulfilling <br class="mo" />
+              life through <br />
+              our technologies,<br class="mo" />
+              products, and services
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

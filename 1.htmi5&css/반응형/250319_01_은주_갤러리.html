@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>갤러리</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: url(../images/body_bg.png);
+      }
+      ul {
+        list-style: none;
+      }
+
+      .wrap {
+        width: 80%;
+        max-width: 1080px;
+        padding: 60px;
+        margin: 0 auto;
+        display: grid;
+        background: #fff;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+      }
+      .wrap div {
+        padding-top: 100%;
+        border-radius: 5px;
+        filter: grayscale(1);
+        cursor: pointer;
+        transition: 0.6s;
+      }
+      .wrap div:hover {
+        filter: grayscale(0);
+      }
+      .wrap div:first-child {
+        background: url(../images/sub_gallery_01.jpg) center/cover;
+      }
+      .wrap div:nth-child(2) {
+        background: url(../images/sub_gallery_02.jpg) center/cover;
+      }
+      .wrap div:nth-child(3) {
+        background: url(../images/sub_gallery_03.jpg) center/cover;
+      }
+      .wrap div:nth-child(4) {
+        background: url(../images/sub_gallery_04.jpg) center/cover;
+      }
+      .wrap div:nth-child(5) {
+        background: url(../images/sub_gallery_05.jpg) center/cover;
+      }
+      .wrap div:nth-child(6) {
+        background: url(../images/sub_gallery_06.jpg) center/cover;
+      }
+      .wrap div:nth-child(7) {
+        background: url(../images/sub_gallery_07.jpg) center/cover;
+      }
+      .wrap div:nth-child(8) {
+        background: url(../images/sub_gallery_08.jpg) center/cover;
+      }
+      .wrap div:nth-child(9) {
+        background: url(../images/sub_gallery_09.jpg) center/cover;
+      }
+      .wrap div:nth-child(10) {
+        background: url(../images/sub_gallery_10.jpg) center/cover;
+      }
+      .wrap div:nth-child(11) {
+        background: url(../images/sub_gallery_11.jpg) center/cover;
+      }
+      .wrap div:nth-child(12) {
+        background: url(../images/sub_gallery_12.jpg) center/cover;
+      }
+
+      div.gallery {
+        width: 80%;
+        padding: 60px;
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+      div.gallery ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      div.gallery ul li {
+        flex: 1 1;
+        flex-basis: calc(25% - 20px);
+        border-radius: 5px;
+        overflow: hidden;
+        filter: grayscale(1);
+        cursor: pointer;
+        transition: 0.6s;
+      }
+      div.gallery ul li:hover {
+        filter: grayscale(0);
+      }
+      div.gallery ul li p {
+        width: 100%;
+        height: 100%;
+      }
+      div.gallery ul li p img {
+        width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+      }
+      @media screen and (max-width: 959px) {
+        .wrap {
+          padding: 40px;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        div.gallery {
+          padding: 40px;
+        }
+        div.gallery ul li {
+          flex-basis: calc(50% - 20px);
+        }
+      }
+      @media screen and (max-width: 766px) {
+        .wrap {
+          padding: 20px;
+          grid-template-columns: 1fr;
+        }
+        div.gallery {
+          padding: 20px;
+        }
+        div.gallery ul li {
+          flex-basis: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="gallery">
+      <ul>
+        <li>
+          <p><img src="../images/sub_gallery_01.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_02.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_03.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_04.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_05.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_06.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_07.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_08.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_09.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_10.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_11.jpg" alt="" /></p>
+        </li>
+        <li>
+          <p><img src="../images/sub_gallery_12.jpg" alt="" /></p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

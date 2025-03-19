@@ -44,7 +44,7 @@ a {
   color: #fff;
 }
 .main ul.bg-menu {
-  position: absolute;
+  position: fixed;
   width: 100%;
   left: 50px;
   top: 50%;
@@ -77,11 +77,11 @@ a {
   margin-right: 15px;
 }
 
-div.nav {
+.main div.nav {
   width: 100%;
   height: 100px;
   display: flex;
-  position: relative;
+  position: fixed;
   align-items: center;
   padding: 0 0 0 45px;
   box-sizing: border-box;
@@ -91,17 +91,17 @@ div.nav {
   transition: 0.5s;
 }
 
-div.nav > a p {
+.main div.nav > a p {
   width: 113px;
   height: 25px;
   padding-right: 146px;
 }
-div.nav > a p img {
+.main div.nav > a p img {
   width: 100%;
   height: 100%;
 }
 
-.nav ul.menu {
+.main .nav ul.menu {
   height: 100%;
   display: flex;
   font-family: "Pretendard-B", "sans-serif";
@@ -109,10 +109,10 @@ div.nav > a p img {
   align-items: center;
   z-index: 99;
 }
-.nav ul.menu > li {
+.main .nav ul.menu > li {
   position: relative;
 }
-.nav ul.menu > li > a {
+.main .nav ul.menu > li > a {
   display: block;
   position: relative;
   height: 100%;
@@ -122,11 +122,11 @@ div.nav > a p img {
   padding: 0 24px;
   transition: 0.5s;
 }
-.nav ul.menu:hover > li > a {
+.main .nav ul.menu:hover > li > a {
   padding: 0 60px;
   color: #000;
 }
-.nav ul.menu li ul.sub-menu {
+.main .nav ul.menu li ul.sub-menu {
   position: absolute;
   width: 100%;
   height: 0;
@@ -136,10 +136,10 @@ div.nav > a p img {
   overflow: hidden;
   text-align: center;
 }
-.nav ul.menu:hover li ul.sub-menu {
+.main .nav ul.menu:hover li ul.sub-menu {
   height: 200px;
 }
-.nav ul.menu li ul.sub-menu li a {
+.main .nav ul.menu li ul.sub-menu li a {
   width: 100%;
   color: #000;
 }
@@ -161,21 +161,21 @@ div.nav > a p img {
   height: 472px;
   background: #fff;
 } */
-.nav ul.service {
+.main .nav ul.service {
   display: flex;
   font-family: "Pretendard-S", "sans-serif";
   position: relative;
   z-index: 99;
 }
-.nav ul.service li {
+.main .nav ul.service li {
   padding-right: 35px;
   align-self: center;
   position: relative;
 }
-.nav ul.menu:hover ~ .service li {
+.main .nav ul.menu:hover ~ .service li {
   color: #000;
 }
-.nav ul.service li::after {
+.main .nav ul.service li::after {
   content: url(../imges/arrow1.svg);
   position: absolute;
   width: 8px;
@@ -183,12 +183,12 @@ div.nav > a p img {
   right: 20px;
 }
 
-div.nav .service p {
+.main div.nav .service p {
   position: relative;
   width: 100px;
   height: 100px;
 }
-div.nav .service p span {
+.main div.nav .service p span {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -196,13 +196,28 @@ div.nav .service p span {
   left: 0;
   top: 0;
 }
-div.nav .service p span img {
+.main div.nav .service p span img {
   width: 26px;
   height: 20px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.business {
+  text-align: center;
+}
+
+.business .business-txt {
+  padding: 150px 0;
+}
+
+.business .business-txt h2 {
+  font-size: 84px;
+}
+.business .business-txt p {
+  font-size: 24px;
 }
 
 @media screen and (max-width: 1599px) {
