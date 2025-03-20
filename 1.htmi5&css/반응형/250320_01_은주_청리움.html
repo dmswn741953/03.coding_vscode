@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>청리움</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        padding: 96px;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      .wrap > ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .wrap > ul > .title-txt h2 {
+        font-size: 64px;
+      }
+      .wrap > ul > .title-txt p {
+        font-size: 22px;
+        margin-bottom: 70px;
+        white-space: nowrap;
+      }
+      .wrap > ul > .title-txt br.mo {
+        display: none;
+      }
+
+      .wrap > ul > li.list {
+        color: rgb(178, 178, 178);
+        font-size: 16px;
+      }
+      .wrap > ul > li.list > ul {
+        display: flex;
+        cursor: pointer;
+      }
+
+      .wrap > ul > li.list > ul li {
+        padding: 5px 10px;
+        border: 1px solid transparent;
+        white-space: nowrap;
+      }
+      .wrap > ul > li.list > ul li:hover {
+        border: 1px solid #000;
+        color: #000;
+        border-radius: 5px;
+      }
+      .wrap .con {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        height: 60vh;
+        padding: 0 50px 50px;
+        background: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_1.jpg)
+          center/cover;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+
+      .wrap .con .contxt {
+        color: #fff;
+      }
+      .wrap .con .contxt p:first-child {
+        font-size: 40px;
+        padding-bottom: 10px;
+        /* position: relative; */
+      }
+      /* .wrap .con .contxt p:first-child::after {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 80%;
+        border-radius: 30px;
+        background: #fff;
+      } */
+      .wrap .con .contxt p:nth-child(2) {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .wrap .con .contxt p:nth-child(2) br.mo {
+        display: none;
+      }
+
+      .wrap .con .contxt .txt-foot {
+        display: flex;
+        justify-content: space-between;
+      }
+      .wrap .con .contxt .txt-foot .view {
+        display: flex;
+        align-items: center;
+      }
+      .wrap .con .contxt span:nth-of-type(1) {
+        font-size: 24px;
+        position: relative;
+      }
+
+      .wrap .con .contxt span:nth-of-type(1)::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        left: 0;
+        bottom: 4px;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: 0.3s;
+      }
+      .wrap .con .contxt span:nth-of-type(1):hover:after {
+        transform: scaleX(1);
+      }
+      .wrap .con .contxt span:nth-of-type(2) {
+        display: flex;
+        padding-left: 10px;
+      }
+      .wrap .con .contxt span:nth-of-type(2) img {
+        width: 1.5vw;
+      }
+
+      .con .guide {
+        position: relative;
+        border: 1px solid;
+        border-radius: 30px;
+        width: 90px;
+        padding: 10px 30px 10px 20px;
+        font-size: 22px;
+        background: #fff;
+        color: #000;
+      }
+      .con .guide::before {
+        content: "";
+        position: absolute;
+        width: 55%;
+        height: 1px;
+        bottom: 7px;
+        left: 23px;
+        background: #000;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: 0.3s;
+      }
+      .con .guide:hover:before {
+        transform: scaleX(1);
+      }
+      .con .guide::after {
+        content: url(https://www.cheongrium.com/static/images/icon/icon_arrow_black_3.png);
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+      }
+      @media screen and (max-width: 968px) {
+        .wrap {
+          padding: 18px;
+        }
+        .wrap > ul {
+          flex-direction: column;
+          padding: 10px 0;
+        }
+
+        .wrap > ul > .title-txt {
+          text-align: center;
+          padding: 24px 0;
+        }
+        .wrap > ul > .title-txt h2 {
+          font-size: 32px;
+        }
+        .wrap > ul > .title-txt p {
+          margin-bottom: 0;
+        }
+        .wrap > ul > .title-txt p br.mo {
+          display: block;
+        }
+        .wrap > ul > .title-txt p,
+        .wrap > ul > li.list,
+        .wrap .con .contxt p:nth-child(2),
+        .wrap .con .contxt span:nth-of-type(1) {
+          font-size: 14px;
+        }
+        .wrap .con .contxt p:nth-child(2) br.mo {
+          display: block;
+        }
+        .wrap .con .contxt p:first-child {
+          font-size: 24px;
+        }
+        .con .guide {
+          align-self: flex-start;
+          font-size: 14px;
+          padding: 10px 5px 10px 20px;
+        }
+        .con .guide::before {
+          width: 45%;
+          left: 20px;
+        }
+        .con .guide::after {
+          right: 25px;
+          bottom: 7px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li class="title-txt">
+          <h2>공간안내</h2>
+          <p>
+            고즈넉한 자연 속 사계절의 아름다운 정취가 있는 <br class="mo" />
+            청리움의 공간을 안내합니다
+          </p>
+        </li>
+        <li class="list">
+          <ul>
+            <li>강당동</li>
+            <li>연수동</li>
+            <li>카페테리아</li>
+            <li>잔디마당</li>
+            <li>오하산방</li>
+            <li>약초원</li>
+            <li>명당 기도터</li>
+            <li>녹차 · 포도밭</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="con">
+        <div class="contxt">
+          <p>강당동 (컨퍼런스홀 | 세미나 A·B)</p>
+          <p>
+            천혜의 자연 속 프라이빗한 단독 공간으로 <br />
+            교육, 세미나, 연수, 행사 등 <br class="mo" />
+            다채로운 이벤트를 지원합니다.
+          </p>
+          <div class="txt-foot">
+            <div class="view">
+              <span>VIEW MORE</span>
+              <span>
+                <img
+                  src="https://www.cheongrium.com/static/images/icon/icon_arrow_black_mo.png"
+                  alt=""
+              /></span>
+            </div>
+          </div>
+        </div>
+        <div class="guide">가이드맵</div>
+      </div>
+    </div>
+  </body>
+</html>
