@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>솔루션</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1905px;
+        text-align: center;
+        margin: 50px auto;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .wrap .title {
+        margin-bottom: 150px;
+      }
+      .wrap .title p:nth-child(1) {
+        font-size: 20px;
+        margin-bottom: 14px;
+        color: rgb(102, 102, 102);
+      }
+      .wrap .title p:nth-child(2) {
+        font-size: 40px;
+      }
+      .wrap ul li {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 150px;
+      }
+      .wrap ul li a .con-txt {
+        margin-top: 40px;
+      }
+      .wrap ul li a .con-txt span {
+        font-size: 70px;
+        margin-bottom: 20px;
+        position: relative;
+        transition: 0.2s;
+      }
+      .wrap ul li a .con-txt span:hover {
+        padding-right: 20px;
+      }
+      .wrap ul li a .con-txt span::after {
+        content: url(https://www.bgfecomaterials.com/resources/kr/images/product/materials/arrow_green.svg);
+        position: absolute;
+        right: -50px;
+        top: -30px;
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: 0.2s;
+        transform-origin: 0 0;
+      }
+
+      .wrap ul li a .con-txt span:hover:after {
+        transform: translateX(10px);
+        opacity: 1;
+      }
+      .wrap ul li a .con-txt p {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      .wrap ul li a:nth-child(2) {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+      }
+      .wrap ul li:nth-child(2) a:nth-child(2) {
+        justify-content: flex-start;
+        display: flex;
+      }
+      .wrap ul li a:nth-child(2) p {
+        width: 80%;
+        overflow: hidden;
+        font-size: 0;
+      }
+
+      .wrap ul li a:nth-child(2) p img {
+        width: 100%;
+        transition: 0.5s;
+        object-fit: cover;
+      }
+      .wrap ul li a:nth-child(1):hover ~ a:nth-child(2) p img {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="title">
+        <p>솔루션별</p>
+        <p>
+          자동차, 전기전자, 산업재까지 다양한 분야에서 적용되고 있는 <br />
+          BGF에코머티리얼즈의 솔루션을 소개합니다.
+        </p>
+      </div>
+      <ul>
+        <li>
+          <a href="#">
+            <div class="con-txt">
+              <span>Automotive</span>
+              <p>
+                탄소저감과 지속 가능성을 고려하여 혁신적인 자동차 제품을
+                실현하는데 주력하고 있습니다.
+              </p>
+            </div>
+          </a>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.bgfecomaterials.com/resources/kr/images/product/solution/contents_01.jpg"
+                alt=""
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="con-txt">
+              <span>Electric & Electronic</span>
+              <p>
+                플라스틱 소재의 내충격성과 전기절연, 단열성, 화학적 기능을
+                강화하여 제품의 신뢰성과 안전성을 향상시키는 것을 목표로 합니다.
+              </p>
+            </div>
+          </a>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.bgfecomaterials.com/resources/kr/images/product/solution/contents_02.jpg"
+                alt=""
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="con-txt">
+              <span>Industrial</span>
+              <p>
+                전자기기의 내부 및 외부 재료, 부품, 설비, 도구 등 다양한 산업
+                재료로 널리 활용됩니다.
+              </p>
+            </div>
+          </a>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.bgfecomaterials.com/resources/kr/images/product/solution/contents_03.jpg"
+                alt=""
+              />
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -52,6 +52,7 @@ a {
 }
 .main ul.bg-menu > li {
   line-height: 30px;
+  width: 150px;
 }
 .main ul.bg-menu > li > a {
   display: flex;
@@ -224,10 +225,30 @@ a {
   background: url(../imges/recruit/bg_recruit.06af1aea.png) center/cover;
 }
 .recruit > ul > li {
-  flex: 0 0 25%;
-  height: 400px;
+  /* flex: 0 0 25%; */
+  width: 400px;
+
+  padding-top: 65px;
   border-radius: 5%;
   background: rgba(0, 0, 0, 0.2);
+}
+.recruit > ul > li a {
+  color: #fff;
+}
+.recruit > ul > li a p:nth-child(2) {
+  padding: 25px 0;
+  font-size: 28px;
+  font-family: "Pretendard-B", "sans-serif";
+}
+.recruit > ul > li a p:nth-child(3) {
+  font-size: 18px;
+}
+.recruit > ul > li > a > span {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
 }
 @media screen and (max-width: 1599px) {
   .nav ul.menu > li {
