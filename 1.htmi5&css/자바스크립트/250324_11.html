@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: aliceblue;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1440px;
+        padding: 160px 30px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .wrap ul {
+        flex: 1;
+        list-style: none;
+      }
+      .wrap ul li {
+        font-size: 28px;
+        color: #aaa;
+        line-height: 50px;
+        cursor: pointer;
+      }
+      .wrap ul li.set {
+        color: #000;
+      }
+      .wrap div {
+        flex: 4;
+      }
+      .wrap div a {
+        display: flex;
+        align-items: center;
+      }
+      .wrap div a > p {
+        width: 100%;
+        flex: 2;
+        display: flex;
+        justify-content: center;
+
+        height: 100%;
+      }
+      .wrap div a > p > img {
+        width: 50%;
+        height: 100%;
+        vertical-align: middle;
+      }
+      .wrap div a .txt {
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 50px;
+      }
+      .wrap div a .txt p:nth-child(1) {
+        font-size: 22px;
+      }
+      .wrap div a .txt p:nth-child(2) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>보도자료</li>
+        <li>언론보도</li>
+        <li>CJBS Now</li>
+        <li>미디어</li>
+      </ul>
+      <div>
+        <a href="#"
+          ><p>
+            <img
+              src="	https://www.cjbioscience.com/wp-content/themes/cj/asset/img/logo-bk.svg"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>CJ바이오사이언스, ‘ECCO 2025’에서 ‘CJRB-201’ 전임상</p>
+            <p>
+              - ‘CJRB-201’, 강력한 항염효과로 주목받고 있는 ‘페칼리박테리움’
+              균주 중 ‘조절 T세포’ 가장 효과적으로 유도 -- 다양한 동물실험 통해
+              체중 감소 억제, 질병활성 지수 개선, 조직 병리 완화 등 주요 질환
+              지표 개선 확인 -- 기존 항체 기반 치료제와 동등한 수준의 항염증
+              효과에 안전성과 경구 투약 편의성도 갖춰 차별화된 치료 옵션 제시 -
+              체중 감소 억제, 질병활성 지수 개선, 조직 병리 완화 등 주요 질환
+              지표 개선 확인 -- 기존 항체 기반 치료제와 동등한 수준의 항염증
+              효과에 안전성과 경구 투약 편의성도 갖춰 차별화된 치료 옵션 제시 -
+              체중 감소 억제, 질병활성 지수 개선, 조직 병리 완화 등 주요 질환
+              지표 개선 확인 -- 기존 항체 기반 치료제와 동등한 수준의 항염증
+              효과에 안전성과 경구 투약 편의성도 갖춰 차별화된 치료 옵션 제시 -
+            </p>
+          </div></a
+        >
+      </div>
+    </div>
+    <script>
+      function one() {
+        document.querySelectorAll("ul li").forEach(function (value, key) {
+          value.classList.remove("set");
+        });
+      }
+      document.querySelectorAll("ul li")[0].classList.add("set");
+
+      document.querySelectorAll("ul li").forEach(function (value, key) {
+        value.onclick = function () {
+          console.log(key);
+          one();
+          document.querySelectorAll("ul li")[key].classList.add("set");
+        };
+      });
+    </script>
+  </body>
+</html>

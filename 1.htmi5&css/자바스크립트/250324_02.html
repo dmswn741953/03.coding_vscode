@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script>
+      //1.웹 페이지가 로드된 후 실행되는 코드
+      window.onload = function () {
+        console.log("onload");
+        document.body.style.backgroundColor = "#f00";
+      };
+
+      //2. 문서가 로드된 후 실행되는 코드
+      window.addEventListener("load", function () {
+        console.log("load");
+        document.body.style.backgroundColor = "#ff0";
+      });
+
+      //3.DOM(document 내 object)구성이 완료가 된 후 실행되는 코드(이미지, 스타일 로딩 미완료 상태에도 발생)
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOMContentLoaded");
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
