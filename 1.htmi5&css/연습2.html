@@ -10,59 +10,38 @@
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
-      }
-      section {
-        width: 100%;
-        max-width: 1200px;
-        border: 1px solid;
-        margin: 0 auto;
-      }
-      section ul {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-      }
-      section ul li {
-        flex: 1 0 40%;
-        padding-top: 50%;
-        background: #aaa;
-      }
-
       div {
-        width: 1000px;
-        height: 500px;
-        background: #ccc;
-        margin: 0 auto;
+        position: relative;
       }
-      @media screen and (max-width: 1200px) {
-        div {
-          width: 500px;
-          height: 250px;
-        }
-      }
-      @media screen and (max-width: 1140px) {
-        div {
-          width: 250px;
-          height: 125px;
-        }
+      div p {
+        position: absolute;
       }
     </style>
   </head>
   <body>
-    <section>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </section>
+    <ul>
+      <li>photo1</li>
+      <li>photo2</li>
+      <li>photo3</li>
+      <li>photo4</li>
+      <li>photo5</li>
+    </ul>
     <div>
-      asdassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssfwefwefwef
-      sasfewfefafgsd
+      <p><img src="./images/photo1.jpg" alt="" /></p>
+      <p><img src="./images/photo2.jpg" alt="" /></p>
+      <p><img src="./images/photo3.jpg" alt="" /></p>
+      <p><img src="./images/photo4.jpg" alt="" /></p>
+      <p><img src="./images/photo5.jpg" alt="" /></p>
     </div>
+    <script>
+      function my() {
+        document.querySelectorAll("p").forEach(function (value, key) {
+          value.classList.remove("on");
+        });
+      }
+      document.querySelectorAll("ul li").forEach(value, key){value.onclick=function(){
+        my();document.querySelectorAll("ul li")
+      }};
+    </script>
   </body>
 </html>
