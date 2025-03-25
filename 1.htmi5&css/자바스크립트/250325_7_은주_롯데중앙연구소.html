@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HLL</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #111;
+      }
+      .wrap {
+        text-align: center;
+      }
+      .wrap .R_D {
+        display: flex;
+        justify-content: center;
+      }
+      .wrap .R_D li {
+        margin: 50px 10px;
+        padding: 10px 50px;
+        border: 1px solid;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 1vw;
+        color: rgba(255, 255, 255, 0.5);
+        background: rgba(51, 51, 51, 0.8);
+      }
+      .wrap .R_D li:hover {
+        background-color: rgb(218, 41, 28);
+        color: #fff;
+      }
+      .wrap .con {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .wrap .con li {
+        position: absolute;
+        opacity: 0;
+        height: 100%;
+      }
+      .wrap .con li.up {
+        opacity: 1;
+      }
+
+      .wrap .con li > p {
+        width: 100%;
+        height: 100%;
+      }
+      .wrap .con li > p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .wrap .con li .txt {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        left: 0;
+        top: 0;
+      }
+      .wrap .con li .txt p:first-child {
+        font-size: 2vw;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .wrap .con li .txt p:nth-child(2) {
+        font-size: 0.9vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="R_D">
+        <li>연구개발</li>
+        <li>기초연구</li>
+        <li>패키지연구</li>
+        <li>기술연구</li>
+        <li>안전관리</li>
+        <li>연구전략</li>
+      </ul>
+      <ul class="con">
+        <li>
+          <div>
+            <p>
+              <img
+                src="https://www.lotternd.com/assets/images/sub/research/research-ban1.jpg"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <p>연구개발</p>
+              <p>
+                소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을
+                개선합니다.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <img
+                src="https://www.lotternd.com/assets/images/sub/research/research-ban2.jpg"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <p>기초연구</p>
+              <p>
+                바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을
+                개척합니다.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.lotternd.com/assets/images/sub/research/research-ban3.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>패키지연구</p>
+            <p>
+              제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를
+              이룹니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.lotternd.com/assets/images/sub/research/research-ban4.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>기술연구</p>
+            <p>
+              첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.lotternd.com/assets/images/sub/research/research-ban5.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>안전관리</p>
+            <p>
+              위생 관리와 위해 사고 예방을 통해 롯데 식품 및 상품의 안전을
+              책임집니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.lotternd.com/assets/images/sub/research/research-ban6.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>연구전략</p>
+            <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="Compliance">
+        <ul class="list">
+          <li>컴플라이언스란?</li>
+          <li>컴플라이언스 위원회</li>
+          <li>준법경영헌장</li>
+        </ul>
+        <ul class="sub-title">
+          <li>
+            <p>윤리경영을 향한 길, 컴플라이언스(Compliance)</p>
+            <p>
+              컴플라이언스란 기업경영이 법령, 규정, 윤리 또는 사회통념에 맞도록
+              하는 내부통제 장치입니다. 이는 내부요인이나 외부 자극으로부터
+              기업을 보호하는 길이며, 구성원 스스로의 관리를 통해 리스크에
+              노출되지 않도록 하는 것입니다.
+            </p>
+          </li>
+          <li>
+            <p>컴플라이언스위원회</p>
+            <p>
+              롯데중앙연구소 컴플라이언스위원회는 준법, 윤리 등을 준수하고
+              연구소 내 컴플라이언스 체계확립 및 준법, 윤리적 기준을 유지하기
+              위하여 구성되었습니다.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".con li")[0].classList.add("up");
+
+      function down() {
+        document.querySelectorAll(".con li").forEach(function (v, k) {
+          v.classList.remove("up");
+        });
+      }
+
+      document.querySelectorAll(".R_D li").forEach(function (v, k) {
+        v.onclick = function () {
+          down(), document.querySelectorAll(".con li")[k].classList.add("up");
+        };
+      });
+    </script>
+  </body>
+</html>
