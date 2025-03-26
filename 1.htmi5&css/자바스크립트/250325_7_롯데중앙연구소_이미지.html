@@ -50,23 +50,32 @@
         text-align: center;
         opacity: 0;
       }
+      .con li > div {
+        position: relative;
+      }
+      .con li > div .txt {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
       .con li.on {
         opacity: 1;
         transition: 1s;
       }
-      .con li div h2,
-      .con li div p {
+      .con li div.txt h2,
+      .con li div.txt p {
         position: relative;
         top: 20px;
         opacity: 0;
         transition: 1s;
       }
-      .con li div h2.on,
-      .con li div p.on {
+      .con li div.txt h2.on,
+      .con li div.txt p.on {
         top: 0;
         opacity: 1;
       }
-      .con li div p {
+      .con li div.txt p {
         transition-delay: 0.5s;
       }
     </style>
@@ -83,50 +92,70 @@
     <ul class="con">
       <li>
         <div>
-          <h2>연구개발</h2>
-          <p>
-            소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을
-            개선합니다.
-          </p>
+          <p><img src="" alt="" /></p>
+          <div class="txt">
+            <h2>연구개발</h2>
+            <p>
+              소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을
+              개선합니다.
+            </p>
+          </div>
         </div>
       </li>
       <li>
         <div>
-          <h2>기초연구</h2>
-          <p>
-            바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을
-            개척합니다.
-          </p>
+          <p><img src="" alt="" /></p>
+          <div class="txt">
+            <h2>기초연구</h2>
+            <p>
+              바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을
+              개척합니다.
+            </p>
+          </div>
         </div>
       </li>
       <li>
         <div>
-          <h2>패키지연구</h2>
-          <p>
-            제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를
-            이룹니다.
-          </p>
+          <p><img src="" alt="" /></p>
+          <div class="txt">
+            <h2>패키지연구</h2>
+            <p>
+              제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를
+              이룹니다.
+            </p>
+          </div>
         </div>
       </li>
       <li>
         <div>
-          <h2>기술연구</h2>
-          <p>첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.</p>
+          <p><img src="" alt="" /></p>
+          <div class="txt">
+            <h2>기술연구</h2>
+            <p>
+              첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.
+            </p>
+          </div>
         </div>
       </li>
       <li>
         <div>
-          <h2>안전관리</h2>
-          <p>
-            위생 관리와 위해 사고 예방을 통해 롯데 식품 및 상품의 안전을
-            책임집니다.
-          </p>
+          <p><img src="" alt="" /></p>
+          <div class="txt">
+            <h2>안전관리</h2>
+            <p>
+              위생 관리와 위해 사고 예방을 통해 롯데 식품 및 상품의 안전을
+              책임집니다.
+            </p>
+          </div>
         </div>
       </li>
       <li>
         <div>
-          <h2>연구전략</h2>
-          <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+          <p><img src="" alt="" /></p>
+          <div class="txt">
+            <h2>연구전략</h2>
+            <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+          </div>
         </div>
       </li>
     </ul>
@@ -142,13 +171,13 @@
         .classList.add("on");
       document
         .querySelectorAll(".con li")[0]
-        .querySelector("p")
+        .querySelector(".txt p")
         .classList.add("on");
       document.querySelectorAll(".con li").forEach(function (v, k) {
-        v.style.background =
-          "url(https://www.lotternd.com/assets/images/sub/research/research-ban" +
+        v.querySelector("img").src =
+          "https://www.lotternd.com/assets/images/sub/research/research-ban" +
           (k + 1) +
-          ".jpg)";
+          ".jpg";
       });
       function my() {
         document.querySelectorAll(".menu li").forEach(function (v, k) {
@@ -156,8 +185,8 @@
         });
         document.querySelectorAll(".con li").forEach(function (v, k) {
           v.classList.remove("on");
-          v.querySelector("div h2").classList.remove("on");
-          v.querySelector("div p").classList.remove("on");
+          v.querySelector("div.txt h2").classList.remove("on");
+          v.querySelector("div.txt p").classList.remove("on");
         });
       }
       document.querySelectorAll(".menu li").forEach(function (v, k) {
@@ -168,11 +197,11 @@
           document.querySelectorAll(".con li")[k].classList.add("on");
           document
             .querySelectorAll(".con li")
-            [k].querySelector("div h2")
+            [k].querySelector("div.txt h2")
             .classList.add("on");
           document
             .querySelectorAll(".con li")
-            [k].querySelector("div p")
+            [k].querySelector("div.txt p")
             .classList.add("on");
         };
       });

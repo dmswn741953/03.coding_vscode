@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭버튼</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let a = 10;
+      let b = 20;
+      document.write("a+b=" + (a + b) + "<br>");
+      document.write("a+b=" + a + b + "<br>");
+      document.write("a+b=", a + b, "<br>");
+      // ,(콤마)는 좌우(왼,오)에 있는 식을 연결해 주는 역할
+      document.write("a-b=", a - b, "<br>");
+      document.write("a/b=", a / b, "<br>");
+      document.write("a%b=", a % b, "<br>");
+      document.write("a**b=", a ** b, "<br>");
+      //(**은 지수, 10의 20승 한것)
+      document.write("a++ : ", a++, "<br>");
+
+      document.write("a : ", a, "<br>");
+      document.write("a-- : ", a--, "<br>");
+      //후위연산 a 출력 후 +연산 +1
+      document.write("++a : ", ++a, "<br>");
+      //전위연산 a+1
+    </script>
+  </body>
+</html>

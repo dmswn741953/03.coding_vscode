@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신세계푸드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(68, 68, 68);
+      }
+
+      #business {
+        /* width: 100%;
+        max-width: 1905px; */
+        height: 450px;
+        margin: 0 auto;
+        background: url(https://www.shinsegaefood.com/images/business/business_bg_food.jpg)
+          center/cover;
+      }
+      #business ul {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 3%;
+      }
+      #business ul li {
+        background: #fff;
+        border-radius: 50%;
+        position: relative;
+      }
+      #business ul li.on::after {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        width: 180px;
+        height: 180px;
+        border: 10px solid #da2128;
+        border-radius: 50%;
+      }
+      #business ul li a {
+        display: block;
+        position: relative;
+        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        filter: grayscale(1);
+        box-sizing: border-box;
+      }
+      #business ul li a.on {
+        filter: grayscale(0);
+      }
+      #business ul li:nth-child(1) a {
+        background: url(https://www.shinsegaefood.com/images/business/bg_business_tab01_on.png)
+          center top;
+        background-repeat: no-repeat;
+      }
+      #business ul li:nth-child(2) a {
+        background: url(https://www.shinsegaefood.com/images/business/bg_business_tab02_on.png)
+          center top;
+        background-repeat: no-repeat;
+      }
+      #business ul li:nth-child(3) a {
+        background: url(https://www.shinsegaefood.com/images/business/bg_business_tab03_on.png)
+          center top;
+        background-repeat: no-repeat;
+      }
+      #business ul li:nth-child(4) a {
+        background: url(https://www.shinsegaefood.com/images/business/bg_business_tab04_on.png)
+          center top;
+        background-repeat: no-repeat;
+      }
+      #business ul li:nth-child(5) a {
+        background: url(https://www.shinsegaefood.com/images/business/bg_business_tab05_on.png)
+          center top;
+        background-repeat: no-repeat;
+      }
+      #business ul li:nth-child(6) a {
+        background: url(https://www.shinsegaefood.com/images/business/bg_business_tab06_on.png)
+          center top;
+        background-repeat: no-repeat;
+      }
+
+      #business ul li a span {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 19px;
+      }
+
+      @media screen and (max-width: 1420px) {
+        #business {
+          height: 360px;
+        }
+        #business ul li a {
+          width: 120px;
+          height: 120px;
+        }
+        #business ul li.on::after {
+          width: 120px;
+          height: 120px;
+        }
+
+        #business ul li:nth-child(1) a,
+        #business ul li:nth-child(2) a,
+        #business ul li:nth-child(3) a,
+        #business ul li:nth-child(4) a,
+        #business ul li:nth-child(5) a,
+        #business ul li:nth-child(6) a {
+          background-size: 80%;
+        }
+        #business ul li a span {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="business">
+      <ul>
+        <li>
+          <a href="#">
+            <span>식품제조/<br />유통</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"> <span>푸드서비스</span></a>
+        </li>
+        <li>
+          <a href="#">
+            <span>프리미엄<br />다이닝</span></a
+          >
+        </li>
+        <li>
+          <a href="#"> <span>베이커리</span></a>
+        </li>
+        <li>
+          <a href="#"> <span>프랜차이즈</span></a>
+        </li>
+        <li>
+          <a href="#"> <span>자회사</span></a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      document.querySelectorAll("#business ul li")[0].classList.add("on");
+      document.querySelectorAll("#business ul li a")[0].classList.add("on");
+
+      function remove() {
+        document.querySelectorAll("#business ul li").forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        document.querySelectorAll("#business ul li a").forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+      }
+
+      document.querySelectorAll("#business ul li").forEach(function (v, k) {
+        v.onclick = function () {
+          remove();
+          document.querySelectorAll("#business ul li")[k].classList.add("on");
+          document.querySelectorAll("#business ul li a")[k].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

@@ -194,6 +194,8 @@ a {
 .business {
   width: 100%;
   text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .title-txt {
@@ -206,49 +208,35 @@ a {
 .title-txt p {
   font-size: 24px;
 }
+
 .business ul {
   width: 100%;
   display: flex;
 }
 
-.business ul li {
-  width: 100%;
-}
 .recruit {
   width: 100%;
   text-align: center;
 }
-.recruit > ul {
+.recruit .re_con {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  width: 100%;
   background: url(../imges/recruit/bg_recruit.06af1aea.png) center/cover;
+  justify-content: center;
 }
-.recruit > ul > li {
-  /* flex: 0 0 25%; */
-  width: 400px;
 
-  padding-top: 65px;
-  border-radius: 5%;
+.recruit ul {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 40%);
+  gap: 30px;
+}
+.recruit ul li {
   background: rgba(0, 0, 0, 0.2);
+  border: 1px solid;
 }
-.recruit > ul > li a {
-  color: #fff;
-}
-.recruit > ul > li a p:nth-child(2) {
-  padding: 25px 0;
-  font-size: 28px;
-  font-family: "Pretendard-B", "sans-serif";
-}
-.recruit > ul > li a p:nth-child(3) {
-  font-size: 18px;
-}
-.recruit > ul > li > a > span {
-  display: inline-block;
-  width: 55px;
-  height: 55px;
-  border: 1px solid #aaa;
-  border-radius: 10px;
+.recruit ul li a {
+  display: block;
 }
 @media screen and (max-width: 1599px) {
   .nav ul.menu > li {

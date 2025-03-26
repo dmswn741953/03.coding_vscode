@@ -51,6 +51,22 @@
       }
       .con li.on {
         opacity: 1;
+        transition: 1s;
+      }
+      .con li div h2,
+      .con li div p {
+        position: relative;
+        top: 20px;
+        opacity: 0;
+        transition: 1s;
+      }
+      .con li div h2.on,
+      .con li div p.on {
+        top: 0;
+        opacity: 1;
+      }
+      .con li div p {
+        transition-delay: 0.5s;
       }
     </style>
   </head>
@@ -89,6 +105,15 @@
         .querySelector("a")
         .classList.add("on");
       document.querySelectorAll(".con li")[0].classList.add("on");
+      document
+        .querySelectorAll(".con li")[0]
+        .querySelector("h2")
+        .classList.add("on");
+
+      document
+        .querySelectorAll(".con li")[0]
+        .querySelector("p")
+        .classList.add("on");
 
       document.querySelectorAll(".con li").forEach(function (v, k) {
         v.style.background =
@@ -97,8 +122,34 @@
           ".jpg";
       });
 
-      function my(){document.querySelectorAll(".con li").forEach(function(v,k){
-        v.classList.remove("on")}}
+      function my() {
+        document.querySelectorAll(".menu li").forEach(function (v, k) {
+          v.querySelector("a").classList.remove("on");
+        });
+
+        document.querySelectorAll(".con li").forEach(function (v, k) {
+          v.classList.remove("on");
+          v.querySelector("div h2").classList.remove("on");
+          v.querySelector("div p").classList.remove("on");
+        });
+      }
+
+      document.querySelectorAll(".menu li").forEach(function (v, k) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          my();
+          v.querySelector("a").classList.add("on");
+          document.querySelectorAll(".con li")[k].classList.add("on");
+          document
+            .querySelectorAll(".con li")
+            [k].querySelector("div h2")
+            .classList.add("on");
+          document
+            .querySelectorAll(".con li")
+            [k].querySelector("div p")
+            .classList.add("on");
+        };
+      });
     </script>
   </body>
 </html>
