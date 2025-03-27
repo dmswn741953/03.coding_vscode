@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문자열메소드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let str1 = "nice to meetm you"; //자릿수 셀때는 앞에서 셀때 > 0123  | 뒤에서 셀때 > 1234
+      let str2 = new String("nice to meet you");
+      document.write(str1.search("m") + "<br>");
+      document.write(str1.search("M") + "<br>");
+      document.write(str1.search(/m/i) + "<br>"); //search(/?/i) 는 ?의 대소문자 구분하지 않음 처음만나는 ?을 변경함/
+      document.write(str1.replace("m", "n") + "<br>");
+      document.write(str1.replace("M", "n") + "<br>");
+      document.write(str1.replace(/M/i, "n") + "<br>");
+      document.write(str1.replace(/m/g, "n") + "<br>");
+      document.write(str1.replace(/m/gi, "n") + "<br>");
+      document.write(str1.replaceAll("m", "n") + "<br>");
+      document.write(str1.indexOf("m") + "<br>");
+      document.write(str1.indexOf("x") + "<br>");
+      document.write(str1.lastIndexOf("m") + "<br>");
+      document.write(str1.match("me") + "<br>");
+      document.write(str1.match("x") + "<br>");
+      document.write(str1.charAt(8) + "<br>");
+      document.write(str1.slice(0, 3) + "<br>");
+      document.write(str1.slice(-3, -1) + "<br>");
+      document.write(str1.slice(1) + "<br>");
+      document.write(str1.slice(-3) + "<br>");
+      let str3 = "123456-1234567";
+      document.write(str3.replace(str3.slice(8), "******") + "<br>");
+      document.write(str3.replace(str3.slice(8), "*".repeat(6)) + "<br>");
+      document.write(str3.substring(0, 8) + "<br>");
+      document.write(str3.substring(7) + "<br>");
+      document.write(str3.substring(-3) + "<br>");
+      //substring메소드는 인수값에 음의값이 입력되면 0으로 처리
+      document.write(str3.substr(0, 5) + "<br>"); //개수를 가져오는 것
+      document.write(str3.substr(0) + "<br>");
+      document.write(str3.length + "<br>"); //공백까지 포함
+
+      let str4 = "a b c d f";
+      document.write(str4.split("", 1) + "<br>");
+      document.write(str4.split("").length + "<br>"); //공백으로 나눌 수 있는 개수
+      document.write(str4.split("")[4] + "<br>");
+    </script>
+  </body>
+</html>
