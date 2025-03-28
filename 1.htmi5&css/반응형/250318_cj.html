@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>바보</title>
     <style>
       @font-face {
         font-family: "Pretendard-Regular";
@@ -16,9 +16,6 @@
         margin: 0;
         padding: 0;
       }
-      html {
-        scroll-behavior: smooth;
-      }
       body {
         font-family: "Pretendard-Regular";
       }
@@ -28,11 +25,11 @@
       a {
         text-decoration: none;
       }
-      #store:target,
-      #service:target,
-      #global:target {
+      /* #link1:target,
+      #link2:target,
+      #link3:target {
         color: rgb(130, 220, 40);
-      }
+      } */
       .cj {
         width: 100%;
         max-width: 1420px;
@@ -40,9 +37,10 @@
         padding: 0 60px;
         box-sizing: border-box;
       }
-      .cj > ul {
+      .cj > ul.main {
         display: flex;
         gap: 20px;
+        padding-bottom: 140px;
       }
       .cj > ul img {
         width: 100%;
@@ -117,25 +115,25 @@
         font-size: 20px;
       }
 
-      .cj .con {
+      /* .cj .con {
         width: 100%;
         padding-top: 40%;
         background: url(https://corp.oliveyoung.com/img/main/key_msg_back-90998f6de42a777977aa140f5864b7f6.jpg)
           center/cover;
         background-size: 190%;
-      }
+      } */
 
       .cj section {
         width: 100%;
         display: flex;
+        background: #ccc;
       }
       .cj section > div {
         /* flex: 1; */
         /* border: 1px solid; */
       }
       .cj section .Plat-txt {
-        top: 0;
-        padding-top: 140px;
+        top: 140px;
         height: 50%;
         position: sticky;
         flex: 1;
@@ -148,12 +146,16 @@
         line-height: 40px;
         color: rgb(86, 94, 101);
       }
+      .cj section .Plat-txt .plat-menu li a.on {
+        color: rgb(130, 220, 40);
+      }
       .cj section .Plat-txt h1 {
         font-size: 54px;
       }
       .cj section .plat-con {
-        padding-top: 140px;
         flex: 2;
+        position: relative;
+        top: 140px;
       }
       .cj section .plat-con > div {
         display: flex;
@@ -296,7 +298,7 @@
   </head>
   <body>
     <div class="cj">
-      <ul>
+      <ul class="main">
         <li class="left">
           <a href="#">
             <p>
@@ -391,7 +393,7 @@
           </ul>
         </li>
       </ul>
-      <div class="con"></div>
+      <!-- <div class="con"></div> -->
       <section>
         <div class="Plat-txt">
           <h1>
@@ -399,15 +401,15 @@
             Platforms
           </h1>
           <ul class="plat-menu">
-            <li><a href="#store">올리브영 매장</a></li>
-            <li><a href="#service">올리브영 Online (국내)</a></li>
-            <li><a href="#global">올리브영 글로벌</a></li>
+            <li><a href="#">올리브영 매장</a></li>
+            <li><a href="#">올리브영 Online (국내)</a></li>
+            <li><a href="#">올리브영 글로벌</a></li>
           </ul>
         </div>
 
         <div class="plat-con">
           <div>
-            <p><span id="store">01</span> <span>올리브영 매장(국내)</span></p>
+            <p><span id="link1">01</span> <span>올리브영 매장(국내)</span></p>
             <ul>
               <li>
                 <p>
@@ -435,9 +437,7 @@
             </ul>
           </div>
           <div>
-            <p>
-              <span id="service">02</span><span>올리브영 Online (국내)</span>
-            </p>
+            <p><span id="link2">02</span><span>올리브영 Online (국내)</span></p>
             <ul>
               <li>
                 <p>
@@ -469,7 +469,7 @@
             </ul>
           </div>
           <div>
-            <p><span id="global">03</span><span>올리브영 글로벌</span></p>
+            <p><span id="link3">03</span><span>올리브영 글로벌</span></p>
             <ul>
               <li>
                 <p>
@@ -497,5 +497,31 @@
         </div>
       </section>
     </div>
+    <script>
+      let ht = document.querySelector(".main").clientHeight;
+      console.log(ht);
+      document
+        .querySelectorAll(".plat-menu li")[0]
+        .querySelector("a")
+        .classList.add("on");
+
+      function down() {
+        document.querySelectorAll(".plat-menu li").forEach(function (v, k) {
+          v.querySelector("a").classList.remove("on");
+        });
+      }
+
+      document.querySelectorAll(".plat-menu li").forEach(function (v, k) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          down();
+          this.querySelector("a").classList.add("on");
+          window.scrollTo({
+            top: document.querySelector(`#link${k + 1}`).offsetTop + ht,
+            behavior: "smooth",
+          });
+        };
+      });
+    </script>
   </body>
 </html>

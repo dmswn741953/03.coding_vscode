@@ -34,7 +34,7 @@
           >
         </li>
         <li>
-          <a href="#"
+          <a href="#Sustainability"
             ><p></p>
             <span>SUSTAINABILITY</span></a
           >
@@ -180,6 +180,8 @@
         </li>
       </ul>
     </div>
+
+    <div id="Sustainability"></div>
     <div id="recruit">
       <div class="title-txt">
         <h2>RECRUIT</h2>
@@ -242,10 +244,15 @@
         </ul>
         <ul class="re_notice">
           <li>
-            <span>전체</span>
-            <span>수시</span>
-            <span>상시</span>
+            <div>
+              <span>전체</span>
+              <span>수시</span>
+              <span>상시</span>
+            </div>
+            <div><a href="#">인재채용 목록보기</a></div>
+          </li>
 
+          <li>
             <div>
               <a href="#">
                 <p>수시/ <span>접수마감</span></p>
@@ -254,9 +261,27 @@
               </a>
             </div>
           </li>
-          <li><a href="#">인재채용 목록보기</a></li>
+          <li></li>
         </ul>
       </div>
     </div>
   </div>
+  <script>
+    document
+      .querySelectorAll(".main .bg-menu li")[0]
+      .querySelector("span")
+      .classList.add("on");
+
+    function down() {
+      document.querySelectorAll(".main .bg-menu li").forEach(function (v, k) {
+        v.querySelector("span").classList.remove("on");
+      });
+    }
+    document.querySelectorAll(".main .bg-menu li").forEach(function (v, k) {
+      v.onclick = function () {
+        down();
+        this.querySelector("span").classList.add("on");
+      };
+    });
+  </script>
 </body>
