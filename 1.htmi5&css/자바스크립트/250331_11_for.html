@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // document.write("제목1입니다.<br>");
+      // document.write("제목2입니다.<br>");
+      // document.write("제목3입니다.<br>");
+      // document.write("제목4입니다.<br>");
+      // document.write("제목5입니다.<br>");
+
+      for (let i = 0; i <= 5; i++) {
+        document.write(`제목${i}입니다.<br>`);
+      }
+      for (let i = 0; i <= 100; i++) {
+        document.write(`${i}<br>`);
+      }
+      for (let i = 0; i <= 100; i++) {
+        if (i % 2 == 0) {
+          document.write(`${i},`);
+        }
+      }
+      document.write("<br>");
+      for (let i = 0; i <= 100; i++) {
+        if (i % 2 == 1) {
+          document.write(`${i},`);
+        }
+      }
+      document.write("<br>");
+      for (let i = 1; i <= 100; i += 2) {
+        document.write(`${i},`);
+      }
+      document.write("<br>");
+      for (let i = 0; i <= 100; i += 2) {
+        document.write(`${i},`);
+      }
+      document.write("<br>");
+      let sum = 0;
+      for (let i = 1; i <= 10; i++) {
+        // sum1 = sum + i;
+        sum += i;
+      }
+      document.write(`1부터 10까지의 합계:${sum}`);
+
+      document.write("<br>");
+      let sum1 = 0;
+      for (let i = 1; i <= 100; i++) {
+        // sum1 = sum + i;
+        sum1 += i;
+      }
+      document.write(`1부터 100까지의 합계:${sum1}<br>`);
+
+      document.write("<br>");
+      let sum2 = 0;
+      for (let i = 1; i <= 100; i++) {
+        if (i % 2 == 0) {
+          sum2 += i;
+        }
+      }
+      document.write(`1부터 100까지의 짝수의합계:${sum2}<br>`);
+
+      document.write("<br>");
+      let sum3 = 0;
+      for (let i = 1; i <= 100; i++) {
+        if (i % 2 == 1) {
+          sum3 += i;
+        }
+      }
+      document.write(`1부터 100까지의 짝수의합계:${sum3}<br>`);
+
+      document.write("<br>");
+
+      for (let i = 100; i >= 0; i--) {
+        document.write(`${i}<br>`);
+      }
+    </script>
+  </body>
+</html>

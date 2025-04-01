@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1560px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin: 0 auto;
+      }
+
+      .wrap .title {
+        padding: 30px 0;
+        border-bottom: 1px solid rgb(235, 235, 235);
+        overflow: hidden;
+      }
+      .wrap .title h1.on {
+        padding-bottom: 30px;
+      }
+      .wrap .title .con {
+        height: 0;
+        opacity: 0;
+      }
+      .wrap .title .con.on {
+        height: 300px;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="title">
+        <h1>GS파워</h1>
+        <div class="con">
+          <p>
+            <img
+              src="https://www.gsenergy.co.kr/pub/images/img_collective_b01.jpg"
+              alt=""
+            />
+          </p>
+          <p>
+            GS파워는 한국전력공사의 발전부문 매각과 한국지역난방공사 공기업
+            민영화 작업의 일환으로 정부가 시행한 안양/부천 열병합 발전 및
+            <br />지역난방설비에 대한 공개경쟁입찰에서 인수자로 최종 결정되어,
+            2000년 6월 22일 자산양수도 계약을 체결하고, 그 해 9 월 1일 본격적인
+            운영을 시작하였습니다.
+          </p>
+        </div>
+      </div>
+      <div class="title">
+        <h1>인천종합에너지</h1>
+        <div class="con">
+          <p>
+            <img
+              src="https://www.gsenergy.co.kr/pub/images/img_collective_b01.jpg"
+              alt=""
+            />
+          </p>
+          <p>
+            GS파워는 한국전력공사의 발전부문 매각과 한국지역난방공사 공기업
+            민영화 작업의 일환으로 정부가 시행한 안양/부천 열병합 발전 및
+            <br />지역난방설비에 대한 공개경쟁입찰에서 인수자로 최종 결정되어,
+            2000년 6월 22일 자산양수도 계약을 체결하고, 그 해 9 월 1일 본격적인
+            운영을 시작하였습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let bool = true;
+
+      document.querySelectorAll(".title").forEach(function (v, k) {
+        v.querySelector("h1").onclick = function () {
+          if (bool) {
+            document
+              .querySelector(".title")
+              .querySelector(".con")
+              .classList.add("on");
+          } else {
+            document
+              .querySelector(".title")
+              .querySelector(".con")
+              .classList.remove("on");
+          }
+
+          bool = !bool;
+        };
+      });
+    </script>
+  </body>
+</html>

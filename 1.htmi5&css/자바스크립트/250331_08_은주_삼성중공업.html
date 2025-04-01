@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 100%;
+        width: 1912px;
+        height: 960px;
+        margin: 0 auto;
+        text-align: center;
+        background: url(https://www.samsungshi.com/images/sub/sVisual_01.jpg)
+          center/cover;
+        box-sizing: border-box;
+      }
+      .wrap > div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+      .wrap h2 {
+        font-size: 60px;
+        color: #fff;
+      }
+      .wrap ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .wrap ul li {
+        width: 180px;
+        position: relative;
+        font-size: 22px;
+        color: rgba(255, 255, 255, 0.37);
+        padding-bottom: 30px;
+        transition: 1s;
+        cursor: pointer;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.37);
+        text-align: center;
+      }
+      .wrap ul li.on {
+        text-align: left;
+        color: #fff;
+      }
+      .wrap ul li::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 180px;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.37);
+        transform: scaleX(0);
+        transform-origin: 50 50;
+        transition: 0.5s ease-in-out;
+      }
+      .wrap ul li.on::after {
+        transform: scaleX(1);
+        background: #fff;
+      }
+
+      .wrap ul li::before {
+        content: url(https://www.samsungshi.com/images/sub/sVIsual_icon.png);
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        transition: 0.5s;
+        transform: rotate(180deg);
+      }
+      .wrap ul li.on::before {
+        opacity: 1;
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div>
+        <h2>제품 | 기술</h2>
+        <ul>
+          <li>제품 | 서비스</li>
+          <li>그린 솔루션</li>
+          <li>디지털 솔루션</li>
+          <li>스마트야드 솔루션</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll("ul li").forEach(function (v, k) {
+        v.onmouseenter = function () {
+          this.classList.add("on");
+        };
+
+        v.onmouseleave = function () {
+          this.classList.remove("on");
+        };
+      });
+    </script>
+  </body>
+</html>

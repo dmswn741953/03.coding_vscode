@@ -276,7 +276,7 @@
           <li id="con2">둘</li>
           <li id="con3">셋</li>
           <li id="con4">넷</li>
-          <li id="con5">다섯</li>
+          <li id="con5">다섯<a href="#">top</a></li>
         </ul>
       </div>
     </div>
@@ -306,6 +306,20 @@
           });
         };
       });
+      // document.querySelector("#con5").querySelector("a").onclick = function (
+      //   e
+      // ) {
+      //   e.preventDefault();
+      //   window.scrollTo({ top: 200, behavior: "smooth" });
+      // };
+
+      document
+        .querySelector("#con5")
+        .querySelector("a")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.scrollTo({ top: 200, behavior: "smooth" });
+        });
     </script>
   </body>
 </html>
