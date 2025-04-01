@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .list {
+        width: 95%;
+        max-width: 1420px;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      .list li {
+        flex: 1;
+        cursor: pointer;
+        height: 503.72px;
+      }
+      .list li img {
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <img src="./images/img_sustain_pc_1.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./images/img_sustain_pc_2.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./images/img_sustain_pc_3.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./images/img_sustain_pc_4.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./images/img_sustain_pc_5.jpg" alt="" />
+      </li>
+    </ul>
+    <script>
+      function my() {
+        document.querySelectorAll(".list li").forEach(function (v, k) {
+          v.querySelector("img").src = `./images/img_sustain_pc_hover_1_${
+            k + 1
+          }.jpg`;
+        });
+      }
+
+      function remove() {}
+
+      document.querySelectorAll(".list li").forEach(function (v, k) {
+        v.onmouseenter = function () {
+          my();
+        };
+      });
+    </script>
+  </body>
+</html>

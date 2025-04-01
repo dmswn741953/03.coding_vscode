@@ -11,6 +11,10 @@
   font-family: "Pretendard-S";
   src: url(../webfonts/Pretendard-SemiBold.0b651bef.woff2) format("woff2");
 }
+@font-face {
+  font-family: "Pretendard-m";
+  src: url(../webfonts/Pretendard-Medium.c0f4afc6.woff2) format("woff2");
+}
 html {
   scroll-behavior: smooth;
 }
@@ -48,7 +52,7 @@ a {
 }
 .main ul.bg-menu {
   position: fixed;
-  width: 100%;
+  width: 150px;
   left: 50px;
   top: 50%;
   transform: translateY(-50%);
@@ -56,7 +60,7 @@ a {
 }
 .main ul.bg-menu > li {
   line-height: 30px;
-  width: 150px;
+  width: 100%;
 }
 
 .main ul.bg-menu > li > a {
@@ -229,6 +233,7 @@ a {
 #recruit .re_con {
   width: 100%;
   background: url(../imges/recruit/bg_recruit.06af1aea.png) center/cover;
+  padding: 80px 0;
 }
 
 #recruit .re_con .re_telent {
@@ -236,7 +241,6 @@ a {
   justify-content: center;
   grid-template-columns: repeat(3, 400px);
   gap: 30px;
-  padding-top: 80px;
 }
 #recruit .re_con .re_telent li {
   display: block;
@@ -316,7 +320,7 @@ a {
 
 #recruit .re_con .re_notice {
   width: 1260px;
-  margin: 50px auto;
+  margin: 50px auto 0;
   text-align: left;
   color: #fff;
 }
@@ -344,9 +348,20 @@ a {
   background: rgba(255, 255, 255, 0.315);
 }
 #recruit .re_con .re_notice li:first-child div:nth-child(2) a {
+  position: relative;
   font-size: 18px;
   color: #fff;
 }
+#recruit .re_con .re_notice li:first-child div:nth-child(2) a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  right: 0;
+  bottom: -2px;
+  background: #fff;
+}
+
 #recruit .re_con .re_notice li:nth-child(2) {
   width: 470px;
 }
@@ -385,6 +400,33 @@ a {
   font-family: "Pretendard-S", "sans-serif";
 }
 
+#PR {
+  background: url(https://www.lsmtron.com/_nuxt/bg_pr.fc97cbd8.png) center/cover;
+}
+#PR .pr-title {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 207px;
+}
+#PR .pr-title li:first-child h2 {
+  font-size: 84px;
+  color: #fff;
+}
+
+#PR .pr-title li:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+#PR .pr-title li:nth-child(2) div a {
+  font-size: 20px;
+  color: #fff;
+  font-family: "Pretendard-m", "sans-serif";
+}
+#PR .pr-title li:nth-child(2) > a {
+  font-size: 18px;
+  color: #fff;
+}
 @media screen and (max-width: 1599px) {
   .nav ul.menu > li {
     transition: none;

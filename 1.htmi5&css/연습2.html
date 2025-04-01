@@ -40,6 +40,7 @@
         left: 50%;
         top: 50%;
         border-radius: 2px;
+        transition: 0.2s linear;
       }
       ul.list .title span::before {
         width: 23px;
@@ -51,6 +52,10 @@
         width: 3px;
         height: 23px;
         margin: -11px 0 0 -1px;
+      }
+      ul.list .title span.on::after {
+        transform: rotate(90deg);
+        opacity: 0;
       }
 
       ul.list .contents p {
@@ -105,6 +110,25 @@
     </ul>
     <script>
       let item = document.querySelectorAll(".list li");
+
+      function myfnc() {
+        let bool = this.querySelector("span").classList.contains("on");
+        item.forEach(function (v, k) {
+          v.querySelector("span").classList.remove("on");
+          v.querySelector(".contents p").classList.remove("on");
+          v.querySelector(".contents p").style.height = 0;
+        });
+        if (!bool) {
+          this.querySelector("span").classList.add("on");
+          this.querySelector(".contents p").classList.add("on");
+          let ht = this.querySelector(".contents p img").clientHeight;
+          console.log(ht);
+          this.querySelector(".contents p").style.height = ht + "px";
+        }
+      }
+      item.forEach(function (v, k) {
+        v.onclick = myfnc;
+      });
     </script>
   </body>
 </html>
