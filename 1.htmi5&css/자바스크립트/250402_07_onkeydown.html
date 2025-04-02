@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onkeydown</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="fname" id="name" value="132465" />
+    <script>
+      document.querySelector("#name").onchange = function () {
+        this.value = this.value.toUpperCase();
+      };
+      // document.querySelector("#name").onkeydown = function (event) {
+      //   console.log(event.keyCode);a
+      // };
+      // document.querySelector("#name").onkeypress = function (event) {
+      //   console.log(event.keyCode);
+      // };
+      document.querySelector("#name").onkeyup = function (event) {
+        console.log(event.keyCode);
+      };
+    </script>
+  </body>
+</html>

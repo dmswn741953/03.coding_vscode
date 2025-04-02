@@ -109,8 +109,28 @@
         </ul>
         <!-- <div class="nav-back"></div> -->
         <ul class="service">
-          <li>CUSTOMER</li>
-          <li>KOR</li>
+          <li>
+            <div>CUSTOMER</div>
+            <div class="sv-list">
+              <ul>
+                <li>고객센터</li>
+                <li><a href="#">고객문의</a></li>
+                <li>파트너 포털</li>
+                <li><a href="#">협력업체 포털 +</a></li>
+                <li><a href="#">대리점 포털 +</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            KOR
+            <div class="sv-list">
+              <ul>
+                <li><a href="#">KOR</a></li>
+                <li><a href="#">ENG</a></li>
+                <li><a href="#">CHN</a></li>
+              </ul>
+            </div>
+          </li>
           <p>
             <span><img src="./imges/menu.svg" alt="menu" /></span>
           </p>
@@ -279,20 +299,39 @@
     </div>
   </div>
   <script>
-    document
-      .querySelectorAll(".main .bg-menu li")[0]
-      .querySelector("span")
-      .classList.add("on");
+    let bgmenu = document.querySelectorAll(".main .bg-menu li");
+    let service = document.querySelectorAll(".main div.nav .service li");
+    let bool = true;
+
+    document;
+    bgmenu[0].querySelector("span").classList.add("on");
 
     function down() {
-      document.querySelectorAll(".main .bg-menu li").forEach(function (v, k) {
+      bgmenu.forEach(function (v, k) {
         v.querySelector("span").classList.remove("on");
       });
     }
-    document.querySelectorAll(".main .bg-menu li").forEach(function (v, k) {
+    bgmenu.forEach(function (v, k) {
       v.onclick = function () {
         down();
         this.querySelector("span").classList.add("on");
+      };
+    });
+
+    service.forEach(function (v, k) {
+      v.onclick = function () {
+        if (bool) {
+          v.classList.add("on");
+          v.querySelector(".sv-list").classList.add("on");
+        } else {
+          v.classList.remove("on");
+          v.querySelector(".sv-list").classList.remove("on");
+        }
+        bool = !bool;
+        v.onmouseleave = function () {
+          v.classList.remove("on");
+          v.querySelector(".sv-list").classList.remove("on");
+        };
       };
     });
   </script>
