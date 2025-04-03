@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1210px;
+        padding: 25px;
+        margin: 0 auto;
+      }
+      .wrap h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+        color: rgb(209, 160, 80);
+      }
+      .wrap h1:first-child {
+        margin-bottom: 70px;
+      }
+      .wrap .con {
+        font-size: 24px;
+      }
+      .wrap .con li {
+        padding: 20px 0 20px 40px;
+        cursor: pointer;
+        color: rgb(209, 160, 80);
+        border-top: 1px solid;
+      }
+
+      .wrap .con li.on {
+        font-weight: bold;
+      }
+
+      .wrap .con li span {
+        position: relative;
+      }
+      .wrap .con li span::after {
+        position: absolute;
+        content: "\e145";
+        font-family: "Material Symbols Outlined", sans-serif;
+        font-weight: normal;
+        font-size: 24px;
+        left: -30px;
+        top: 5px;
+        transition: 0.5s;
+      }
+
+      .wrap .con li span.on::after {
+        transform: rotate(45deg);
+      }
+      .wrap .con li p {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .wrap .con li p.on {
+        height: 350px;
+        padding-bottom: 70px;
+      }
+      .wrap .con li p img {
+        width: 100%;
+        padding: 70px 40px;
+        object-fit: cover;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>RETAIL</h1>
+      <h1>Slices - Oat Base</h1>
+
+      <ul class="con">
+        <li>
+          <span>AMERICAN</span>
+          <p>
+            <img
+              src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <span>CHEDDAR</span>
+          <p>
+            <img
+              src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <span>PEPPER JACK</span>
+          <p>
+            <img
+              src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+      </ul>
+    </div>
+    <script>
+      let con = document.querySelectorAll(".wrap .con li");
+      let check = true;
+      con.forEach(function (v, k) {
+        v.onclick = function () {
+          if (check) {
+            this.classList.add("on");
+            v.querySelector("span").classList.add("on");
+            v.querySelector("p").classList.add("on");
+          } else {
+            this.classList.remove("on");
+            v.querySelector("span").classList.remove("on");
+            v.querySelector("p").classList.remove("on");
+          }
+          check = !check;
+        };
+      });
+    </script>
+  </body>
+</html>
