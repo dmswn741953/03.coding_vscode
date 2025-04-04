@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 1000px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .mouse {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(6, 56, 22, 0.5);
+        z-index: 1000;
+        transform: translate(-50%, -50%) scale(1); /*scale(1) 왜 있지*/
+        pointer-events: none;
+        transition: transform 0.4s; /*왜 이렇게 써져있지?*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+      }
+      .mouse.on {
+        opacity: 1;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1330px;
+        margin: 200px auto;
+      }
+
+      .wrap ul {
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+      }
+      .wrap ul li {
+        transition: 0.5s;
+      }
+      .wrap ul li:hover {
+        transform: translateY(-20px);
+      }
+
+      .wrap ul li:nth-child(2) {
+        align-self: flex-start;
+      }
+      .wrap ul li p:nth-child(3) img {
+        width: 100%;
+        height: 494px;
+        object-fit: cover;
+        vertical-align: top;
+        transition: 0.5s;
+      }
+      .wrap ul li:hover p:nth-child(3) img {
+        box-shadow: 0 20px 25px rgb(172, 168, 168);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mouse">view more</div>
+    <div class="wrap">
+      <ul>
+        <li>
+          <p>자코모 소개</p>
+          <h1>About</h1>
+          <p>
+            <img
+              src="https://www.jakomosofa.com/inc/img/main/info_sect_1.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+
+        <li>
+          <p>자코모 소개</p>
+          <h1>About</h1>
+          <p>
+            <img
+              src="https://www.jakomosofa.com/inc/img/main/info_sect_2.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+
+        <li>
+          <p>자코모 소개</p>
+          <h1>About</h1>
+          <p>
+            <img
+              src="https://www.jakomosofa.com/inc/img/main/info_sect_3.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      document.onmousemove = function (e) {
+        document.querySelector(".mouse").style.left = e.clientX + "px";
+        document.querySelector(".mouse").style.top = e.clientY + "px";
+      };
+      document.querySelectorAll(".wrap ul li").forEach(function (v, k) {
+        v.onmouseenter = function () {
+          document.querySelector(".mouse").classList.add("on");
+        };
+        v.onmouseleave = function () {
+          document.querySelector(".mouse").classList.remove("on");
+        };
+      });
+    </script>
+  </body>
+</html>

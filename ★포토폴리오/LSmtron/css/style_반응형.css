@@ -168,25 +168,24 @@ a {
   z-index: 99;
   position: relative;
 }
+
 .main .nav ul.service > li {
   padding-right: 35px;
   align-self: center;
   position: relative;
   cursor: pointer;
-  /* overflow: hidden; */
 }
-.main .nav ul.service > li.on {
-  /* overflow: visible; */
-}
+
 .main .nav ul.menu:hover ~ .service > li {
   color: #000;
 }
+
 .main .nav ul.service > li::after {
   content: "";
   position: absolute;
   width: 8px;
   height: 6px;
-  top: 22px;
+  top: 8px;
   right: 20px;
   background: url(../imges/arrow1.svg) center/cover no-repeat;
   transition: 0.3s;
@@ -195,42 +194,32 @@ a {
 .main .nav ul.service > li.on::after {
   transform: rotate(180deg);
 }
-.main .nav ul.service > li > div {
-  padding: 15px 0;
+.main .nav ul.service > li > span {
+  padding-bottom: 20px;
+  box-sizing: border-box;
 }
-.main div.nav .service > li .sv-list {
-  width: 120px;
-  height: 190px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.main div.nav .service > li .sv-list ul {
+.main .nav ul.service > li .sv-list {
   position: absolute;
-  font-family: "Pretendard-m", "sans-serif";
-  overflow: hidden;
   left: 0;
-  top: 51px;
-  /* padding: 15px 10px; */
-  font-size: 16px;
-  line-height: 30px;
+  top: 40px;
   color: #000;
   background: #fff;
-  border-top: 3px solid #fa002d;
-  transition: 0.5s;
-}
-.main div.nav .service > li .sv-list.on {
-  height: 190px;
-  transition: 0.5s;
-}
-.main div.nav .service > li:first-child .sv-list li:nth-child(2) {
-  margin-bottom: 40px;
-}
-.main div.nav .service > li .sv-list li a {
-  color: #767676;
+  height: 0;
+  overflow: hidden;
+  line-height: 30px;
 }
 
+.main .nav ul.service > li:first-child .sv-list.on {
+  border-top: 3px solid rgb(250, 0, 45);
+  height: 200px;
+}
+.main .nav ul.service > li:nth-child(2) .sv-list.on {
+  border-top: 3px solid rgb(250, 0, 45);
+  height: 130px;
+}
+.main .nav ul.service > li .sv-list li:first-child {
+  padding-top: 20px;
+}
 .main div.nav .service p {
   position: relative;
   width: 100px;
