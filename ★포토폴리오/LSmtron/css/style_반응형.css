@@ -33,7 +33,7 @@ a {
 }
 .main .bg {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 .main .bg video {
   width: 100%;
@@ -276,8 +276,10 @@ a {
 
 #recruit .re_con .re_telent {
   display: grid;
+  width: 1280px;
+  margin: 0 auto;
   justify-content: center;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
 }
 #recruit .re_con .re_telent li {
@@ -357,7 +359,7 @@ a {
 }
 
 #recruit .re_con .re_notice {
-  width: 1260px;
+  width: 1280px;
   margin: 50px auto 0;
   text-align: left;
   color: #fff;
@@ -442,28 +444,73 @@ a {
   background: url(https://www.lsmtron.com/_nuxt/bg_pr.fc97cbd8.png) center/cover;
 }
 #PR .pr-title {
-  width: 1200px;
+  width: 1280px;
   margin: 0 auto;
-  padding-top: 207px;
+  padding: 170px 0 220px;
+}
+#PR .pr-title li {
+  margin-top: 36px;
 }
 #PR .pr-title li:first-child h2 {
   font-size: 84px;
   color: #fff;
 }
 
-#PR .pr-title li:nth-child(2) {
+#PR .pr-title > li:nth-child(2) {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
-#PR .pr-title li:nth-child(2) div a {
+#PR .pr-title > li:nth-child(2) > div {
+  display: flex;
+  gap: 15px;
+}
+#PR .pr-title > li:nth-child(2) > div a {
+  display: block;
   font-size: 20px;
+  padding: 14px 24px;
+  border: 1px solid;
+  border-radius: 10px;
   color: #fff;
   font-family: "Pretendard-m", "sans-serif";
 }
-#PR .pr-title li:nth-child(2) > a {
+#PR .pr-title > li:nth-child(2) > a {
   font-size: 18px;
   color: #fff;
+}
+#PR .pr-title > li:nth-child(3) .pr-con {
+  display: grid;
+  width: 1280px;
+  margin: 0 auto;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+#PR .pr-title > li:nth-child(3) .pr-con li {
+}
+#PR .pr-title > li:nth-child(3) .pr-con li > p {
+  width: 100%;
+  height: 280px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+#PR .pr-title > li:nth-child(3) .pr-con li > p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+#PR .pr-title > li:nth-child(3) .pr-con li .pr-txt p:first-child {
+  color: #fff;
+  margin-top: 28px;
+  font-size: 24px;
+}
+#PR .pr-title > li:nth-child(3) .pr-con li .pr-txt p:nth-child(2) {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 18px;
+  font-size: 18px;
+  font-family: "Pretendard-m", "sans-serif";
 }
 @media screen and (max-width: 1599px) {
   .nav ul.menu > li {
@@ -495,6 +542,7 @@ a {
     background: url(../imges/bg_recruit.2a210b8c.png) bottom/cover;
   }
   #recruit .re_con .re_telent {
+    width: 100%;
     grid-template-columns: repeat(1, 400px);
   }
   #recruit .re_con .re_telent li a {
