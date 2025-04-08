@@ -205,21 +205,37 @@ a {
   color: #000;
   background: #fff;
   height: 0;
+  opacity: 0;
   overflow: hidden;
   line-height: 30px;
+  font-size: 16px;
+  padding: 0 13px;
+  transition: 0.5s;
+  border-top: 3px solid rgb(250, 0, 45);
 }
 
-.main .nav ul.service > li:first-child .sv-list.on {
-  border-top: 3px solid rgb(250, 0, 45);
-  height: 200px;
-}
-.main .nav ul.service > li:nth-child(2) .sv-list.on {
-  border-top: 3px solid rgb(250, 0, 45);
-  height: 130px;
+.main .nav ul.service > li .sv-list > li > a {
+  color: rgb(118, 118, 118);
 }
 .main .nav ul.service > li .sv-list li:first-child {
   padding-top: 20px;
 }
+.main .nav ul.service > li:first-child .sv-list li:nth-child(2) {
+  padding-bottom: 40px;
+}
+.main .nav ul.service > li:first-child .sv-list li:first-child,
+.main .nav ul.service > li:first-child .sv-list li:nth-child(3) {
+  font-family: "Pretendard-B", "sans-serif";
+}
+.main .nav ul.service > li:first-child .sv-list.on {
+  opacity: 1;
+  height: 230px;
+}
+.main .nav ul.service > li:nth-child(2) .sv-list.on {
+  opacity: 1;
+  height: 130px;
+}
+
 .main div.nav .service p {
   position: relative;
   width: 100px;
@@ -439,7 +455,7 @@ a {
   color: rgba(255, 255, 255, 0.7);
   font-family: "Pretendard-S", "sans-serif";
 }
-
+/*<--여기부터 PR -->*/
 #PR {
   background: url(https://www.lsmtron.com/_nuxt/bg_pr.fc97cbd8.png) center/cover;
 }
@@ -486,21 +502,24 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
 }
-#PR .pr-title > li:nth-child(3) .pr-con li {
-}
-#PR .pr-title > li:nth-child(3) .pr-con li > p {
+
+#PR .pr-title > li:nth-child(3) .pr-con li a > p {
   width: 100%;
   height: 280px;
   border-radius: 15px;
   overflow: hidden;
 }
-#PR .pr-title > li:nth-child(3) .pr-con li > p img {
+#PR .pr-title > li:nth-child(3) .pr-con li a > p img {
   width: 100%;
   height: 100%;
+  border-radius: 15px;
   object-fit: cover;
   vertical-align: top;
+  transition: 0.5s;
 }
-
+#PR .pr-title > li:nth-child(3) .pr-con li:hover a > p img {
+  transform: scale(1.1);
+}
 #PR .pr-title > li:nth-child(3) .pr-con li .pr-txt p:first-child {
   color: #fff;
   margin-top: 28px;
@@ -512,6 +531,40 @@ a {
   font-size: 18px;
   font-family: "Pretendard-m", "sans-serif";
 }
+
+/*<-- 여기부터 FOOTER -->*/
+footer {
+  width: 100%;
+  background: #172137;
+}
+footer .foot {
+  width: 1280px;
+  margin: 0 auto;
+  color: #fff;
+}
+footer .foot > p {
+  width: 113px;
+  height: 25px;
+}
+footer .foot > p img {
+  width: 100%;
+  height: 100%;
+}
+footer .foot > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .foot > ul > li:nth-child(2) > p {
+  width: 88px;
+  height: 60px;
+}
+
+footer .foot > ul > li:nth-child(2) > p img {
+  width: 100%;
+  height: 100%;
+}
+/*** 여기부터 미디어쿼리 ***/
 @media screen and (max-width: 1599px) {
   .nav ul.menu > li {
     transition: none;

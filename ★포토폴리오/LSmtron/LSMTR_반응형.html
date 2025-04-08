@@ -121,13 +121,11 @@
           </li>
           <li>
             <span>KOR</span>
-            <div class="sv-list">
-              <ul>
-                <li><a href="#">KOR</a></li>
-                <li><a href="#">ENG</a></li>
-                <li><a href="#">CHN</a></li>
-              </ul>
-            </div>
+            <ul class="sv-list">
+              <li><a href="#">KOR</a></li>
+              <li><a href="#">ENG</a></li>
+              <li><a href="#">CHN</a></li>
+            </ul>
           </li>
           <p>
             <span><img src="./imges/menu.svg" alt="menu" /></span>
@@ -296,43 +294,86 @@
         <li>
           <ul class="pr-con">
             <li>
-              <p>
-                <img src="./imges/PR/PR_img_thumbnail_01.jpg" alt="pr1" />
-              </p>
-              <div class="pr-txt">
-                <p>LS엠트론, 산불 피해 지역 트랙터 무상 임대</p>
-                <p>2025.04.07</p>
-              </div>
-            </li>
-            <li>
-              <p>
-                <img src="./imges/PR/PR_img_thumbnail_02.jpg" alt="pr1" />
-              </p>
-              <div class="pr-txt">
+              <a href="#none">
                 <p>
-                  LS엠트론, 오픈이노베이션 협력사업 중소∙창업기업(스타트업) 모집
+                  <img src="./imges/PR/PR_img_thumbnail_01.jpg" alt="pr1" />
                 </p>
-                <p>2025.04.03</p>
-              </div>
+                <div class="pr-txt">
+                  <p>LS엠트론, 산불 피해 지역 트랙터 무상 임대</p>
+                  <p>2025.04.07</p>
+                </div>
+              </a>
             </li>
             <li>
-              <p>
-                <img src="./imges/PR/PR_img_thumbnail_03.jpg" alt="pr1" />
-              </p>
-              <div class="pr-txt">
-                <p>LS엠트론, 상주농업기계박람회서 자율작업 Full Line-up 선봬</p>
-                <p>2025.03.31</p>
-              </div>
+              <a href="#none">
+                <p>
+                  <img src="./imges/PR/PR_img_thumbnail_02.jpg" alt="pr1" />
+                </p>
+                <div class="pr-txt">
+                  <p>
+                    LS엠트론, 오픈이노베이션 협력사업 중소∙창업기업(스타트업)
+                    모집
+                  </p>
+                  <p>2025.04.03</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <p>
+                  <img src="./imges/PR/PR_img_thumbnail_03.jpg" alt="pr1" />
+                </p>
+                <div class="pr-txt">
+                  <p>
+                    LS엠트론, 상주농업기계박람회서 자율작업 Full Line-up 선봬
+                  </p>
+                  <p>2025.03.31</p>
+                </div>
+              </a>
             </li>
           </ul>
         </li>
       </ul>
     </div>
+
+    <footer>
+      <div class="foot">
+        <p><img src="./imges/logo.svg" alt="ftlogo" /></p>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <p>ADDRESS</p>
+                <p>경기도 안양시 동안구 엘에스로 127 LS타워 11층</p>
+                <p>대표: 신재호</p>
+              </li>
+              <li>
+                <p>TEL</p>
+                <p>(031)689-8288</p>
+              </li>
+              <li>
+                <p>FAX</p>
+                <p>(031)689-8258</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><img src="./imges/ft_img_wa" alt="wa" /></p>
+            <p>
+              <select name="other_site" id="other_site">
+                <option value="">FAMILY SITE</option>
+                <option value="LS 트랙터">LS 트랙터</option>
+                <option value="LS 트랙터 미국">LS 트랙터 미국</option>
+              </select>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </div>
   <script>
     let bgmenu = document.querySelectorAll(".main .bg-menu li");
     let service = document.querySelectorAll(".main div.nav .service li");
-    let bool = true;
 
     document;
     bgmenu[0].querySelector("span").classList.add("on");
@@ -351,14 +392,9 @@
 
     service.forEach(function (v, k) {
       v.onclick = function () {
-        if (bool) {
-          v.classList.add("on");
-          v.querySelector(".sv-list").classList.add("on");
-        } else {
-          v.classList.remove("on");
-          v.querySelector(".sv-list").classList.remove("on");
-        }
-        bool = !bool;
+        v.classList.toggle("on");
+        v.querySelector(".sv-list").classList.toggle("on");
+
         v.onmouseleave = function () {
           v.classList.remove("on");
           v.querySelector(".sv-list").classList.remove("on");

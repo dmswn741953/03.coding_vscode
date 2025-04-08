@@ -128,10 +128,10 @@
         display: flex;
         background: #ccc;
       }
-      .cj section > div {
-        /* flex: 1; */
-        /* border: 1px solid; */
-      }
+      /* .cj section > div {
+        flex: 1;
+        border: 1px solid;
+      } */
       .cj section .Plat-txt {
         top: 140px;
         height: 50%;
@@ -498,30 +498,68 @@
       </section>
     </div>
     <script>
-      let ht = document.querySelector(".main").clientHeight;
-      console.log(ht);
-      document
-        .querySelectorAll(".plat-menu li")[0]
-        .querySelector("a")
-        .classList.add("on");
+      setTimeout(function () {
+        <!-- setTimeout을 사용해 지연 실행 (딜레이를 주어 렌더링 완료 후 실행)-->
+        let ht = document.querySelector(".main").clientHeight;
+        console.log(ht); // 콘솔에 높이 출력
 
-      function down() {
-        document.querySelectorAll(".plat-menu li").forEach(function (v, k) {
-          v.querySelector("a").classList.remove("on");
-        });
-      }
+        document
+          .querySelectorAll(".plat-menu li")[0]
+          .querySelector("a")
+          .classList.add("on");
 
-      document.querySelectorAll(".plat-menu li").forEach(function (v, k) {
-        v.onclick = function (e) {
-          e.preventDefault();
-          down();
-          this.querySelector("a").classList.add("on");
-          window.scrollTo({
-            top: document.querySelector(`#link${k + 1}`).offsetTop + ht,
-            behavior: "smooth",
+        function down() {
+          document.querySelectorAll(".plat-menu li").forEach(function (v, k) {
+            v.querySelector("a").classList.remove("on");
           });
-        };
+        }
+
+        document.querySelectorAll(".plat-menu li").forEach(function (v, k) {
+          v.onclick = function (e) {
+            e.preventDefault();
+            down();
+            this.querySelector("a").classList.add("on");
+            window.scrollTo({
+              top: document.querySelector(`#link${k + 1}`).offsetTop + ht,
+              behavior: "smooth",
+            });
+          };
+        });
       });
+    </script>
+
+    //
+    <script>
+      //   window.addEventListener("load", function () {  <!-- 이 부분을 수정
+      //  load 이벤트는 페이지와 모든 리소스(이미지, 스타일시트 등)가 로드된 후에 실행
+      // ==window.onload = function() -->
+      //     let ht = document.querySelector(".main").clientHeight;
+      //     console.log(ht); // 콘솔에 높이 출력
+
+      //     document
+      //       .querySelectorAll(".plat-menu li")[0]
+      //       .querySelector("a")
+      //       .classList.add("on");
+
+      //     function down() {
+      //       document.querySelectorAll(".plat-menu li").forEach(function (v, k) {
+      //         v.querySelector("a").classList.remove("on");
+      //       });
+      //     }
+
+      //     document.querySelectorAll(".plat-menu li").forEach(function (v, k) {
+      //       v.onclick = function (e) {
+      //         e.preventDefault();
+      //         down();
+      //         this.querySelector("a").classList.add("on");
+      //         window.scrollTo({
+      //           top: document.querySelector(`#link${k + 1}`).offsetTop + ht,
+      //           behavior: "smooth",
+      //         });
+      //       };
+      //     });
+      //   });  <!-- 이 부분을 수정 -->
+      //
     </script>
   </body>
 </html>

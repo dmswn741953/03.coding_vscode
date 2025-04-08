@@ -2,8 +2,9 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>연습</title>
     <style>
       * {
         margin: 0;
@@ -29,7 +30,7 @@
         width: 100%;
         object-fit: cover;
         position: absolute;
-        opacity: 0;
+        /* opacity: 0; */
         transition: 1s;
       }
       .list li img.default {
@@ -75,41 +76,57 @@
         <img src="images/img_sustain_pc_hover_5_4.jpg" alt="hover" />
       </li>
       <li>
-        <img src="images/img_sustain_pc_5.jpg" alt="pc_5" />
-        <img src="images/img_sustain_pc_hover_1_5.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_2_5.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_3_5.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_4_5.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_5_5.jpg" alt="hover" />
+        <img src="./자바스크립트/images/img_sustain_pc_5.jpg" alt="pc_5" />
+        <img
+          src="./자바스크립트/images/img_sustain_pc_hover_1_1.jpg"
+          alt="hover"
+        />
+        <img
+          src="./자바스크립트/images/img_sustain_pc_hover_2_5.jpg"
+          alt="hover"
+        />
+        <img
+          src="./자바스크립트/images/img_sustain_pc_hover_3_5.jpg"
+          alt="hover"
+        />
+        <img
+          src="./자바스크립트/images/img_sustain_pc_hover_4_5.jpg"
+          alt="hover"
+        />
+        <img
+          src="./자바스크립트/images/img_sustain_pc_hover_5_5.jpg"
+          alt="hover"
+        />
       </li>
     </ul>
     <script>
       let btn = document.querySelectorAll(".list li");
-      function myfnc1() {
-        btn.forEach(function (item, index) {
-          let imgs = item.querySelectorAll("img");
-          imgs.forEach(function (value) {
-            imgs[0].classList.add("default");
-            value.classList.remove("hidden");
-            value.classList.remove("default");
-          });
-        });
-      }
-      myfnc1();
       btn.forEach(function (v, k) {
         v.onmouseenter = function () {
+          console.log(k);
           myover(k);
         };
         v.onmouseleave = function () {
-          myfnc1();
+          myleave();
         };
       });
+
+      function myleave() {
+        //왜 item, index 를 다른 명칭으로 변경하면 안먹히는 것인가
+        btn.forEach(function (item, index) {
+          item.querySelector(
+            "img"
+          ).src = `./자바스크립트/images/img_sustain_pc_${index + 1}.jpg`;
+        });
+      }
+
       function myover(i) {
-        btn.forEach(function (v, k) {
-          let imgs = v.querySelectorAll("img");
-          imgs.forEach(function (item, index) {
-            imgs[i + 1].classList.add("default");
-          });
+        btn.forEach(function (item, index) {
+          item.querySelector(
+            "img"
+          ).src = `./자바스크립트/images/img_sustain_pc_hover_${i + 1}_${
+            index + 1
+          }.jpg`;
         });
       }
     </script>
