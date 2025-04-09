@@ -46,7 +46,7 @@ a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-family: "Pretendard-B", "sans-serif";
+
   font-size: 72px;
   color: #fff;
 }
@@ -67,7 +67,7 @@ a {
   display: flex;
   align-items: center;
   color: #fff;
-  font-family: "Pretendard-B", "sans-serif";
+
   font-size: 15px;
 }
 .main ul.bg-menu > li > a span {
@@ -121,7 +121,7 @@ a {
 .main .nav ul.menu {
   height: 100%;
   display: flex;
-  font-family: "Pretendard-B", "sans-serif";
+
   margin: 0 auto;
   align-items: center;
   z-index: 99;
@@ -216,17 +216,19 @@ a {
 
 .main .nav ul.service > li .sv-list > li > a {
   color: rgb(118, 118, 118);
+  font-family: "Pretendard-S", "sans-serif";
+  transition: 0.7s;
+}
+.main .nav ul.service > li .sv-list > li > a:hover {
+  color: rgb(250, 0, 45);
 }
 .main .nav ul.service > li .sv-list li:first-child {
   padding-top: 20px;
 }
 .main .nav ul.service > li:first-child .sv-list li:nth-child(2) {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
-.main .nav ul.service > li:first-child .sv-list li:first-child,
-.main .nav ul.service > li:first-child .sv-list li:nth-child(3) {
-  font-family: "Pretendard-B", "sans-serif";
-}
+
 .main .nav ul.service > li:first-child .sv-list.on {
   opacity: 1;
   height: 230px;
@@ -268,6 +270,8 @@ a {
 .title-txt p {
   font-size: 24px;
 }
+
+/*<-- 여기부터 business -->*/
 #business {
   width: 100%;
   text-align: center;
@@ -279,6 +283,66 @@ a {
   display: flex;
 }
 
+/*<-- 여기부터 Sustainability -->*/
+
+#Sustain {
+  width: 100%;
+  text-align: center;
+}
+
+#Sustain .sustain_con {
+  width: 100%;
+  background: url(../imges/sustain/bg_sustainability.e4398e19.png) center/cover;
+}
+#Sustain .sustain_con div {
+  width: 1060px;
+  display: flex;
+  margin: 0 auto;
+  padding: 15% 0 8%;
+  justify-content: space-between;
+}
+#Sustain .sustain_con div ul {
+  width: 406px;
+  color: #fff;
+  text-align-last: left;
+}
+#Sustain .sustain_con div ul a {
+  color: #fff;
+  position: relative;
+}
+#Sustain .sustain_con div ul a::after {
+  content: url(../imges/sustain/sustain_arrow.svg);
+  position: absolute;
+  width: 25px;
+  left: 0;
+  bottom: 0;
+}
+#Sustain .sustain_con div ul p img {
+  width: 100%;
+  border-radius: 30px;
+}
+#Sustain .sustain_con div ul p:nth-child(2) {
+  padding: 20px 0;
+  font-size: 27px;
+}
+#Sustain .sustain_con div ul p:nth-child(3) {
+  font-size: 20px;
+  padding-bottom: 60px;
+  margin-bottom: 100px;
+  font-family: "Pretendard-m", "sans-serif";
+}
+#Sustain .sustain_con div ul.sus_conL .con_tit {
+  padding: 105px 0 150px;
+}
+
+#Sustain .sustain_con div ul.sus_conL .con_tit h2 {
+  font-size: 56px;
+}
+#Sustain .sustain_con div ul.sus_conL .con_tit p {
+  font-size: 24px;
+  font-family: "Pretendard-m", "sans-serif";
+}
+/*<-- 여기부터 recruit -->*/
 #recruit {
   width: 100%;
   text-align: center;
@@ -327,7 +391,6 @@ a {
 #recruit .re_con .re_telent li a p:nth-child(2) {
   font-size: 28px;
   padding: 20px 0;
-  font-family: "Pretendard-B", "sans-serif";
 }
 #recruit .re_con .re_telent li a p:nth-child(3) {
   font-size: 18px;
@@ -387,7 +450,6 @@ a {
 
 #recruit .re_con .re_notice li:first-child > div > span {
   font-size: 24px;
-  font-family: "Pretendard-B", "sans-serif";
   padding: 0 10px;
   position: relative;
 }
@@ -455,6 +517,7 @@ a {
   color: rgba(255, 255, 255, 0.7);
   font-family: "Pretendard-S", "sans-serif";
 }
+
 /*<--여기부터 PR -->*/
 #PR {
   background: url(https://www.lsmtron.com/_nuxt/bg_pr.fc97cbd8.png) center/cover;
@@ -493,6 +556,17 @@ a {
 #PR .pr-title > li:nth-child(2) > a {
   font-size: 18px;
   color: #fff;
+  position: relative;
+}
+
+#PR .pr-title > li:nth-child(2) > a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  right: 0;
+  bottom: -2px;
+  background: #fff;
 }
 #PR .pr-title > li:nth-child(3) .pr-con {
   display: grid;
@@ -540,7 +614,9 @@ footer {
 footer .foot {
   width: 1280px;
   margin: 0 auto;
+  padding-top: 40px;
   color: #fff;
+  font-family: "Pretendard-m", "sans-serif";
 }
 footer .foot > p {
   width: 113px;
@@ -553,9 +629,22 @@ footer .foot > p img {
 footer .foot > ul {
   display: flex;
   justify-content: space-between;
+  padding-top: 60px;
 }
-
-footer .foot > ul > li:nth-child(2) > p {
+footer .foot ul li:nth-child(1) {
+  flex-basis: 55%;
+}
+footer .foot ul li:nth-child(2) {
+  flex-basis: 45%;
+}
+footer .foot ul li .ftInfo li {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr 0.8fr;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 35px;
+}
+.foot > ul > li:nth-child(2) > p {
   width: 88px;
   height: 60px;
 }
