@@ -13,7 +13,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Demo styles -->
     <style>
       * {
         margin: 0;
@@ -25,13 +24,13 @@
       a {
         text-decoration: none;
       }
+
       body {
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       }
       .visual {
-        width: 100%;
-        height: 100vh;
         position: relative;
+        height: 100vh;
       }
       .swiper {
         width: 100%;
@@ -55,20 +54,21 @@
       }
       .txt {
         position: absolute;
-        width: 100%;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 20;
+        width: 100%;
       }
       .txt > div {
         width: 100%;
         position: absolute;
-        text-align: center;
       }
       .txt > div h1 {
+        width: 100%;
         font-size: 80px;
         color: #fff;
+        text-align: center;
       }
       .txt > div h1.active {
         opacity: 0;
@@ -78,6 +78,53 @@
       .txt > div h1.on {
         opacity: 1;
         filter: blur(0);
+      }
+
+      .slidePage {
+        position: absolute;
+        display: flex;
+        left: 50%;
+        bottom: 70px;
+        transform: translateX(-50%);
+        z-index: 20;
+        gap: 20px;
+      }
+      .slidePage > div {
+        width: 140px;
+        /* position: relative; */
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 18px;
+      }
+      .slidePage > div.on {
+        color: rgba(255, 255, 255, 1);
+      }
+      .slidePage .title {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      .slidePage .btn {
+        display: block;
+        height: 2px;
+        width: 100%;
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .slidePage .btn .btn_bar {
+        display: block;
+        width: 0;
+        height: 100%;
+        background: #fff;
+      }
+      .slidePage > div.on .btn .btn_bar {
+        animation: slide 3s forwards linear;
+      }
+      @keyframes slide {
+        to {
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -105,17 +152,38 @@
               alt=""
             />
           </div>
-          <div class="txt">
-            <div><h1>세상에 없던 원료</h1></div>
-            <div><h1 class="active">세상을 위한 제품</h1></div>
-            <div><h1 class="active">세상을 바꾸는 기술</h1></div>
+        </div>
+        <div class="txt">
+          <div>
+            <h1>세상에 없던 원료</h1>
           </div>
-          <div class="slidePage">
-            <div>
-              <p>
-                <span class="title">01. Ingredient</span>
-              </p>
-            </div>
+          <div>
+            <h1 class="active">세상을 위한 제품</h1>
+          </div>
+          <div>
+            <h1 class="active">세상을 바꾸는 기술</h1>
+          </div>
+        </div>
+        <div class="slidePage">
+          <div>
+            <p>
+              <span class="title">01. Ingredient</span>
+              <span class="btn">
+                <span class="btn_bar"></span>
+              </span>
+            </p>
+          </div>
+          <div>
+            <p>
+              <span class="title">02. Product</span>
+              <span class="btn"><span class="btn_bar"></span></span>
+            </p>
+          </div>
+          <div>
+            <p>
+              <span class="title">03. Technology</span>
+              <span class="btn"><span class="btn_bar"></span></span>
+            </p>
           </div>
         </div>
       </div>
@@ -126,15 +194,30 @@
 
     <!-- Initialize Swiper -->
     <script>
+      let page = document.querySelectorAll(".slidePage>div");
       let txt = document.querySelectorAll(".txt>div");
-      txt[0].querySelector("h1").classList.add("on");
-
+      txt[0].querySelector("h1").classList.add("on", "active");
+      function myfnc() {
+        page.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        txt.forEach(function (v, k) {
+          v.querySelector("h1").classList.remove("on");
+        });
+      }
       var swiper = new Swiper(".mySwiper", {
         speed: 1000,
         loop: true,
         autoplay: {
           delay: 4000,
           disableOnInteraction: false,
+        },
+        on: {
+          slideChange: function () {
+            myfnc();
+            page[this.realIndex].classList.add("on");
+            txt[this.realIndex].querySelector("h1").classList.add("on");
+          },
         },
       });
     </script>

@@ -49,20 +49,45 @@ a {
   font-size: 72px;
   color: #fff;
 }
-
 .main .bg-controls {
   position: absolute;
   left: 30px;
   bottom: 40px;
+  width: 300px;
+  display: flex;
+  align-items: center;
 }
-.main .bg-controls svg {
+.main .bg-controls .bgControl_conBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main .bg-controls .bgControl_con {
+  position: relative;
+  width: 100px;
+}
+.main .bg-controls .bgControl_con p {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.main .bg-controls .bgControl_con p img {
+  width: 100%;
+  height: 100%;
+}
+.main .bg-controls .bgControl_con svg {
+  vertical-align: top;
+  cursor: pointer;
   stroke-dashoffset: 251.33px;
   /*C=2π×40= 2 ×3.14159×40*/
   stroke-dasharray: 251.33px;
-  animation: controls 6s infinite linear;
+  animation: circle 6s infinite linear;
 }
-
-@keyframes controls {
+@keyframes circle {
   0% {
     stroke-dashoffset: 251.33px;
   }
@@ -70,13 +95,17 @@ a {
     stroke-dashoffset: 0;
   }
 }
-.main .bg-controls > p img {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.main .bg-controls .bgControl_nb {
+  font-size: 18px;
+}
+
+.main .bg-controls .bgControl_nb span {
+  padding: 0 9px;
+  color: #ccc;
+  cursor: pointer;
+}
+.main .bg-controls .bgControl_nb span:first-child {
+  padding-left: 20px;
 }
 
 /*<-- 여기부터 ul.bg-menu -->*/
@@ -122,6 +151,7 @@ a {
   margin-right: 15px;
 }
 
+/*<-- 여기부터 div.nav-->*/
 .main div.nav {
   width: 100%;
   height: 100px;
@@ -138,7 +168,19 @@ a {
   transition: 0.5s;
   z-index: 1;
 }
-
+.main div.nav .nav-back {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+  transition: 0.5s ease-in;
+}
+.main div.nav .nav-back.on {
+  height: 490px;
+  background: #fff;
+}
 .main div.nav > a p {
   width: 113px;
   height: 25px;
@@ -152,10 +194,10 @@ a {
 .main .nav ul.menu {
   height: 100%;
   display: flex;
-
   margin: 0 auto;
   align-items: center;
   z-index: 99;
+  /* background: #ccc; */
 }
 .main .nav ul.menu > li {
   position: relative;

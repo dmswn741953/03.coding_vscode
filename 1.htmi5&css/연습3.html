@@ -1,134 +1,223 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>연습</title>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
     <style>
-      * {
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
-      }
-      .list {
-        width: 95%;
-        max-width: 1420px;
-        margin: 0 auto;
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-      }
-      .list li {
-        flex: 1;
-        cursor: pointer;
+
+      .visual {
         position: relative;
       }
-      .list li img {
+
+      .swiper {
         width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide video {
+        display: block;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
+      }
+
+      .autoplay-progress {
         position: absolute;
-        /* opacity: 0; */
-        transition: 1s;
+        right: 16px;
+        bottom: 16px;
+        z-index: 10;
+        width: 200px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--swiper-theme-color);
       }
-      .list li img.default {
-        opacity: 1;
+
+      .autoplay-progress svg {
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 4px;
+        stroke: var(--swiper-theme-color);
+        fill: none;
+        stroke-dashoffset: calc(200px * (1 - var(--progress)));
+        stroke-dasharray: 200;
       }
-      .list li img.hidden {
-        opacity: 0;
+
+      #controls {
+        position: absolute;
+        left: 100px;
+        top: 80%;
+        width: 200px;
+        height: 50px;
+        z-index: 20;
+      }
+
+      #controls svg {
+        stroke-width: 10px;
+        stroke: #fff;
+        fill: none;
+        stroke-dasharray: 200;
+        animation: bar 10s linear infinite;
+        border-radius: 3px;
+      }
+
+      #controls #wait {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        width: 33px;
+        height: 33px;
+        right: -50px;
+        top: -5px;
+      }
+
+      /* 키프레임 애니메이션 */
+      @keyframes bar {
+        0% {
+          stroke-dashoffset: 200;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
       }
     </style>
   </head>
+
   <body>
-    <ul class="list">
-      <li>
-        <img src="images/img_sustain_pc_1.jpg" alt="pc_1" />
-        <img src="images/img_sustain_pc_hover_1_1.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_2_1.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_3_1.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_4_1.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_5_1.jpg" alt="hover" />
-      </li>
-      <li>
-        <img src="images/img_sustain_pc_2.jpg" alt="pc_2" />
-        <img src="images/img_sustain_pc_hover_1_2.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_2_2.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_3_2.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_4_2.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_5_2.jpg" alt="hover" />
-      </li>
-      <li>
-        <img src="images/img_sustain_pc_3.jpg" alt="pc_3" />
-        <img src="images/img_sustain_pc_hover_1_3.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_2_3.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_3_3.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_4_3.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_5_3.jpg" alt="hover" />
-      </li>
-      <li>
-        <img src="images/img_sustain_pc_4.jpg" alt="pc_4" />
-        <img src="images/img_sustain_pc_hover_1_4.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_2_4.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_3_4.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_4_4.jpg" alt="hover" />
-        <img src="images/img_sustain_pc_hover_5_4.jpg" alt="hover" />
-      </li>
-      <li>
-        <img src="./자바스크립트/images/img_sustain_pc_5.jpg" alt="pc_5" />
-        <img
-          src="./자바스크립트/images/img_sustain_pc_hover_1_1.jpg"
-          alt="hover"
-        />
-        <img
-          src="./자바스크립트/images/img_sustain_pc_hover_2_5.jpg"
-          alt="hover"
-        />
-        <img
-          src="./자바스크립트/images/img_sustain_pc_hover_3_5.jpg"
-          alt="hover"
-        />
-        <img
-          src="./자바스크립트/images/img_sustain_pc_hover_4_5.jpg"
-          alt="hover"
-        />
-        <img
-          src="./자바스크립트/images/img_sustain_pc_hover_5_5.jpg"
-          alt="hover"
-        />
-      </li>
-    </ul>
+    <div class="visual">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <video id="video" muted autoplay loop>
+              <source src="https://www.jbfg.com/assets/img/main/kv.mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 200 48">
+            <line x1="0" y1="0" x2="200" y2="0"></line>
+          </svg>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="controls">
+        <svg viewBox="0 0 200 5">
+          <line x1="0" y1="0" x2="200" y2="0"></line>
+        </svg>
+        <span id="stop">정지</span>
+        <span id="wait">
+          <img src="https://www.jbfg.com/assets/img/icon/pause.svg" alt="" />
+        </span>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
     <script>
-      let btn = document.querySelectorAll(".list li");
-      btn.forEach(function (v, k) {
-        v.onmouseenter = function () {
-          console.log(k);
-          myover(k);
-        };
-        v.onmouseleave = function () {
-          myleave();
-        };
+      const progressCircle = document.querySelector(".autoplay-progress svg");
+      const progressContent = document.querySelector(".autoplay-progress span");
+      const video = document.getElementById("video");
+      const stop = document.getElementById("stop");
+      const bar = document.querySelector("#controls svg");
+      const wait = document.querySelector("#wait");
+
+      // Swiper 초기화
+      var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+          delay: 10000, // 10초마다 자동으로 슬라이드가 전환됨
+          disableOnInteraction: false, // 사용자가 슬라이드를 넘기더라도 자동 재생 유지
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressCircle.style.setProperty("--progress", 1 - progress); // 프로그래스바 업데이트
+            progressContent.textContent = `${Math.ceil(time / 1000)}s`; // 남은 시간 표시
+          },
+        },
       });
 
-      function myleave() {
-        //왜 item, index 를 다른 명칭으로 변경하면 안먹히는 것인가
-        btn.forEach(function (item, index) {
-          item.querySelector(
-            "img"
-          ).src = `./자바스크립트/images/img_sustain_pc_${index + 1}.jpg`;
-        });
-      }
+      let videoPlay = true;
+      stop.onclick = function () {
+        if (videoPlay) {
+          video.pause();
+          this.innerHTML = "재생";
+          bar.style.animationPlayState = "paused"; // 애니메이션 정지
+        } else {
+          video.play();
+          this.innerHTML = "정지";
+          bar.style.animationPlayState = "running"; // 애니메이션 실행
+        }
+        videoPlay = !videoPlay;
+      };
 
-      function myover(i) {
-        btn.forEach(function (item, index) {
-          item.querySelector(
-            "img"
-          ).src = `./자바스크립트/images/img_sustain_pc_hover_${i + 1}_${
-            index + 1
-          }.jpg`;
-        });
-      }
+      wait.onclick = function () {
+        if (videoPlay) {
+          video.pause();
+          stop.innerHTML = "재생";
+          this.querySelector("img").src =
+            "https://www.jbfg.com/assets/img/icon/play.svg";
+          bar.style.animationPlayState = "paused"; // 애니메이션 정지
+        } else {
+          video.play();
+          stop.innerHTML = "정지";
+          this.querySelector("img").src =
+            "https://www.jbfg.com/assets/img/icon/pause.svg";
+          bar.style.animationPlayState = "running"; // 애니메이션 실행
+        }
+        videoPlay = !videoPlay;
+      };
     </script>
   </body>
 </html>

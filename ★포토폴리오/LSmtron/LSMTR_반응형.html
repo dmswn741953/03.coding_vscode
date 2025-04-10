@@ -21,17 +21,38 @@
         <h1>Leading Solution For You</h1>
       </div>
       <div class="bg-controls">
-        <p><img src="./imges/bg_control1.svg" alt="" /></p>
-        <svg width="100" height="100">
-          <circle
-            cx="50"
-            cy="50"
-            r="40"
-            fill="none"
-            stroke="rgb(250, 0, 45)"
-            stroke-width="3"
-          ></circle>
-        </svg>
+        <div class="bgControl_conBg">
+          <svg width="100" height="100">
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              fill="none"
+              stroke="rgba(211, 211, 211, 0.747)"
+              stroke-width="2.5"
+            ></circle>
+          </svg>
+        </div>
+        <div class="bgControl_con">
+          <p><img src="./imges/bg_control1.svg" alt="bg_control1" /></p>
+          <svg width="100" height="100">
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              fill="none"
+              stroke="rgb(250, 0, 45)"
+              stroke-width="2.5"
+              transform="rotate(-90 50 50)"
+            ></circle>
+          </svg>
+        </div>
+
+        <div class="bgControl_nb">
+          <span>01</span>
+          <span>02</span>
+          <span>03</span>
+        </div>
       </div>
       <ul class="bg-menu">
         <li>
@@ -121,7 +142,7 @@
             </ul>
           </li>
         </ul>
-        <!-- <div class="nav-back"></div> -->
+        <div class="nav-back"></div>
         <ul class="service">
           <li>
             <span>CUSTOMER</span>
@@ -479,7 +500,12 @@
   </div>
   <script>
     let bgmenu = document.querySelectorAll(".main .bg-menu li");
+    let video = document.querySelector("video");
+    let bgControlCon = document.querySelector(".bgControl_con");
+    let svgCircle = document.querySelector(".bgControl_con svg");
     let service = document.querySelectorAll(".main div.nav .service li");
+    let menu = document.querySelector(".nav .menu");
+    let BgStrimig = true;
 
     document;
     bgmenu[0].querySelector("span").classList.add("on");
@@ -496,6 +522,19 @@
       };
     });
 
+    bgControlCon.onclick = function () {
+      if (BgStrimig) {
+        video.pause();
+        bgControlCon.querySelector("img").src = "./imges/bg_control2.svg";
+        svgCircle.style.animationPlayState = "paused";
+      } else {
+        video.play();
+        bgControlCon.querySelector("img").src = "./imges/bg_control1.svg";
+        svgCircle.style.animationPlayState = "running";
+      }
+      BgStrimig = !BgStrimig;
+    };
+
     service.forEach(function (v, k) {
       v.onclick = function () {
         v.classList.toggle("on");
@@ -507,5 +546,12 @@
         };
       };
     });
+
+    menu.onmouseenter = function () {
+      document.querySelector(".nav-back").classList.add("on");
+    };
+    document.querySelector(".nav-back").onmouseleave = function () {
+      this.classList.remove("on");
+    };
   </script>
 </body>
