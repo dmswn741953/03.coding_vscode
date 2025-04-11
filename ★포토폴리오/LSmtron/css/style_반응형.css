@@ -165,10 +165,24 @@ a {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   font-size: 18px;
-  transition: 0.5s;
+  transition: 0.5s ease-in;
   z-index: 1;
 }
+
 .main div.nav .nav-back {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in;
+}
+.main div.nav .nav-back.on {
+  height: 490px;
+  background: #fff;
+}
+.main div.nav .menu-back {
   width: 100%;
   height: 100px;
   position: absolute;
@@ -177,8 +191,7 @@ a {
   background: transparent;
   transition: 0.5s ease-in;
 }
-.main div.nav .nav-back.on {
-  height: 490px;
+.main div.nav:hover .menu-back.on {
   background: #fff;
 }
 .main div.nav > a p {
@@ -199,9 +212,11 @@ a {
   z-index: 99;
   /* background: #ccc; */
 }
+
 .main .nav ul.menu > li {
   position: relative;
 }
+
 .main .nav ul.menu > li > a {
   display: block;
   position: relative;
@@ -222,12 +237,15 @@ a {
   height: 0;
   left: 0;
   top: 100px;
-  margin-top: 35px;
+  /* border: 1px solid #000; */
+  padding-top: 35px;
   overflow: hidden;
   text-align: center;
+  font-family: "Pretendard-m", "sans-serif";
+  line-height: 35px;
 }
 .main .nav ul.menu:hover li ul.sub-menu {
-  height: 200px;
+  height: 400px;
 }
 .main .nav ul.menu li ul.sub-menu li a {
   width: 100%;
@@ -677,6 +695,44 @@ a {
   margin-top: 18px;
   font-size: 18px;
   font-family: "Pretendard-m", "sans-serif";
+}
+
+/*--------------------------------------------------------*/
+
+.visual {
+  position: relative;
+  width: 1280px;
+}
+.swiper {
+  margin: 0 auto;
+  /* background: #ccc; */
+  overflow: hidden;
+}
+.swiper-wrapper {
+  display: flex;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  text-align: center;
+
+  font-size: 18px;
+  /* background: #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.btn {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  width: 100px;
 }
 
 /*<-- 여기부터 FOOTER -->*/

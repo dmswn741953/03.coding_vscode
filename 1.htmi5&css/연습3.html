@@ -26,17 +26,15 @@
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         color: #000;
-        margin: 0;
+        margin: 10% 0;
         padding: 0;
       }
-
       .visual {
         position: relative;
       }
-
       .swiper {
-        width: 100%;
-        height: 100%;
+        width: 1280px;
+        height: 480px;
       }
 
       .swiper-slide {
@@ -48,109 +46,41 @@
         align-items: center;
       }
 
-      .swiper-slide video {
+      .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-
-      .autoplay-progress {
+      .btn {
         position: absolute;
-        right: 16px;
-        bottom: 16px;
-        z-index: 10;
-        width: 200px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: var(--swiper-theme-color);
-      }
-
-      .autoplay-progress svg {
-        --progress: 0;
-        position: absolute;
-        left: 0;
-        top: 10px;
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        stroke-width: 4px;
-        stroke: var(--swiper-theme-color);
-        fill: none;
-        stroke-dashoffset: calc(200px * (1 - var(--progress)));
-        stroke-dasharray: 200;
-      }
-
-      #controls {
-        position: absolute;
-        left: 100px;
-        top: 80%;
-        width: 200px;
-        height: 50px;
-        z-index: 20;
-      }
-
-      #controls svg {
-        stroke-width: 10px;
-        stroke: #fff;
-        fill: none;
-        stroke-dasharray: 200;
-        animation: bar 10s linear infinite;
-        border-radius: 3px;
-      }
-
-      #controls #wait {
-        position: absolute;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        width: 33px;
-        height: 33px;
-        right: -50px;
-        top: -5px;
-      }
-
-      /* 키프레임 애니메이션 */
-      @keyframes bar {
-        0% {
-          stroke-dashoffset: 200;
-        }
-        100% {
-          stroke-dashoffset: 0;
-        }
+        right: 0;
+        top: 0;
+        width: 100px;
       }
     </style>
   </head>
 
   <body>
+    <!-- Swiper -->
     <div class="visual">
-      <!-- Swiper -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <video id="video" muted autoplay loop>
-              <source src="https://www.jbfg.com/assets/img/main/kv.mp4" />
-            </video>
-          </div>
-        </div>
-        <div class="autoplay-progress">
-          <svg viewBox="0 0 200 48">
-            <line x1="0" y1="0" x2="200" y2="0"></line>
-          </svg>
-          <span></span>
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
         </div>
       </div>
-
-      <div id="controls">
-        <svg viewBox="0 0 200 5">
-          <line x1="0" y1="0" x2="200" y2="0"></line>
-        </svg>
-        <span id="stop">정지</span>
-        <span id="wait">
-          <img src="https://www.jbfg.com/assets/img/icon/pause.svg" alt="" />
-        </span>
+      <div class="btn">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
 
@@ -159,65 +89,18 @@
 
     <!-- Initialize Swiper -->
     <script>
-      const progressCircle = document.querySelector(".autoplay-progress svg");
-      const progressContent = document.querySelector(".autoplay-progress span");
-      const video = document.getElementById("video");
-      const stop = document.getElementById("stop");
-      const bar = document.querySelector("#controls svg");
-      const wait = document.querySelector("#wait");
-
-      // Swiper 초기화
       var swiper = new Swiper(".mySwiper", {
-        autoplay: {
-          delay: 10000, // 10초마다 자동으로 슬라이드가 전환됨
-          disableOnInteraction: false, // 사용자가 슬라이드를 넘기더라도 자동 재생 유지
+        slidesPerView: 3,
+        spaceBetween: 30,
+        keyboard: {
+          enabled: true,
         },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
+
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        on: {
-          autoplayTimeLeft(s, time, progress) {
-            progressCircle.style.setProperty("--progress", 1 - progress); // 프로그래스바 업데이트
-            progressContent.textContent = `${Math.ceil(time / 1000)}s`; // 남은 시간 표시
-          },
-        },
       });
-
-      let videoPlay = true;
-      stop.onclick = function () {
-        if (videoPlay) {
-          video.pause();
-          this.innerHTML = "재생";
-          bar.style.animationPlayState = "paused"; // 애니메이션 정지
-        } else {
-          video.play();
-          this.innerHTML = "정지";
-          bar.style.animationPlayState = "running"; // 애니메이션 실행
-        }
-        videoPlay = !videoPlay;
-      };
-
-      wait.onclick = function () {
-        if (videoPlay) {
-          video.pause();
-          stop.innerHTML = "재생";
-          this.querySelector("img").src =
-            "https://www.jbfg.com/assets/img/icon/play.svg";
-          bar.style.animationPlayState = "paused"; // 애니메이션 정지
-        } else {
-          video.play();
-          stop.innerHTML = "정지";
-          this.querySelector("img").src =
-            "https://www.jbfg.com/assets/img/icon/pause.svg";
-          bar.style.animationPlayState = "running"; // 애니메이션 실행
-        }
-        videoPlay = !videoPlay;
-      };
     </script>
   </body>
 </html>
