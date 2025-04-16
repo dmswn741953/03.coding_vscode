@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script></script>
+
+    <style>
+      p.on {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">문단태그1</p>
+    <p>문단태그2</p>
+    <p>문단태그3</p>
+    <p>문단태그4</p>
+    <p>문단태그5</p>
+
+    <script>
+      let p = document.querySelectorAll("p");
+      // function myremove() {
+      //   p.forEach(function (v, k) {
+      //     v.classList.remove("on");
+      //   });
+      // }
+
+      // p.forEach(function (v, k) {
+      //   v.onclick = function () {
+      //     myremove();
+      //     this.classList.add("on");
+      //   };
+      // });
+
+      // p.forEach(function (v, k, allitem) {
+      //   v.onclick = function () {
+      //     allitem.forEach(function (item) {
+      //       item.style.color = "#000";
+      //     });
+      //     this.style.color = "#f00";
+      //   };
+      // });
+
+      // p.forEach((v, k, allitem) => {
+      //   v.onclick = () => {
+      //     allitem.forEach((item) => {
+      //       item.style.color = "#000";
+      //     });
+      //     v.style.color = "#f00";
+      //     // this.style.color = "#f00"; 화살표 함수(=>)를 쓰면  this를 못씀
+      //   };
+      // });
+
+      // <!--------제이쿼리----------->
+      // $("p").click(function () {
+      //   $("p").css("color", "#000");
+      //   $(this).css("color", "#f00");
+      // });
+
+      // $("p").click(() => {
+      //   $("p").css("color", "#000");
+      //   $(event.currentTarget).css("color", "#f00");
+      // });
+
+      $("p").mouseenter(() => {
+        $("p").css("color", "#000");
+        $(event.currentTarget).css("color", "#f00");
+      });
+
+      $("p").dblclick(function () {
+        $(this).hide();
+      });
+
+      // $("#p1").mousedown(function () {
+      //   alert("오류다 오류");
+      // }); //누르기만 하면 오류창 뜸
+
+      $("#p1").mouseup(function () {
+        alert("Mouse up over p1!");
+      }); //눌렀다가 떼면 오류창 뜸
+    </script>
+  </body>
+</html>

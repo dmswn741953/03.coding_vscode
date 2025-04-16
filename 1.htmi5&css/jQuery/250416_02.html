@@ -11,8 +11,15 @@
       //
       // })
       $(function () {
-        $("p").css("color", "#f00");
-        $("p").css({ color: "#f00" });
+        // $("p").css("color", "#f00");
+        $("p:first").css({ color: "#f00" });
+        $("p:last").css({ color: "#f00" });
+        $("p").eq(2).css({ color: "#f00" });
+        $("h1").text("hello<br>");
+        $("h1").html("hello<br>");
+        // $("h1").remove();
+        let sec = $(".visual").parent().prop("nodeName"); //부모를 반환해서 가져오는거
+        console.log(sec);
       });
     </script>
   </head>
@@ -23,12 +30,19 @@
     <p>셋</p>
     <p>넷</p>
     <p>다섯</p>
+    <section>
+      <div class="visual"></div>
+    </section>
     <script>
       // document.querySelector("p").style.color = "#f00";
       // document.getElementsByTagName("p")[2].style.color = "#f00";
       // document.querySelectorAll("p").forEach(function (v, k) {
       //   v.style.color = "#f00";
       // });
+      // document.querySelector("h1").innerText = "hello";/
+      // document.querySelector("h1").remove();
+      let sec = document.querySelector(".visual").parentNode.nodeName;
+      console.log(sec);
     </script>
   </body>
 </html>
