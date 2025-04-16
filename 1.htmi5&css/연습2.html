@@ -1,142 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <title>Swiper demo</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <!-- Demo styles -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습</title>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
+      .tower {
+        width: 1488px;
+        margin: 50px auto;
+        height: 500px;
       }
-      a {
-        text-decoration: none;
-      }
-      body {
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      }
-      .visual {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-      }
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
+      .tower ul {
         display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .txt {
-        position: absolute;
-        width: 100%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 20;
-      }
-      .txt > div {
-        width: 100%;
-        position: absolute;
-        text-align: center;
-      }
-      .txt > div h1 {
-        font-size: 80px;
-        color: #fff;
-      }
-      .txt > div h1.active {
-        opacity: 0;
-        filter: blur(50px);
-        transition: 1s;
-      }
-      .txt > div h1.on {
-        opacity: 1;
-        filter: blur(0);
       }
     </style>
   </head>
-
   <body>
-    <!-- Swiper -->
-    <div class="visual">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img
-              src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/visual_1.jpg"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/visual_2.jpg"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/visual_3.jpg"
-              alt=""
-            />
+    <div class="tower">
+      <ul>
+        <li>
+          <div class="title">
+            <h2>Forest Tower</h2>
           </div>
           <div class="txt">
-            <div><h1>세상에 없던 원료</h1></div>
-            <div><h1 class="active">세상을 위한 제품</h1></div>
-            <div><h1 class="active">세상을 바꾸는 기술</h1></div>
-          </div>
-          <div class="slidePage">
             <div>
+              <h2><div>Forest 투어</div></h2>
               <p>
-                <span class="title">01. Ingredient</span>
+                자연의 생기와 다양한 색채를 품은 포근한 안식처, 포레스트
+                타워에서 평온하면서도 활기 가득한 쉼을 누리세요.&nbsp;
               </p>
             </div>
+            <a href="#"
+              >더 알아보기
+              <img
+                src="https://www.inspirekorea.com/static/media/link-arrow.6e2068e260561c2fc2139d5b50cfbadf.svg"
+                alt="right arrow"
+              />
+            </a>
           </div>
-        </div>
-      </div>
+        </li>
+        <li>
+          <div class="title">
+            <h2>Ocean Tower</h2>
+          </div>
+          <div class="txt">
+            <div>
+              <h2><div>Ocean 투어</div></h2>
+              <p>
+                자연의 생기와 다양한 색채를 품은 포근한 안식처, 포레스트
+                타워에서 평온하면서도 활기 가득한 쉼을 누리세요.&nbsp;
+              </p>
+            </div>
+            <a href="#"
+              >더 알아보기
+              <img
+                src="https://www.inspirekorea.com/static/media/link-arrow.6e2068e260561c2fc2139d5b50cfbadf.svg"
+                alt="right arrow"
+              />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="title">
+            <h2>SUN Tower</h2>
+          </div>
+          <div class="txt">
+            <div>
+              <h2><div>SUN 투어</div></h2>
+              <p>
+                자연의 생기와 다양한 색채를 품은 포근한 안식처, 포레스트
+                타워에서 평온하면서도 활기 가득한 쉼을 누리세요.&nbsp;
+              </p>
+            </div>
+            <a href="#"
+              >더 알아보기
+              <img
+                src="https://www.inspirekorea.com/static/media/link-arrow.6e2068e260561c2fc2139d5b50cfbadf.svg"
+                alt="right arrow"
+              />
+            </a>
+          </div>
+        </li>
+      </ul>
     </div>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      let txt = document.querySelectorAll(".txt>div");
-      txt[0].querySelector("h1").classList.add("on");
-
-      var swiper = new Swiper(".mySwiper", {
-        speed: 1000,
-        loop: true,
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-        },
-      });
-    </script>
   </body>
 </html>
