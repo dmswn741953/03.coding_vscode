@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>show_hide</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+    <!-- 제이쿼리 쓰려면 꼭 있어야함 -->
+
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+      let yes = true;
+
+      $(function () {
+        $("a").click(function () {
+          $("p").toggle(1000, "linear", function () {
+            if ($("a").text() == "hide") {
+              $("a").text("show");
+            } else {
+              $("a").text("hide");
+            }
+          });
+        });
+
+        return false;
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <p>show() hide()</p>
+    <a href="#">hide</a>
+  </body>
+</html>

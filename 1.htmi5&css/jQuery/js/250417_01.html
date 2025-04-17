@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .parent1,
+      .parent2,
+      .parent3 {
+        border: 1px solid;
+        padding: 50px;
+        margin: 20px;
+      }
+    </style>
+    <script>
+      $(function () {
+        $(".parent1")
+          .focus(function () {
+            $(this).css("background-color", "#ccc");
+          })
+          .blur(function () {
+            $(this).css("background-color", "#fff");
+          });
+        $(".parent2 input")
+          .focusin(function () {
+            $(this).css("background-color", "#ccc");
+            $(this).parent().css("background-color", "#aaa");
+          })
+          .focusout(function () {
+            $(this).css("background-color", "#fff");
+          });
+
+        $(".parent1 input").focus(function () {
+          $(this).css("background-color", "#ccc");
+        });
+
+        $(".parent1 input").blur(function () {
+          $(this).css("background-color", "#fff");
+        });
+
+        //   $(".parent3").focusin(function () {
+        //     $(this).css("background-color", "#ccc");
+        //     // $(this).children().css("background-color", "#ccc");
+        //     // $(this).children().first().css("background-color", "#ccc");
+        //     $(this).children().first().css("background-color", "#ccc");
+        //   });
+        // });
+
+        $(".parent3 input").focus(function () {
+          $(this).css("background-color", "#ccc");
+          $(this).parent().css("background-color", "#ccc");
+        });
+        // $(".parent3").focusout(function () {
+        //   $(this).css("background-color", "#fff");
+        //   $(this).children().css("background-color", "#fff");
+        // });
+
+        $(".parent3 input").blur(function () {
+          $(this).css("background-color", "#fff");
+          $(this).parent().css("background-color", "transparent");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="parent1"><input type="text" /><br /><input type="text" /></div>
+    <div class="parent2"><input type="text" /><br /><input type="text" /></div>
+    <div class="parent3"><input type="text" /><br /><input type="text" /></div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+    <!-- 제이쿼리 쓰려면 꼭 있어야함 -->
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let i = 0;
+        $("#demo").on("click", function () {
+          console.log(i++); //i는 0부터 i+1
+          if (i > 5) {
+            $(this).off("click"); //off:그만해!
+          }
+        });
+
+        $("#one").one("click", function () {
+          console.log(i++);
+        });
+
+        // $("#con")
+        //   .click(function () {
+        //     $(this).text("클릭이벤트");
+        //   })
+        //   .dblclick(function () {
+        //     $(this).text("더블클릭이벤트");
+        //   })
+        //   .mouseenter(function () {
+        //     $(this).text("마우스엔터 이벤트");
+        //   })
+        //   .mouseleave(function () {
+        //     $(this).text("마우스리브 이벤트");
+        //   });
+
+        $("#con").on({
+          click: function () {
+            $(this).text("클릭이벤트");
+          },
+          dblclick: function () {
+            $(this).text("더블클릭이벤트");
+          },
+          mouseenter: function () {
+            $(this).text("마우스엔터 이벤트");
+          },
+          mouseleave: function () {
+            $(this).text("마우스리브 이벤트");
+          },
+        });
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <p id="demo">제이쿼리 on 메소드</p>
+    <p id="one">제이쿼리 one 메소드</p>
+    <p id="con">on 메소드 입니다.</p>
+  </body>
+</html>

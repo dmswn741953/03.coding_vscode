@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>show_hide</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+    <!-- 제이쿼리 쓰려면 꼭 있어야함 -->
+
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+      let yes = true;
+
+      $(function () {
+        // $("a").click(function (e) {
+        //   if (yes) {
+        //     e.preventDefault();
+        //     // $("p").hide();
+        //     $("p").toggle();
+        //     $(this).text("show");
+        //   } else {
+        //     $("p").toggle();
+        //     $(this).text("hide");
+        //   }
+        //   yes = !yes;
+        // });
+
+        $("a").click(function (e) {
+          // e.preventDefault();
+          //  e.preventDefault(): a태그의 기본동작을 막아줌, 위치는 구문의 가장위
+          $("p").toggle(1000, "linear"); //1000dms 밀리세컨드
+          let txt = $(this).text();
+          let txt = $("p").css("display");
+          // $(this).text("show");
+          // if (txt == "hide")
+          if (txt == "none") {
+            $(this).text("show");
+          } else {
+            $(this).text("hide");
+          }
+          return false;
+          //return false:  a태그의 기본동작을 막아줌, 위치는 구문의 가장 아래
+        });
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <p>show() hide()</p>
+    <a href="#">hide</a>
+  </body>
+</html>
