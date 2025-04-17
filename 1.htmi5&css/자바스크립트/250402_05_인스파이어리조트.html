@@ -32,7 +32,10 @@
       .tower ul li.on {
         flex: 1; /*스크립트 */
       }
-
+      .tower ul li.active {
+        width: 5%;
+        transition: 0.3s;
+      }
       .tower ul li div.title {
         background-position: center;
         border-radius: 15px;
@@ -45,10 +48,7 @@
         border-radius: 25px 0 0 25px;
         position: relative;
       }
-      .tower ul li.active {
-        width: 5%;
-        transition: 0.3s;
-      }
+
       .tower ul li.active div.title {
         width: 100%;
       }
