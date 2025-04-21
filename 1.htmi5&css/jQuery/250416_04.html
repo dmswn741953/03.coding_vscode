@@ -11,13 +11,15 @@
         //   $("p:nth-child(2)").css("color", "#f00");
         // });
         // $(function () {
-        //   $("p:odd").css("color", "#f00"); //odd:짝수인거
+        //   $("p:odd").css("color", "#f00"); //odd:전체 인덱스 홀수인거
         // });
         // $(function () {
-        $("p:even").css("color", "#f00"); // even: 홀수인거
+        $("p:even").css("color", "#f00"); // even:전체 인덱스 짝수인거
         // $("h1~p").css("color", "#f00");
+        //h1 아래 형제들만
 
         // $("p:gt(2)").css("color", "#f00");
+        //p중에서 인데스 2보다 큰 애들만, 즉 3부터~ (인덱스는 0부터)
       });
     </script>
   </head>
@@ -28,8 +30,8 @@
     <p>문단태그3</p>
     <p>문단태그4</p>
     <p>문단태그5</p>
-
     <section></section>
+
     <script></script>
   </body>
 </html>
