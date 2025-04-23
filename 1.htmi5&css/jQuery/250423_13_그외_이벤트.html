@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>each</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        padding: 1500px;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $(document).keypress(function (e) {
+          console.log(e.keyCode);
+        });
+        // $(document).keydown(function (e) {
+        //   console.log(e.keyCode);
+        // });
+        $(document).mousemove(function (e) {
+          console.log(e.clientX); //뷰포트에서 마우스 위치의 좌표값
+          console.log(e.pageX); //전체 페이지에서 마우스 위치의 좌표값(움직인거까지 포함)
+          console.log(e.screenX); //디바이스 기준 위치값
+        });
+        $(window).resize(function () {
+          console.log($(window).width());
+        }); //resize는 조정되는 값을 가져오는거 //현재는 width값
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li data-bg="aaa"></li>
+      <li data-bg="bbb"></li>
+      <li data-bg="ccc"></li>
+      <li data-bg="ddd"></li>
+      <li data-bg="eee"></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>width</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        transition: 1s;
+        padding: 100px;
+        border: 10px solid;
+        margin: 50px;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("a").click(function (e) {
+          e.preventDefault();
+          // $(this).text($("p").width());
+          $(this).text($("p").innerWidth()); //패딩포함너비
+          $(this).text($("p").outerWidth()); //패딩&보더 포함 너비
+          $(this).text($("p").outerWidth(true)); //패딩&보더&마진 포함 너비
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <a href="#">클릭</a>
+  </body>
+</html>
