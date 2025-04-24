@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>leaves</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+      rel="stylesheet"
+    />
+    <style>
+      canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="leafCanvas"></canvas>
+
+    <script>
+      const canvas = document.getElementById("leafCanvas");
+      const ctx = canvas.getContext("2d");
+
+      const leafImage = new Image();
+      leafImage.src = "../images/leaves.png";
+
+      // 캔버스 사이즈 초기화
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+
+      // Leaf 객체
+      class Leaf {
+        constructor() {
+          this.reset();
+        }
+
+        reset() {
+          this.x = canvas.width + Math.random() * canvas.width; // 오른쪽 바깥쪽에서 시작
+          this.y = Math.random() * canvas.height; // 세로 위치 랜덤
+          this.size = Math.random() * 30 + 20; // 크기 20~50px
+          this.speedX = Math.random() * 1.5 + 0.5; // 왼쪽 이동 속도
+          this.speedY = Math.random() * 1 - 0.5; // 위아래 흔들림
+          this.rotation = Math.random() * 360;
+          this.rotationSpeed = Math.random() * 2 - 1;
+        }
+
+        update() {
+          this.x -= this.speedX;
+          this.y += this.speedY;
+          this.rotation += this.rotationSpeed;
+
+          if (
+            this.x < -this.size ||
+            this.y > canvas.height ||
+            this.y < -this.size
+          ) {
+            this.reset();
+            this.x = canvas.width + Math.random() * canvas.width;
+          }
+        }
+
+        draw() {
+          ctx.save();
+          ctx.translate(this.x, this.y);
+          ctx.rotate((this.rotation * Math.PI) / 180);
+          ctx.drawImage(
+            leafImage,
+            -this.size / 2,
+            -this.size / 2,
+            this.size,
+            this.size
+          );
+          ctx.restore();
+        }
+      }
+
+      // 나뭇잎 여러 개 만들기
+      const leaves = [];
+      for (let i = 0; i < 30; i++) {
+        leaves.push(new Leaf());
+      }
+
+      // 애니메이션 루프
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        leaves.forEach((leaf) => {
+          leaf.update();
+          leaf.draw();
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      // 이미지 로드 후 시작
+      leafImage.onload = () => {
+        animate();
+      };
+    </script>
+  </body>
+</html>
