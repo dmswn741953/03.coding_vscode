@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+      }
+      .green {
+        background: green;
+      }
+      .red {
+        background: red;
+      }
+      .blue {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box green"></div>
+    <div class="box red"></div>
+    <div class="box blue"></div>
+    <button class="pause">pause</button>
+    <button class="resume">resume</button>
+    <button class="restart">restart</button>
+    <button class="seek">seek(1.5)</button>
+    <button class="reverse">reverse</button>
+    <script>
+      var tl = gsap.timeline({});
+      tl.to(".green", { x: 500, duration: 6 })
+        .to(".red", { x: 500, duration: 2 }, "<2")
+        //"<n": 이전 요소가 애니메이션 진행된지 n초됐을때("<n")부터 duration: 2초(설정한대로) 동안 같이 움직이는거
+        .to(".blue", { x: 500, duration: 2 }, "-=3"); //"-=3": 타임라인종료 3초 전부터 duration: 2초 동안 진행
+
+      document.querySelector(".pause").onclick = function () {
+        tl.pause();
+      };
+      document.querySelector(".resume").onclick = function () {
+        tl.resume(); //멈췄던거 이어서 진행
+      };
+      document.querySelector(".restart").onclick = function () {
+        tl.restart(); //처음부터 다시 진행
+      };
+      document.querySelector(".seek").onclick = function () {
+        tl.seek(1.5); // gsap.timeline 애니메이션이 진행되는 전체 시간 중에 1.5초후의 지점으로 이동 하는것
+      };
+      document.querySelector(".reverse").onclick = function () {
+        tl.reverse(); // 거꾸로 되돌아가는 것
+      };
+    </script>
+  </body>
+</html>
