@@ -382,7 +382,7 @@
                 <h2>SUSTAINABILITY</h2>
                 <p>고객과 다음 세대를 위한 지속 가능한 발전</p>
               </li>
-              <li>
+              <li data-aos="zoom-in-up">
                 <a href="#none">
                   <p>
                     <img
@@ -397,7 +397,7 @@
                   </p>
                 </a>
               </li>
-              <li>
+              <li data-aos="zoom-in-up">
                 <a href="#none">
                   <p>
                     <img
@@ -414,7 +414,7 @@
               </li>
             </ul>
             <ul class="sus_conR">
-              <li>
+              <li data-aos="zoom-in-up">
                 <a href="#none">
                   <p>
                     <img
@@ -429,7 +429,7 @@
                   </p>
                 </a>
               </li>
-              <li>
+              <li data-aos="zoom-in-up">
                 <a href="#none">
                   <p>
                     <img
@@ -444,7 +444,7 @@
                   </p>
                 </a>
               </li>
-              <li>
+              <li data-aos="zoom-in-up">
                 <a href="#none">
                   <p>
                     <img
@@ -509,7 +509,7 @@
               <a href="#"
                 ><p class="re_ic">
                   <img
-                    src="./imges/ico_talented_parson_02.e7aed0fc.svg"
+                    src="./imges/ico_talented_parson_03.03bc2e1c.svg"
                     alt="ic3"
                   />
                 </p>
@@ -894,14 +894,10 @@
         $(".Menu_view").removeClass("on");
       });
 
-      $("family_Con").click(function (e) {
-        e.preventDefault();
-        $("family-site").slideDown(1000, "linear");
-      });
-
       $(".family-site").hide();
       $(".family_Con").click(function () {
         $(".family-site").slideToggle(1000);
+        $(this).toggleClass("on");
       });
 
       AOS.init({
