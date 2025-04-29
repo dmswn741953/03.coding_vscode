@@ -1,5 +1,5 @@
 let bgmenu = document.querySelectorAll(".main .bg-menu li");
-let Bgvideo = document.querySelector(".bg video");
+let Bgvideo = document.querySelectorAll(".bg video");
 let bgControlCon = document.querySelector(".bgControl_con");
 let svgCircle = document.querySelector(".bgControl_con svg");
 let gnb = document.querySelectorAll(".menu>li");
@@ -37,6 +37,22 @@ function PRSwiper() {
   advertSwiper.classList.remove("on");
 }
 
+const myVideoSwiper = new Swiper(".myVideoSwiper", {
+  effect: "fade",
+  loop: false,
+  allowTouchMove: true,
+});
+
+document.querySelector(".Bgbtn1").addEventListener("click", () => {
+  myVideoSwiper.slideTo(0);
+});
+document.querySelector(".Bgbtn2").addEventListener("click", () => {
+  myVideoSwiper.slideTo(1);
+});
+document.querySelector(".Bgbtn3").addEventListener("click", () => {
+  myVideoSwiper.slideTo(2);
+});
+
 bgmenu.forEach(function (v, k) {
   v.addEventListener("click", function () {
     down1();
@@ -57,11 +73,11 @@ bgmenu.forEach(function (v, k) {
 
 bgControlCon.onclick = function () {
   if (BgStrimig) {
-    Bgvideo.pause();
+    Bgvideo.forEach((video) => video.pause());
     bgControlCon.querySelector("img").src = "./imges/bg_control2.svg";
     svgCircle.style.animationPlayState = "paused";
   } else {
-    Bgvideo.play();
+    Bgvideo.forEach((video) => video.play());
     bgControlCon.querySelector("img").src = "./imges/bg_control1.svg";
     svgCircle.style.animationPlayState = "running";
   }
