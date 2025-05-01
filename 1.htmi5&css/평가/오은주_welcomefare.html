@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>welcomefare</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        width: 100%;
+      }
+      .con {
+        margin: 50px auto;
+      }
+      .con .menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .con .menu li {
+        width: 280px;
+        height: 60px;
+        padding: 10px;
+        text-align: center;
+        line-height: 60px;
+        cursor: pointer;
+        color: #000;
+        font-size: 18px;
+        font-weight: 600;
+        position: relative;
+      }
+      .con .menu li.on {
+        color: rgb(234, 0, 44);
+      }
+
+      .con .menu li::after {
+        content: "";
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+      }
+      .con .menu li.on::after {
+        background-color: rgb(234, 0, 44);
+        transform: scaleX(1);
+      }
+      .con .menu li.action::after {
+        background-color: #000;
+        transform: scaleX(1);
+        transition: 0.5s;
+      }
+      .con .txt {
+        display: none;
+        text-align: center;
+        padding-top: 140px;
+        padding-bottom: 70px;
+        position: relative;
+      }
+      .con .txt.on {
+        display: block;
+      }
+      .con .txt .tit {
+        font-size: 50px;
+        padding-bottom: 40px;
+      }
+      .con .txt::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #ccc;
+        left: 0;
+        top: 0;
+      }
+      .con .txt .list {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        color: #666;
+        gap: 40px;
+      }
+      .con .txt .list li.on {
+        color: rgb(234, 0, 44);
+      }
+      .con .txt:first-of-type .list li:nth-child(2) {
+        position: relative;
+      }
+      .con .txt:first-of-type .list li:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        left: -18px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: #ccc;
+      }
+      .con .txt:first-of-type .list li:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        right: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: #ccc;
+      }
+      .con .txt:nth-of-type(2) .list li:first-child,
+      .con .txt:nth-of-type(3) .list li:first-child {
+        position: relative;
+      }
+      .con .txt:nth-of-type(2) .list li:first-child::after,
+      .con .txt:nth-of-type(3) .list li:first-child::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        right: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="con">
+        <ul class="menu">
+          <li>아동복지사업</li>
+          <li>청소년복지사업</li>
+          <li>노인복지사업</li>
+          <li>장애인복지사업</li>
+          <li>사회봉사사업</li>
+        </ul>
+        <div class="txt">
+          <h1 class="tit">아동복지사업</h1>
+          <ul class="list">
+            <li class="on">지역아동센터사업</li>
+            <li>우리동네키움센터사업</li>
+            <li>어린이집사업</li>
+          </ul>
+        </div>
+        <div class="txt">
+          <h1 class="tit">청소년복지사업</h1>
+          <ul class="list">
+            <li class="on">청소년복지시설사업</li>
+            <li>웰컴투모로우사업</li>
+          </ul>
+        </div>
+        <div class="txt">
+          <h1 class="tit">노인복지사업</h1>
+          <ul class="list">
+            <li class="on">행복빨래방사업</li>
+            <li>주거환경개선사업</li>
+          </ul>
+        </div>
+        <div class="txt">
+          <h1 class="tit">장애인복지사업</h1>
+        </div>
+        <div class="txt">
+          <h1 class="tit">사회봉사사업</h1>
+        </div>
+      </div>
+    </div>
+    <script>
+      const menu = document.querySelectorAll(".menu li");
+      const con = document.querySelectorAll(".txt");
+      const list = document.querySelectorAll(".list");
+      menu[0].classList.add("on");
+      con[0].classList.add("on");
+
+      function remove() {
+        menu.forEach(function (v, k) {
+          v.classList.remove("on");
+          con.forEach(function (v, k) {
+            v.classList.remove("on");
+          });
+          hoverfcn();
+        });
+      }
+      function hoverfcn() {
+        menu.forEach(function (v, k) {
+          v.classList.remove("action");
+        });
+      }
+
+      function listfnc() {
+        list.forEach(function (v, k) {
+          v.querySelectorAll("li").forEach(function (item, index) {
+            item.classList.remove("on");
+          });
+        });
+      }
+
+      menu.forEach(function (v, k) {
+        v.onclick = function () {
+          remove();
+          menu[k].classList.add("on");
+          con[k].classList.add("on");
+          list.forEach(function (v, k) {
+            v.querySelectorAll("li")[0].classList.add("on");
+          });
+        };
+      });
+
+      menu.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          hoverfcn();
+          menu[k].classList.add("action");
+
+          if (v.classList.contains("on")) {
+            menu[k].classList.remove("action");
+          }
+        };
+      });
+      menu.forEach(function (v, k) {
+        v.onmouseleave = function () {
+          hoverfcn();
+        };
+      });
+
+      list.forEach(function (v, k) {
+        v.querySelectorAll("li").forEach(function (item, index) {
+          item.onclick = function () {
+            listfnc();
+            v.querySelectorAll("li")[index].classList.add("on");
+          };
+        });
+      });
+    </script>
+  </body>
+</html>

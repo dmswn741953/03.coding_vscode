@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aekyung</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1894px;
+        margin-top: 50px;
+      }
+      .sustainable {
+        width: 1500px;
+        margin: 0px auto;
+        padding: 0 50px;
+        box-sizing: border-box;
+      }
+      .sustainable .tt_Mn {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 68px;
+        margin-bottom: 40px;
+        position: relative;
+      }
+      .sustainable .tt_Mn::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #ccc;
+        bottom: 0;
+      }
+      .sustainable .tt_Mn section:first-child h1 {
+        font-size: 46px;
+        text-transform: uppercase;
+      }
+      .sustainable .tt_Mn section:nth-child(2) ul {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        gap: 60px;
+      }
+      .sustainable .tt_Mn section:nth-child(2) ul li {
+        text-align: right;
+      }
+      .sustainable .tt_Mn section:nth-child(2) ul li p {
+        font-size: 15px;
+        color: #16161699;
+      }
+      .sustainable .tt_Mn section:nth-child(2) ul li h5 {
+        display: inline-block;
+        position: relative;
+        font-size: 20px;
+      }
+      .sustainable .tt_Mn section:nth-child(2) ul li h5.action::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        left: 0;
+        bottom: -2px;
+      }
+      .content {
+        display: flex;
+        display: none;
+      }
+      .content.action {
+        display: flex;
+      }
+      .content div {
+        width: 40%;
+      }
+      .content div > p {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 100px;
+      }
+      .content div > a {
+        display: block;
+        width: 174px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 15px;
+        color: #000;
+        background-color: #f8f8f6;
+        text-align: center;
+        border-radius: 30px;
+      }
+      .content div > a:hover {
+        background: #f9d7d8;
+      }
+      .content div > a p {
+        padding-right: 40px;
+        font-weight: 500;
+        position: relative;
+        box-sizing: border-box;
+      }
+      .content div > a p::after {
+        content: "";
+        position: absolute;
+        background: url(https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp);
+        width: 38px;
+        height: 11px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .content section {
+        width: 70%;
+      }
+      .content section p {
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .content section p img {
+        width: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="sustainable">
+        <div class="tt_Mn">
+          <section>
+            <h1>
+              Sustainable <br />
+              Love & Respect
+            </h1>
+          </section>
+          <section>
+            <ul>
+              <li class="menu">
+                <p>Environmental</p>
+                <h5>환경</h5>
+              </li>
+              <li class="menu">
+                <p>Social</p>
+                <h5>사회</h5>
+              </li>
+              <li class="menu">
+                <p>Governance</p>
+                <h5>지배구조</h5>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="content">
+          <div>
+            <p>
+              애경산업은 지속가능한 환경을 위해 <br />
+              책임을 다하겠습니다.
+            </p>
+            <a href=""><p>바로가기</p></a>
+          </div>
+          <section>
+            <p>
+              <img
+                src="https://www.aekyung.co.kr/img/front/main/mo_main_tab01.png"
+                alt="earth"
+              />
+            </p>
+          </section>
+        </div>
+        <div class="content">
+          <div>
+            <p>
+              애경산업의 노력은 <br />
+              임직원과 협력사, 지역사회 <br />
+              그리고 고객이 함께하는 향기로운 동행이 될 것입니다.
+            </p>
+            <a href=""><p>바로가기</p></a>
+          </div>
+          <section>
+            <p>
+              <img
+                src="https://www.aekyung.co.kr/img/front/main/mo_main_tab02.png"
+                alt="earth"
+              />
+            </p>
+          </section>
+        </div>
+        <div class="content">
+          <div>
+            <p>투명하고 건전한 기업 활동을 이어나가겠습니다.</p>
+            <a href=""><p>바로가기</p></a>
+          </div>
+          <section>
+            <p>
+              <img
+                src="https://www.aekyung.co.kr/img/front/main/mo_main_tab03.png"
+                alt="earth"
+              />
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script>
+      const menu = document.querySelectorAll(".menu");
+      const content = document.querySelectorAll(".content");
+      menu[0].querySelector("h5").classList.add("action");
+      content[0].classList.add("action");
+
+      function remove() {
+        menu.forEach(function (v, k) {
+          v.querySelector("h5").classList.remove("action");
+        });
+        content.forEach(function (v, k) {
+          v.classList.remove("action");
+        });
+      }
+
+      menu.forEach(function (v, k) {
+        v.addEventListener("click", function () {
+          remove();
+          menu[k].querySelector("h5").classList.add("action");
+          content[k].classList.add("action");
+        });
+      });
+    </script>
+  </body>
+</html>
