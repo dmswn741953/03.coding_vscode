@@ -302,7 +302,7 @@ section {
   position: absolute;
   width: 60%;
   top: 200px;
-  left: 330px;
+  left: 30%;
   opacity: 0;
 }
 .best .best_txt .txt_wrap.on {
@@ -396,8 +396,8 @@ section {
 .best .best_con .btn2 {
   position: relative;
 }
-.best .best_con .swiper-button-prev,
-.best .best_con .swiper-button-next {
+.best .best_con .btn2 .swiper-button-prev,
+.best .best_con .btn2 .swiper-button-next {
   position: absolute;
   width: 10px;
   height: 14px;
@@ -422,7 +422,7 @@ section {
 .best .best_con .btn2 .swiper-pagination {
   position: absolute;
   top: -100px;
-  left: -692px;
+  left: -60%;
   z-index: 1;
 }
 .best .best_con .btn2 .swiper-pagination .swiper-pagination-current {
