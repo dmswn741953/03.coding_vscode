@@ -54,10 +54,20 @@ var Main_Swiper = new Swiper(".Main_Swiper", {
   },
 });
 
-var swiper = new Swiper(".bestSwiper", {
+function best1() {
+  document.querySelectorAll(".best_txt").forEach(function (v, k) {
+    v.classList.remove("on");
+  });
+}
+
+var mySwiper2 = new Swiper(".mySwiper2", {
   grabCursor: true,
   loop: true,
   effect: "creative",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   creativeEffect: {
     prev: {
       shadow: true,
@@ -67,4 +77,80 @@ var swiper = new Swiper(".bestSwiper", {
       translate: ["100%", 0, 0],
     },
   },
+  pagination: {
+    el: ".best_con .swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".best_con .swiper-button-next",
+    prevEl: ".best_con .swiper-button-prev",
+  },
+  on: {
+    slideChange: function () {
+      const realIndex2 = this.realIndex;
+      const BestTxt = document.querySelectorAll(".txt_wrap");
+      BestTxt.forEach(function (v, k) {
+        if (realIndex2 == k) {
+          BestTxt[k].classList.add("on");
+          v.querySelectorAll("p").forEach(function (v, k) {
+            v.classList.add("on");
+          });
+        } else {
+          v.classList.remove("on");
+          v.querySelectorAll("p").forEach(function (v, k) {
+            v.classList.remove("on");
+          });
+        }
+      });
+    },
+  },
+});
+
+var mySwiper3 = new Swiper(".mySwiper3", {
+  slidesPerView: 4,
+  spaceBetween: 15,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+document.querySelectorAll(".mySwiper3 .swiper-slide").forEach(function (v, k) {
+  const img = v.querySelector("img");
+  const originalSrc = img.src;
+
+  v.onmouseenter = function () {
+    img.src = `./images/new_item_0${k + 1}_hover.png`;
+  };
+  v.onmouseleave = function () {
+    img.src = originalSrc;
+  };
+});
+var mySwiper4 = new Swiper(".mySwiper4", {
+  slidesPerView: 4,
+  spaceBetween: 15,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+document.querySelectorAll(".mySwiper4 .swiper-slide").forEach(function (v, k) {
+  const img = v.querySelector("img");
+  const originalSrc = img.src;
+
+  v.onmouseenter = function () {
+    img.src = `./images/new_item_0${k + 1}_hover.png`;
+  };
+  v.onmouseleave = function () {
+    img.src = originalSrc;
+  };
 });
