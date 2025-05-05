@@ -35,6 +35,11 @@ var Main_Swiper = new Swiper(".Main_Swiper", {
       document.querySelectorAll(".nav_icon").forEach((v) => {
         v.classList.remove("on");
       });
+      document.querySelectorAll(".mainBg .slide_txt").forEach((v) => {
+        v.querySelector("button").classList.remove("on");
+      });
+      document.querySelector(".swiper-button-prev").classList.remove("on");
+      document.querySelector(".swiper-button-next").classList.remove("on");
       // 현재 활성화된 슬라이드의 실제 인덱스를 가져옴
       var realIndex = this.realIndex;
 
@@ -58,8 +63,18 @@ var Main_Swiper = new Swiper(".Main_Swiper", {
         });
       } else if (realIndex === 1) {
         document.querySelector(".nav_logo img").src = "./images/logo_white.png";
+        document.querySelector(".swiper-button-prev").classList.add("on");
+        document.querySelector(".swiper-button-next").classList.add("on");
+        document.querySelectorAll(".mainBg .slide_txt").forEach((v) => {
+          v.querySelector("button").classList.add("on");
+        });
       } else if (realIndex === 2) {
         document.querySelector(".nav_logo img").src = "./images/logo_white.png";
+        document.querySelector(".swiper-button-prev").classList.add("on");
+        document.querySelector(".swiper-button-next").classList.add("on");
+        document.querySelectorAll(".mainBg .slide_txt").forEach((v) => {
+          v.querySelector("button").classList.add("on");
+        });
       } else if (realIndex === 3) {
         document.querySelectorAll(".menu li").forEach(function (v) {
           v.querySelector("a").classList.add("on");
@@ -79,6 +94,11 @@ var Main_Swiper = new Swiper(".Main_Swiper", {
         });
       } else if (realIndex === 4) {
         document.querySelector(".nav_logo img").src = "./images/logo_white.png";
+        document.querySelector(".swiper-button-prev").classList.add("on");
+        document.querySelector(".swiper-button-next").classList.add("on");
+        document.querySelectorAll(".mainBg .slide_txt").forEach((v) => {
+          v.querySelector("button").classList.add("on");
+        });
       } else if (realIndex === 5) {
         document.querySelectorAll(".menu li").forEach(function (v) {
           v.querySelector("a").classList.add("on");
@@ -115,6 +135,11 @@ var Main_Swiper = new Swiper(".Main_Swiper", {
         });
       } else if (realIndex === 7) {
         document.querySelector(".nav_logo img").src = "./images/logo_white.png";
+        document.querySelector(".swiper-button-prev").classList.add("on");
+        document.querySelector(".swiper-button-next").classList.add("on");
+        document.querySelectorAll(".mainBg .slide_txt").forEach((v) => {
+          v.querySelector("button").classList.add("on");
+        });
       }
     },
   },
