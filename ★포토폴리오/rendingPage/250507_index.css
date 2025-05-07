@@ -1,0 +1,149 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrap {
+  width: 100%;
+  /* max-width: 1920px; */
+  height: 100vh;
+  overflow: hidden;
+}
+.intro {
+  width: 100%;
+  height: 100vh;
+  background: #f3ecf2;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 구름 */
+.cloud-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 1s ease;
+  z-index: 2;
+}
+
+.cloud-image {
+  width: 950px;
+  max-width: 80vw;
+  transition: transform 1s ease;
+}
+
+/* 텍스트 */
+.cloud-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-weight: bold;
+  text-align: center;
+  transition: opacity 1s ease;
+}
+
+.cloud-text > p:first-child {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #8b7057;
+}
+.cloud-text > p:last-child {
+  font-size: 18px;
+}
+.cloud-text .mouse {
+  margin-top: 30px;
+}
+.cloud-text .mouse p:first-child {
+  color: #767171;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.cloud-text .mouse p:nth-child(2) {
+  transform: translateY(0);
+  animation: mouse 2s ease-in-out infinite normal;
+}
+@keyframes mouse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+/* 클릭 후 효과 */
+.cloud-wrap.expand .cloud-image {
+  transform: scale(10);
+}
+.cloud-wrap.expand .cloud-text {
+  opacity: 0;
+}
+
+/* 다음 콘텐츠 */
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease;
+}
+
+.main.active {
+  opacity: 1;
+  z-index: 2;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  background: #f3ecf2;
+  padding: 0 40px;
+  position: relative;
+}
+header nav {
+  display: grid;
+  grid-template-columns: 5fr 7fr 5fr;
+  align-items: center;
+  height: 90px;
+}
+
+header nav div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+header nav ul {
+  display: flex;
+  gap: 40px;
+}
+header .profile {
+  width: 95%;
+  height: 85%;
+  margin: 0 auto;
+  border-radius: 30px;
+  background: #fff;
+}
+header .profile .me {
+  width: 400px;
+}
+header .profile .me img {
+  width: 100%;
+}
