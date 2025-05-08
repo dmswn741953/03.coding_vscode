@@ -4,6 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "Pacifico-Regular";
+  src: url(./webfonts/Pacifico-Regular.woff);
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url(./webfonts/Pretendard-SemiBold.0b651bef.woff2);
+}
 ul {
   list-style: none;
 }
@@ -14,16 +22,17 @@ a {
 
 .wrap {
   width: 100%;
-  /* max-width: 1920px; */
+  max-width: 1920px;
   height: 100vh;
   overflow: hidden;
 }
 .intro {
   width: 100%;
   height: 100vh;
-  background: #f3ecf2;
+  background: #f8ebe6;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 /* 구름 */
@@ -62,7 +71,7 @@ a {
   color: #8b7057;
 }
 .cloud-text > p:last-child {
-  font-size: 18px;
+  font-size: 20px;
 }
 .cloud-text .mouse {
   margin-top: 30px;
@@ -93,57 +102,337 @@ a {
   opacity: 0;
 }
 
-/* 다음 콘텐츠 */
+/* ------------ 다음 콘텐츠------------ */
 .main {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: opacity 1s ease;
+  font-family: "Pretendard-SemiBold";
 }
-
 .main.active {
   opacity: 1;
   z-index: 2;
 }
-header {
+.main .menu {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: right;
+}
+.main .menu a {
+  display: block;
+  width: 187px;
+  height: 66px;
+  line-height: 65px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.main .menu a:hover {
+  transform: translateX(20px);
+}
+.main .menu a:first-child {
+  background: url(./image/mark1.png) center/cover no-repeat;
+}
+.main .menu a:nth-child(2) {
+  background: url(./image/mark2.png) center/cover no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.main .menu a:nth-child(3) {
+  background: url(./image/mark3.png) center/cover no-repeat;
+}
+.main .menu a:nth-child(4) {
+  background: url(./image/mark4.png) center/cover no-repeat;
+}
+.main .menu a:nth-child(5) {
+  background: url(./image/mark4.png) center/cover no-repeat;
+}
+header,
+.skill-wrap {
   width: 100%;
-  height: 100vh;
-  background: #f3ecf2;
-  padding: 0 40px;
+  height: 962px;
+  background: #896c61;
+  padding: 0 40px 0 100px;
   position: relative;
 }
 header nav {
   display: grid;
   grid-template-columns: 5fr 7fr 5fr;
   align-items: center;
-  height: 90px;
+  height: 75px;
+  font-size: 18px;
+  color: #fff;
 }
 
 header nav div:nth-child(2) {
   display: flex;
   justify-content: center;
 }
-header nav ul {
-  display: flex;
-  gap: 40px;
-}
+
 header .profile {
-  width: 95%;
+  width: 88%;
   height: 85%;
-  margin: 0 auto;
   border-radius: 30px;
   background: #fff;
+  display: flex;
+  gap: 60px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  align-items: center;
 }
+
 header .profile .me {
-  width: 400px;
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .profile .me p {
+  width: 350px;
 }
 header .profile .me img {
   width: 100%;
+}
+header .profile .profile_txt {
+  width: 100%;
+  /* flex: 1 1 65%; */
+}
+header .profile .profile_txt .about {
+  width: 85%;
+  margin-bottom: 30px;
+  background: #f8ebe6;
+  padding: 20px 30px 30px;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+header .profile .profile_txt .about span:first-child {
+  font-size: 50px;
+  font-family: "Pacifico-Regular";
+}
+header .profile .profile_txt .about span:nth-child(2) {
+  font-size: 20px;
+}
+header .profile .profile_txt .about p {
+  line-height: 30px;
+  font-size: 17px;
+}
+header .profile .profile_txt .about p .mo {
+  display: none;
+}
+header .profile .profile_txt .pro_tit {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+header .profile .profile_txt .career {
+  display: flex;
+  gap: 100px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+header .profile .profile_txt .career li p {
+  line-height: 25px;
+}
+header .profile .profile_txt .career li span {
+  color: #767171;
+}
+header .profile .profile_txt .certificat .pro_tit {
+  font-size: 20px;
+}
+header .profile .profile_txt .certificat p {
+  font-size: 18px;
+  line-height: 25px;
+}
+header .profile .profile_skill {
+  margin-top: 40px;
+}
+header .profile .profile_skill ul {
+  display: flex;
+  gap: 20px;
+}
+.skill-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.skill_con {
+  width: 88%;
+  height: 85%;
+  border-radius: 30px;
+  background: #fff;
+  gap: 60px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+}
+.skill-wrap .skill_con h1 {
+  font-size: 40px;
+}
+.skill_con ul {
+  display: grid;
+  margin: 0 auto;
+  border: 1px solid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 50px;
+}
+.skill_con ul li {
+  border: 1px solid;
+}
+.skill_con ul li p {
+  width: 50px;
+}
+.skill_con ul li p img {
+  width: 100%;
+}
+
+.skill-wrap .menu a:nth-child(2) {
+  background: url(./image/mark2.png) center/cover no-repeat;
+  z-index: 0;
+}
+.skill-wrap .menu a:nth-child(3) {
+  background: url(./image/mark3.png) center/cover no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+/*------------------미디어쿼리------------------*/
+@media screen and (max-width: 1589px) {
+  header .profile {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+  }
+  header .profile .me {
+    flex: 1 1 20%;
+  }
+  header .profile .me p {
+    width: 220px;
+  }
+  header .profile .profile_txt .about {
+    margin: 0 auto;
+  }
+
+  header .profile .profile_txt .about span:first-child {
+    font-size: 27px;
+  }
+  header .profile .profile_txt .about span:nth-child(2) {
+    font-size: 16px;
+  }
+  header .profile .profile_txt .about p {
+    line-height: 23px;
+    font-size: 15px;
+  }
+  header .profile .profile_txt .pro_tit {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  header .profile .profile_txt .career {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  header .profile .profile_txt .career li:first-child {
+    flex-basis: 40%;
+    padding-left: 8%;
+  }
+  header .profile .profile_txt .career li:nth-child(2) {
+    flex-basis: 60%;
+  }
+  header .profile .profile_txt .certi_Skill {
+    display: flex;
+    justify-content: center;
+  }
+  header .profile .profile_txt .certificat {
+    width: 40%;
+    padding-left: 8%;
+  }
+  header .profile .profile_txt .certificat .pro_tit {
+    font-size: 18px;
+  }
+  header .profile .profile_txt .certificat p {
+    font-size: 14px;
+  }
+  header .profile .profile_skill {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  header,
+  .skill-wrap {
+    width: 100%;
+    height: 962px;
+    background: #896c61;
+    padding: 0 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .profile .profile_txt .about {
+    margin: 0 auto;
+    /* padding: 15px; */
+  }
+  header .profile .profile_txt .about span:first-child {
+    font-size: 25px;
+  }
+  header .profile .profile_txt .about span:nth-child(2) {
+    font-size: 16px;
+  }
+  header .profile .profile_txt .about p {
+    line-height: 23px;
+  }
+}
+@media screen and (max-width: 1044px) {
+  header .profile .me {
+    flex: 0 0 10%;
+  }
+  header .profile .me p {
+    width: 220px;
+  }
+  header .profile .profile_txt .about {
+    background: transparent;
+    text-align: center;
+    margin: 0 auto 30px;
+    padding: 0;
+  }
+  header .profile .profile_txt .about p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 845px) {
+  header .profile {
+    gap: 10px;
+  }
+  header .profile .me {
+    flex: 1 1 10%;
+    margin-top: 30px;
+  }
+  header .profile .me p {
+    width: 180px;
+  }
+  header .profile .profile_txt .about {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
 }
