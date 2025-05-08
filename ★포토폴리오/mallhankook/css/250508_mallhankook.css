@@ -13,6 +13,7 @@ a {
 .wrap {
   width: 100%;
   max-width: 1905px;
+  overflow: hidden;
 }
 .wrap .main {
   width: 100%;
@@ -923,6 +924,8 @@ footer .ftRight ul li:first-child p:nth-child(5) {
   footer {
     flex-direction: column;
     padding: 40px 16px 20px;
+    height: auto;
+    box-sizing: border-box;
   }
   footer .ftLeft > ul {
     flex-direction: row;
