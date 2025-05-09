@@ -107,12 +107,13 @@ a {
 
 /* ------------ 다음 콘텐츠------------ */
 .main {
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: -100vh;
   left: 0;
   width: 100%;
-  opacity: 1;
+  /* display: none; */
   display: flex;
+  opacity: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
