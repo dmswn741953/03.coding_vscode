@@ -12,6 +12,9 @@
   font-family: "Pretendard-SemiBold";
   src: url(./webfonts/Pretendard-SemiBold.0b651bef.woff2);
 }
+html {
+  font-size: 16px;
+}
 ul {
   list-style: none;
 }
@@ -108,7 +111,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -266,15 +269,17 @@ header .profile .profile_skill ul {
 }
 .skill-wrap {
   display: flex;
-  align-items: center;
 }
 
-.skill_con {
+.skill-wrap .skill_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 88%;
   height: 85%;
   border-radius: 30px;
   background: #fff;
-  gap: 60px;
+  gap: 30px;
   padding: 0 50px;
   box-sizing: border-box;
   position: relative;
@@ -287,21 +292,38 @@ header .profile .profile_skill ul {
 .skill_con ul {
   display: grid;
   margin: 0 auto;
-  border: 1px solid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 300px 300px;
   gap: 50px;
 }
 .skill_con ul li {
-  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #c5bcb3;
+  border-radius: 30px;
+  text-align: center;
 }
-.skill_con ul li p {
+.skill_con ul li .skill_icon {
   width: 50px;
+  margin: 0 auto;
 }
-.skill_con ul li p img {
+.skill_con ul li .skill_icon img {
   width: 100%;
 }
+.skill_con ul li:nth-child(5) .skill_icon {
+  width: 150px;
+  height: 70px;
+  line-height: 100px;
+}
 
+.skill_con ul li .skill_txt {
+  font-size: 0.9vw;
+  line-height: 30px;
+  word-break: keep-all;
+}
 .skill-wrap .menu a:nth-child(2) {
   background: url(./image/mark2.png) center/cover no-repeat;
   z-index: 0;
@@ -374,7 +396,17 @@ header .profile .profile_skill ul {
     width: 60%;
   }
 }
+@media screen and (max-width: 1339px) {
+  .skill_con ul li .skill_icon {
+    width: 40px;
+  }
 
+  .skill_con ul li:nth-child(5) .skill_icon {
+    width: 100px;
+    height: 40px;
+    line-height: 70px;
+  }
+}
 @media screen and (max-width: 1160px) {
   header,
   .skill-wrap {
@@ -417,6 +449,18 @@ header .profile .profile_skill ul {
   header .profile .profile_txt .about p {
     display: none;
   }
+  .skill_con ul {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+  .skill_con ul li {
+    padding: 10px;
+  }
+  .skill_con ul li .skill_txt {
+    font-size: 1.3vw;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width: 845px) {
@@ -434,5 +478,26 @@ header .profile .profile_skill ul {
     width: 100%;
     text-align: center;
     margin: 0;
+  }
+  .skill-wrap {
+    height: 100%;
+    /* padding-bottom: 50px; */
+  }
+  .skill-wrap .skill_con {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+  }
+  .skill_con ul {
+    grid-template-columns: 400px;
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+  .skill_con ul li {
+    padding: 10px;
+  }
+  .skill_con ul li .skill_txt {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
