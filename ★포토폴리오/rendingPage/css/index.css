@@ -127,7 +127,7 @@ a {
 .main .menu {
   position: absolute;
   top: 10%;
-  right: 8%;
+  right: 7%;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -163,9 +163,10 @@ a {
   background: url(./image/mark4.png) center/cover no-repeat;
 }
 header,
-.skill-wrap {
+.skill-wrap,
+.portpolio-wrap {
   width: 100%;
-  height: 962px;
+  height: 100vh;
   background: #896c61;
   padding: 0 40px 0 100px;
   position: relative;
@@ -270,6 +271,7 @@ header .profile .profile_skill ul {
 }
 .skill-wrap {
   display: flex;
+  align-items: center;
 }
 
 .skill-wrap .skill_con {
@@ -334,7 +336,64 @@ header .profile .profile_skill ul {
   position: relative;
   z-index: 1;
 }
+.portpolio-wrap {
+  display: flex;
+  align-items: center;
+}
+.portpolio-wrap .menu a:nth-child(2) {
+  background: url(./image/mark2.png) center/cover no-repeat;
+  z-index: 0;
+}
+.portpolio-wrap .menu a:nth-child(4) {
+  background: url(./image/mark4.png) center/cover no-repeat;
+  z-index: 1;
+}
 
+.portpolio_con {
+  width: 88%;
+  height: 85%;
+  border-radius: 30px;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  padding: 60px;
+}
+.portpolio_con .txt_wrap {
+  display: flex;
+  gap: 70px;
+}
+.portpolio_con div {
+  flex: 1 1 50%;
+}
+.popol_txt {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 30px;
+}
+.popol_txt .cor_logo {
+  width: 200px;
+}
+
+.popol_txt ul li:nth-child(3),
+.popol_txt ul li:nth-child(5) {
+  padding-top: 40px;
+}
+.popol_txt ul li p {
+  font-size: 20px;
+  line-height: 35px;
+}
+.portpolio_con h1 {
+  font-size: 40px;
+}
+.popol p {
+  width: 400px;
+}
+.popol p img {
+  width: 100%;
+}
 /*------------------미디어쿼리------------------*/
 @media screen and (max-width: 1589px) {
   header .profile {
@@ -466,6 +525,7 @@ header .profile .profile_skill ul {
 
 @media screen and (max-width: 845px) {
   header .profile {
+    width: 100%;
     gap: 10px;
   }
   header .profile .me {
