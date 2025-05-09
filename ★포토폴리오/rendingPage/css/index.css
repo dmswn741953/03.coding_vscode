@@ -6,11 +6,11 @@
 }
 @font-face {
   font-family: "Pacifico-Regular";
-  src: url(./webfonts/Pacifico-Regular.woff);
+  src: url(../webfonts/Pacifico-Regular.woff);
 }
 @font-face {
   font-family: "Pretendard-SemiBold";
-  src: url(./webfonts/Pretendard-SemiBold.0b651bef.woff2);
+  src: url(../webfonts/Pretendard-SemiBold.0b651bef.woff2);
 }
 html {
   font-size: 16px;
@@ -146,29 +146,28 @@ a {
   transform: translateX(20px);
 }
 .main .menu a:first-child {
-  background: url(./image/mark1.png) center/cover no-repeat;
+  background: url(../image/mark1.png) center/cover no-repeat;
 }
 .main .menu a:nth-child(2) {
-  background: url(./image/mark2.png) center/cover no-repeat;
+  background: url(../image/mark2.png) center/cover no-repeat;
   position: relative;
   z-index: 1;
 }
 .main .menu a:nth-child(3) {
-  background: url(./image/mark3.png) center/cover no-repeat;
+  background: url(../image/mark3.png) center/cover no-repeat;
 }
 .main .menu a:nth-child(4) {
-  background: url(./image/mark4.png) center/cover no-repeat;
+  background: url(../image/mark4.png) center/cover no-repeat;
 }
 .main .menu a:nth-child(5) {
-  background: url(./image/mark4.png) center/cover no-repeat;
+  background: url(../image/mark4.png) center/cover no-repeat;
 }
 header,
-.skill-wrap,
-.portpolio-wrap {
+.skill-wrap {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #896c61;
-  padding: 0 40px 0 100px;
+  padding-bottom: 8%;
   position: relative;
 }
 header nav {
@@ -187,7 +186,7 @@ header nav div:nth-child(2) {
 
 header .profile {
   width: 88%;
-  height: 85%;
+  height: 800px;
   border-radius: 30px;
   background: #fff;
   display: flex;
@@ -279,7 +278,7 @@ header .profile .profile_skill ul {
   flex-direction: column;
   justify-content: center;
   width: 88%;
-  height: 85%;
+  height: 800px;
   border-radius: 30px;
   background: #fff;
   gap: 30px;
@@ -328,41 +327,67 @@ header .profile .profile_skill ul {
   word-break: keep-all;
 }
 .skill-wrap .menu a:nth-child(2) {
-  background: url(./image/mark2.png) center/cover no-repeat;
+  background: url(../image/mark2.png) center/cover no-repeat;
   z-index: 0;
 }
 .skill-wrap .menu a:nth-child(3) {
-  background: url(./image/mark3.png) center/cover no-repeat;
+  background: url(../image/mark3.png) center/cover no-repeat;
   position: relative;
   z-index: 1;
 }
 .portpolio-wrap {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
+  background: #896c61;
+  padding: 0 40px 5% 100px;
+  box-sizing: border-box;
+  position: relative;
 }
+
 .portpolio-wrap .menu a:nth-child(2) {
-  background: url(./image/mark2.png) center/cover no-repeat;
+  background: url(../image/mark2.png) center/cover no-repeat;
   z-index: 0;
 }
 .portpolio-wrap .menu a:nth-child(4) {
-  background: url(./image/mark4.png) center/cover no-repeat;
+  background: url(../image/mark4.png) center/cover no-repeat;
   z-index: 1;
 }
 
 .portpolio_con {
   width: 88%;
-  height: 85%;
+  height: auto;
   border-radius: 30px;
   background: #fff;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
   display: flex;
+  justify-content: center;
+  gap: 100px;
   padding: 60px;
 }
 .portpolio_con .txt_wrap {
   display: flex;
-  gap: 70px;
+  flex-direction: column;
+  gap: 30%;
+}
+.portpolio_con .txt_wrap .popol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.portpolio_con .txt_wrap .popol a {
+  display: block;
+  width: 250px;
+  margin: 30px auto 0;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid #83655b;
+  border-radius: 30px;
+  background: #83655b;
+  color: #ccc;
 }
 .portpolio_con div {
   flex: 1 1 50%;
@@ -370,16 +395,22 @@ header .profile .profile_skill ul {
 .popol_txt {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   gap: 30px;
 }
 .popol_txt .cor_logo {
   width: 200px;
 }
-
+.popol_txt .cor_logo img {
+  width: 100%;
+}
+.popol_txt ul li:nth-child(3) {
+  display: flex;
+  align-items: center;
+}
 .popol_txt ul li:nth-child(3),
 .popol_txt ul li:nth-child(5) {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .popol_txt ul li p {
   font-size: 20px;
@@ -387,12 +418,28 @@ header .profile .profile_skill ul {
 }
 .portpolio_con h1 {
   font-size: 40px;
+  color: #8b7057;
+}
+.popol {
+  position: relative;
 }
 .popol p {
-  width: 400px;
+  width: 500px;
+  position: relative;
+  z-index: 1;
 }
 .popol p img {
   width: 100%;
+}
+.popol::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: -20px;
+  top: 20px;
+  background: #e3effa;
+  border-radius: 50%;
 }
 /*------------------미디어쿼리------------------*/
 @media screen and (max-width: 1589px) {
