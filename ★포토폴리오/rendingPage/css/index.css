@@ -9,8 +9,22 @@
   src: url(../webfonts/Pacifico-Regular.woff);
 }
 @font-face {
+  font-family: "Pretendard-Medium";
+  src: url(../webfonts/Pretendard-Medium.c0f4afc6.woff2);
+}
+@font-face {
   font-family: "Pretendard-SemiBold";
   src: url(../webfonts/Pretendard-SemiBold.0b651bef.woff2);
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url(../webfonts/Pretendard-Bold.c8dc160f.woff2);
+}
+
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  src: url(../webfonts/Pretendard-ExtraBold.bff8ca72.woff2);
 }
 html {
   font-size: 16px;
@@ -24,6 +38,7 @@ a {
 }
 
 .wrap {
+  margin: 0 auto;
   width: 100%;
   max-width: 1920px;
   height: 100vh;
@@ -108,9 +123,10 @@ a {
 /* ------------ 다음 콘텐츠------------ */
 .main {
   position: relative;
-  top: -100vh;
+  /* top: -100vh;  */
   left: 0;
   width: 100%;
+  max-width: 1920px;
   /* display: none; */
   display: flex;
   opacity: 1;
@@ -126,8 +142,8 @@ a {
 }
 .main .menu {
   position: absolute;
-  top: 10%;
-  right: 7%;
+  top: 150px;
+  right: 70px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -135,7 +151,7 @@ a {
 }
 .main .menu a {
   display: block;
-  width: 187px;
+  width: 180px;
   height: 66px;
   line-height: 65px;
   padding-right: 20px;
@@ -160,22 +176,28 @@ a {
   background: url(../image/mark4.png) center/cover no-repeat;
 }
 .main .menu a:nth-child(5) {
-  background: url(../image/mark4.png) center/cover no-repeat;
+  background: url(../image/mark5.png) center/cover no-repeat;
 }
 header,
-.skill-wrap {
+.skill-wrap,
+.contact_wrap {
   width: 100%;
-  height: 100%;
+  height: 1195px;
   background: #896c61;
-  padding-bottom: 8%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 header nav {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   display: grid;
   grid-template-columns: 5fr 7fr 5fr;
   align-items: center;
-  height: 75px;
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -184,18 +206,19 @@ header nav div:nth-child(2) {
   justify-content: center;
 }
 
-header .profile {
-  width: 88%;
-  height: 800px;
+header .profile,
+.contact_con {
+  width: 83%;
+  height: 85%;
   border-radius: 30px;
   background: #fff;
   display: flex;
   gap: 60px;
-  padding: 0 30px;
+  margin-left: 6%;
+  padding: 5% 0;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
-  align-items: center;
 }
 
 header .profile .me {
@@ -264,32 +287,43 @@ header .profile .profile_txt .certificat p {
 header .profile .profile_skill {
   margin-top: 40px;
 }
-header .profile .profile_skill ul {
+header .profile .profile_skill ul li {
   display: flex;
   gap: 20px;
 }
-.skill-wrap {
+header .profile .profile_skill ul li p {
+  width: 60px;
   display: flex;
   align-items: center;
 }
-
+header .profile .profile_skill ul li p:nth-child(5) {
+  width: 80px;
+}
+header .profile .profile_skill ul li p img {
+  width: 100%;
+}
 .skill-wrap .skill_con {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 88%;
-  height: 800px;
+  justify-content: space-between;
+  width: 83%;
+  height: 85%;
   border-radius: 30px;
   background: #fff;
   gap: 30px;
-  padding: 0 50px;
+  padding: 5% 2%;
+  margin-left: 6%;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
   align-items: center;
 }
 .skill-wrap .skill_con h1 {
+  width: 100%;
+  padding-left: 70px;
   font-size: 40px;
+  text-align: left;
+  color: #8b7057;
 }
 .skill_con ul {
   display: grid;
@@ -337,11 +371,11 @@ header .profile .profile_skill ul {
 }
 .portpolio-wrap {
   width: 100%;
-  height: 100%;
+  height: 2650px;
   display: flex;
   align-items: center;
   background: #896c61;
-  padding: 0 40px 5% 100px;
+  padding: 90px 0 5% 0;
   box-sizing: border-box;
   position: relative;
 }
@@ -356,29 +390,44 @@ header .profile .profile_skill ul {
 }
 
 .portpolio_con {
-  width: 88%;
-  height: auto;
+  width: 83%;
+  height: 2500px;
+  display: flex;
+  justify-content: center;
+  padding: 150px 200px;
+  margin-left: 6%;
   border-radius: 30px;
   background: #fff;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  padding: 60px;
 }
-.portpolio_con .txt_wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 30%;
+.portpolio_con > h1 {
+  position: absolute;
+  left: 100px;
+  top: 80px;
 }
-.portpolio_con .txt_wrap .popol {
+.portpolio_con > ul {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 200px;
+  margin-top: 150px;
 }
-.portpolio_con .txt_wrap .popol a {
+.portpolio_con > ul > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.popol a {
   display: block;
   width: 250px;
   margin: 30px auto 0;
@@ -388,40 +437,6 @@ header .profile .profile_skill ul {
   border-radius: 30px;
   background: #83655b;
   color: #ccc;
-}
-.portpolio_con div {
-  flex: 1 1 50%;
-}
-.popol_txt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
-}
-.popol_txt .cor_logo {
-  width: 200px;
-}
-.popol_txt .cor_logo img {
-  width: 100%;
-}
-.popol_txt ul li:nth-child(3) {
-  display: flex;
-  align-items: center;
-}
-.popol_txt ul li:nth-child(3),
-.popol_txt ul li:nth-child(5) {
-  padding-top: 20px;
-}
-.popol_txt ul li p {
-  font-size: 20px;
-  line-height: 35px;
-}
-.portpolio_con h1 {
-  font-size: 40px;
-  color: #8b7057;
-}
-.popol {
-  position: relative;
 }
 .popol p {
   width: 500px;
@@ -436,17 +451,123 @@ header .profile .profile_skill ul {
   position: absolute;
   width: 500px;
   height: 500px;
-  left: -20px;
-  top: 20px;
-  background: #e3effa;
+  left: -100px;
+  top: -100px;
+  background: #fffaf0;
   border-radius: 50%;
 }
+
+.popol_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.popol_txt .cor_logo img {
+  width: 200px;
+}
+
+.popol_txt ul li:nth-child(3) {
+  display: flex;
+  align-items: center;
+}
+.popol_txt ul li:nth-child(3),
+.popol_txt ul li:nth-child(5) {
+  padding-top: 20px;
+}
+.popol_txt ul li .bold {
+  font-family: "Pretendard-ExtraBold";
+}
+.popol_txt ul li p {
+  font-size: 20px;
+  line-height: 35px;
+}
+.popol_txt ul .ls_color {
+  display: flex;
+  gap: 10px;
+}
+
+.popol_txt:first-child .ls_color .color {
+  display: flex;
+  gap: 10px;
+}
+.popol_txt:first-child .ls_color .color span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.popol_txt ul .ls_font p:nth-child(2) {
+  font-family: "Pretendard-Medium";
+}
+.popol_txt ul .ls_font p:nth-child(3) {
+  font-family: "Pretendard-SemiBold";
+}
+.popol_txt ul .ls_font p:nth-child(4) {
+  font-family: "Pretendard-Bold";
+}
+.popol_txt ul .ls_font p:nth-child(5) {
+  font-family: "Pretendard-ExtraBold";
+}
+.portpolio_con h1 {
+  font-size: 40px;
+  color: #8b7057;
+}
+
+.contact_wrap .contact_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact_wrap .contact_con h1 {
+  font-size: 60px;
+  color: #8b7057;
+}
+.contact_wrap .contact_con .my_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact_wrap .contact_con .my_info li {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+.contact_wrap .contact_con .my_info li p {
+  width: 70px;
+  color: #505050d0;
+}
+.contact_wrap .contact_con .my_info li span {
+  color: #3b3b3b;
+}
+.contact_wrap .menu a:nth-child(2) {
+  background: url(../image/mark2.png) center/cover no-repeat;
+  z-index: 0;
+}
+.contact_wrap .menu a:nth-child(5) {
+  background: url(../image/mark5.png) center/cover no-repeat;
+  z-index: 1;
+}
 /*------------------미디어쿼리------------------*/
+@media screen and (max-width: 1690px) {
+  .popol p {
+    width: 350px;
+    position: relative;
+    z-index: 1;
+  }
+  .popol::after {
+    width: 350px;
+    height: 350px;
+    left: -80px;
+    top: -10px;
+  }
+}
 @media screen and (max-width: 1589px) {
   header .profile {
     flex-direction: column;
     gap: 20px;
-    padding: 30px;
+    padding: 20px;
   }
   header .profile .me {
     flex: 1 1 20%;
@@ -501,6 +622,7 @@ header .profile .profile_skill ul {
   }
   header .profile .profile_skill {
     width: 60%;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 1339px) {
@@ -512,6 +634,32 @@ header .profile .profile_skill ul {
     width: 100px;
     height: 40px;
     line-height: 70px;
+  }
+}
+@media screen and (max-width: 1290px) {
+  .portpolio_con {
+    padding: 80px 30px;
+  }
+  .portpolio_con > ul > li {
+    flex-direction: column;
+  }
+  .portpolio_con > ul > li:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .popol::after {
+    display: none;
+  }
+  .popol_txt {
+    margin-top: 15px;
+    text-align: center;
+  }
+  .popol_txt .cor_logo {
+    display: flex;
+    justify-content: center;
+  }
+  .popol_txt ul .ls_color {
+    flex-direction: column;
+    padding-bottom: 20px;
   }
 }
 @media screen and (max-width: 1160px) {
@@ -526,6 +674,18 @@ header .profile .profile_skill ul {
     flex-direction: column;
     align-items: center;
   }
+  header nav {
+    display: none;
+  }
+  header .profile,
+  .contact_con {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .contact_con {
+    margin-left: 0;
+  }
   header .profile .profile_txt .about {
     margin: 0 auto;
     /* padding: 15px; */
@@ -538,6 +698,78 @@ header .profile .profile_skill ul {
   }
   header .profile .profile_txt .about p {
     line-height: 23px;
+  }
+
+  .main .menu,
+  .skill-wrap .menu,
+  .portpolio-wrap .menu,
+  .contact_wrap .menu {
+    left: 15%;
+    top: 40px;
+    flex-direction: row;
+    text-align: center;
+    gap: 20px;
+  }
+  .main .menu a,
+  .skill-wrap .menu a,
+  .portpolio-wrap .menu a,
+  .contact_wrap .menu a {
+    width: 150px;
+    height: 55px;
+    font-style: 16px;
+  }
+  .main .menu a {
+    width: 110px;
+    height: 72px;
+  }
+
+  .main .menu a:first-child,
+  .skill-wrap .menu a:first-child,
+  .portpolio-wrap a:first-child,
+  .contact_wrap a:first-child {
+    background: url(../image/mark1_mo.png) center/cover no-repeat;
+  }
+  .main .menu a:nth-child(2),
+  .skill-wrap .menu a:nth-child(2),
+  .portpolio-wrap .menu a:nth-child(2),
+  .contact_wrap .menu a:nth-child(2) {
+    background: url(../image/mark2_mo.png) center/cover no-repeat;
+    z-index: 0;
+  }
+  .main .menu a:nth-child(3),
+  .skill-wrap .menu a:nth-child(3),
+  .portpolio-wrap .menu a:nth-child(3),
+  .contact_wrap .menu a:nth-child(3) {
+    background: url(../image/mark3_mo.png) center/cover no-repeat;
+    z-index: 0;
+  }
+  .main .menu a:nth-child(4),
+  .skill-wrap .menu a:nth-child(4),
+  .portpolio-wrap .menu a:nth-child(4),
+  .contact_wrap .menu a:nth-child(4) {
+    background: url(../image/mark4_mo.png) center/cover no-repeat;
+    z-index: 0;
+  }
+  .main .menu a:nth-child(5),
+  .skill-wrap .menu a:nth-child(5),
+  .portpolio-wrap .menu a:nth-child(5),
+  .contact_wrap .menu a:nth-child(5) {
+    background: url(../image/mark5_mo.png) center/cover no-repeat;
+    z-index: 0;
+  }
+  .skill-wrap .skill_con,
+  .portpolio-wrap .portpolio_con,
+  .contact_con {
+    width: 100%;
+    margin-left: 0;
+  }
+  .portpolio-wrap,
+  .contact_wrap {
+    padding: 0 20px;
+    justify-content: center;
+  }
+  .contact_wrap {
+    align-items: center;
   }
 }
 @media screen and (max-width: 1044px) {
@@ -571,6 +803,9 @@ header .profile .profile_skill ul {
 }
 
 @media screen and (max-width: 845px) {
+  .main .menu {
+    display: none;
+  }
   header .profile {
     width: 100%;
     gap: 10px;
@@ -587,25 +822,33 @@ header .profile .profile_skill ul {
     text-align: center;
     margin: 0;
   }
+  header .profile .profile_skill ul li {
+    flex-wrap: wrap;
+  }
+  header .profile .profile_skill ul li p {
+    width: 30px;
+  }
   .skill-wrap {
     height: 100%;
-    /* padding-bottom: 50px; */
   }
   .skill-wrap .skill_con {
-    width: 100%;
     height: 100%;
     padding: 0 20px;
   }
   .skill_con ul {
-    grid-template-columns: 400px;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 20px;
   }
   .skill_con ul li {
     padding: 10px;
+    box-sizing: border-box;
   }
   .skill_con ul li .skill_txt {
     font-size: 14px;
     line-height: 20px;
+  }
+  .popol_txt ul li p {
+    font-size: 14px;
   }
 }

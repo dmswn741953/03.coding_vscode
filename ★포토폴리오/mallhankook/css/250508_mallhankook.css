@@ -1,5 +1,28 @@
 @charset "utf-8";
-
+@font-face {
+  font-family: "inter_regular";
+  src: url(../webfonts/inter-v12-latin-regular.woff);
+}
+@font-face {
+  font-family: "inter500";
+  src: url(../webfonts/inter-v12-latin-500.woff);
+}
+@font-face {
+  font-family: "inter700";
+  src: url(../webfonts/inter-v12-latin-700.woff);
+}
+@font-face {
+  font-family: "noto-sans_regular";
+  src: url(../webfonts/noto-sans-kr-v27-latin_korean-regular.woff2);
+}
+@font-face {
+  font-family: "noto-sans500";
+  src: url(../webfonts/noto-sans-kr-v27-latin_korean-500.woff2);
+}
+@font-face {
+  font-family: "noto-sans700";
+  src: url(../webfonts/noto-sans-kr-v27-latin_korean-700.woff2);
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +35,9 @@ a {
 }
 .wrap {
   width: 100%;
-  max-width: 1905px;
+  /* max-width: 1905px; */
   overflow: hidden;
+  font-family: "inter700", "noto-sans700";
 }
 .wrap .main {
   width: 100%;
@@ -393,19 +417,22 @@ a {
   top: 0px;
   opacity: 1;
 }
+.best .best_txt .txt_wrap p:first-child {
+  font-family: "inter_regular", "noto-sans_regular";
+}
 .best .best_txt .txt_wrap P:nth-child(2) {
   transition-delay: 0.5s;
 }
 .best .best_txt .txt_wrap P:nth-child(3) {
   transition-delay: 1s;
+  padding: 25px 0 50px;
+  font-family: "inter_regular", "noto-sans_regular";
 }
 .best .best_txt .txt_wrap p:first-child,
 .best .best_txt .txt_wrap p:nth-child(2) {
-  font-size: 52px;
+  font-size: 2.5vw;
 }
-.best .best_txt .txt_wrap p:nth-child(3) {
-  padding: 25px 0 50px;
-}
+
 .best .best_txt .txt_wrap:first-child a {
   position: relative;
   display: block;
@@ -433,10 +460,15 @@ a {
 .best .best_txt .txt_wrap:first-child a:hover:after {
   right: 10px;
 }
+.best .best_txt .txt_wrap:nth-child(2) p:first-child {
+  font-family: "noto-sans700";
+}
 .best .best_txt .txt_wrap:nth-child(2) p:nth-child(2) {
   font-size: 16px;
   padding-top: 25px;
+  font-family: "inter_regular", "noto-sans_regular";
 }
+
 .best .best_con {
   width: 58%;
   height: 100%;
@@ -568,6 +600,9 @@ a {
 .product section a .product_tit p:first-child {
   font-size: 40px;
   margin-bottom: 15px;
+}
+.product section a .product_tit p:nth-child(2) {
+  font-family: "noto-sans500";
 }
 .content {
   position: relative;
@@ -762,6 +797,7 @@ footer {
   padding: 80px 80px;
   box-sizing: border-box;
   justify-content: space-between;
+  font-family: "noto-sans500";
 }
 
 footer .ftLeft > p {
@@ -912,6 +948,17 @@ footer .ftRight ul li:first-child p:nth-child(5) {
   }
 }
 @media screen and (max-width: 1280px) {
+  .best .best_txt {
+    width: 60%;
+  }
+  .best .best_txt .txt_wrap {
+    top: 200px;
+    left: 10%;
+  }
+  .best .best_txt .txt_wrap p:first-child,
+  .best .best_txt .txt_wrap p:nth-child(2) {
+    font-size: 3vw;
+  }
   footer .ftLeft > ul {
     flex-direction: column;
   }
@@ -921,19 +968,45 @@ footer .ftRight ul li:first-child p:nth-child(5) {
 }
 
 @media screen and (max-width: 1023px) {
+  .wrap .notice button {
+    width: 10px;
+    height: 10px;
+    right: 15px;
+    top: 40%;
+    transform: translateY(-70%);
+  }
   footer {
     flex-direction: column;
     padding: 40px 16px 20px;
     height: auto;
     box-sizing: border-box;
   }
+
   footer .ftLeft > ul {
     flex-direction: row;
   }
   footer .ftLeft .about {
     width: 100%;
   }
+  footer .ftRight {
+    margin-top: 20px;
+  }
+  footer .ftRight ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  footer .ftRight ul li:nth-child(3) {
+    display: none;
+  }
+  footer .ftRight ul li:nth-child(4) div {
+    display: flex;
+    gap: 20px;
+  }
+  footer .ftRight ul li .info {
+    margin-bottom: 15px;
+  }
 }
+
 @media screen and (max-width: 769px) {
   .main .swiper .swiper-pagination {
     left: -35%;
@@ -1023,5 +1096,43 @@ footer .ftRight ul li:first-child p:nth-child(5) {
   }
   .product section {
     margin-bottom: 100px;
+  }
+  .product section a .product_tit {
+    bottom: 50px;
+    left: 10px;
+  }
+  .product section a .product_tit p:first-child {
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+  .product section a .product_tit p:nth-child(2) {
+    font-size: 14px;
+  }
+  .set section a > p img {
+    content: url(../images/set_Bg_mo.jpg);
+  }
+  .mug section a > p img {
+    content: url(../images/mug_Bg_mo.jpg);
+  }
+  .plate section a > p img {
+    content: url(../images/plate_Bg_mo.jpg);
+  }
+  .white section a > p img {
+    content: url(../images/white_Bg_mo.jpg);
+  }
+  footer .ftRight ul {
+    width: 100%;
+  }
+  footer .ftRight ul li .info {
+    font-size: 14px;
+  }
+  footer .ftRight ul li p,
+  footer .ftRight ul li a,
+  footer .ftRight ul li span {
+    font-size: 11px;
+  }
+  footer .ftRight ul li:nth-child(4) div {
+    flex-wrap: wrap;
+    row-gap: 5px;
   }
 }
