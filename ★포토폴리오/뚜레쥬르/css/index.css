@@ -99,6 +99,88 @@ header nav .menu a {
   color: #fff;
   z-index: 1;
 }
-.suggest {
+.reco {
   height: 650px;
+  background: #f8f4e9;
+  position: relative;
+  z-index: 1;
+}
+.reco h1 {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 40px;
+}
+.reco .swiper {
+  width: 100%;
+  height: 400px;
+}
+
+.reco .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reco .swiper-slide .product {
+  width: 312px;
+  height: 312px;
+  display: flex;
+  align-items: center;
+}
+.reco .swiper-slide .product img {
+  display: block;
+  width: 312px;
+  object-fit: cover;
+}
+.reco .product_kind {
+  display: flex;
+  justify-content: center;
+  gap: 170px;
+  margin-top: 30px;
+}
+.ingredient {
+  position: relative;
+  height: 985px;
+  background: #fafaf9;
+  overflow: hidden;
+  padding: 100px;
+  box-sizing: border-box;
+}
+.ingredient::after {
+  content: "";
+  position: absolute;
+  width: 1064px;
+  height: 662px;
+  top: -100px;
+  right: -200px;
+  background: url(../images/milk.png) center/cover no-repeat;
+}
+.ingredient::before {
+  content: "";
+  position: absolute;
+  width: 1330px;
+  height: 757px;
+  left: -150px;
+  bottom: -100px;
+  background: url(../images/wheat.png) center/cover no-repeat;
+}
+/* .ingredient h1 {
+  font-size: 40px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+} */
+.ingredient ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+.ingredient ul li:nth-child(2) {
+  align-self: flex-end;
+}
+.ingredient ul li p {
+  font-size: 25px;
 }

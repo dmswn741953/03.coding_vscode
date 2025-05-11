@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>뚜레쥬르</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
@@ -70,7 +74,125 @@
         <p>여기는 신선함이 가득한 베이커리,</p>
         <p>뚜레쥬르입니다.</p>
       </div>
-      <div class="suggest"></div>
+      <div class="reco">
+        <h1>BEST 추천제품</h1>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="">
+                <p class="product">
+                  <img src="./images/reco_01.png" alt="reco_01" />
+                </p>
+                <p class="name">기본좋은 소금버터식빵</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <p class="product">
+                  <img src="./images/reco_02.png" alt="reco_02" />
+                </p>
+                <p class="name">사르르 리본파이</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <p class="product">
+                  <img src="./images/reco_03.png" alt="reco_03" />
+                </p>
+                <p class="name">生生 생크림 식빵</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <p class="product">
+                  <img src="./images/reco_04.png" alt="reco_04" />
+                </p>
+                <p class="name">생딸기 담은 크림빵</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <p class="product">
+                  <img src="./images/reco_05.png" alt="reco_05" />
+                </p>
+                <p class="name">기본좋은 쌀 베이글</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <p class="product">
+                  <img src="./images/reco_06.png" alt="reco_06" />
+                </p>
+                <p class="name">밤이 듬뿍 맘모스(대)</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <p class="product">
+                  <img src="./images/reco_07.png" alt="reco_07" />
+                </p>
+                <p class="name">연유 퐁당 밀크브레드(소)</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <p class="product">
+                  <img src="./images/reco_08.png" alt="reco_08" />
+                </p>
+                <p class="name">낙엽 소시지 브레드</p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <ul class="product_kind">
+          <li>
+            <p><img src="./images/kind_1.png" alt="kind_1" /></p>
+          </li>
+          <li>
+            <p><img src="./images/kind_2.png" alt="kind_2" /></p>
+          </li>
+          <li>
+            <p><img src="./images/kind_3.png" alt="kind_3" /></p>
+          </li>
+          <li>
+            <p><img src="./images/kind_4.png" alt="kind_4" /></p>
+          </li>
+        </ul>
+      </div>
+      <div class="ingredient">
+        <h1>뚜레쥬르는</h1>
+        <ul>
+          <li>
+            <p>
+              빵의 맛을 더 풍부하게 하는 우유, 치즈, 채소, 과일 등도 <br />
+              자연의 순수함을 그대로 간직한 재료들을 선별하여 사용합니다.
+            </p>
+            <br />
+            <p>
+              깨끗하고 건강한 환경에서 만들어 엄격한 기준을 통과한 유기농 우유와
+              <br />
+              꼭 필요한 것만을 첨가해 순리대로 만든 자연치즈를 사용하고, <br />
+              채소나 과일도 국내 제철품만을 넣어 빵의 맛을 더합니다.
+            </p>
+          </li>
+          <li>
+            <p>
+              빵의 개성있는 식감을 잘 살려주기 위해 <br />
+              제품별로 최적화 전용 밀가루를 사용합니다.
+            </p>
+            <br />
+            <p>
+              빵마다의 특성을 살려주기 때문에 패스트리는 더욱 바삭하게, <br />
+              식빵은 더욱 촉촉하고 쫄깃하게 만들어줍니다.
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
