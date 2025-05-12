@@ -6,28 +6,29 @@
 }
 @font-face {
   font-family: "Pacifico-Regular";
-  src: url(../webfonts/Pacifico-Regular.woff);
+  src: url(../webfonts/Pacifico-Regular.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard-Medium";
-  src: url(../webfonts/Pretendard-Medium.c0f4afc6.woff2);
+  src: url(../webfonts/Pretendard-Medium.c0f4afc6.woff2) format("woff2");
 }
 @font-face {
   font-family: "Pretendard-SemiBold";
-  src: url(../webfonts/Pretendard-SemiBold.0b651bef.woff2);
+  src: url(../webfonts/Pretendard-SemiBold.0b651bef.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Pretendard-Bold";
-  src: url(../webfonts/Pretendard-Bold.c8dc160f.woff2);
+  src: url(../webfonts/Pretendard-Bold.c8dc160f.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Pretendard-ExtraBold";
-  src: url(../webfonts/Pretendard-ExtraBold.bff8ca72.woff2);
+  src: url(../webfonts/Pretendard-ExtraBold.bff8ca72.woff2) format("woff2");
 }
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 ul {
   list-style: none;
@@ -38,34 +39,47 @@ a {
 }
 
 .wrap {
-  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* margin: 0 auto; */
   width: 100%;
   max-width: 1920px;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
+  background: #f8ebe6;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .intro {
-  width: 100%;
+  /* width: 100%;
   height: 100vh;
   background: #f8ebe6;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
+  margin: 0 auto; */
+  /* position: relative; */
+  /* overflow: hidden; */
 }
 
 /* 구름 */
 .cloud-wrap {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 1s ease;
+  /* z-index: 2; */
+}
+
+.cloud-image {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  cursor: pointer;
-  transition: transform 1s ease;
-  z-index: 2;
-}
-
-.cloud-image {
   width: 950px;
   max-width: 80vw;
   transition: transform 1s ease;
@@ -122,14 +136,14 @@ a {
 
 /* ------------ 다음 콘텐츠------------ */
 .main {
-  position: relative;
-  /* top: -100vh;  */
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
   max-width: 1920px;
   /* display: none; */
   display: flex;
-  opacity: 1;
+  /* opacity: 1; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -177,6 +191,17 @@ a {
 }
 .main .menu a:nth-child(5) {
   background: url(../image/mark5.png) center/cover no-repeat;
+}
+header,
+.skill-wrap,
+.contact_wrap {
+  width: 100%;
+  height: 1195px;
+  background: #896c61;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 header,
 .skill-wrap,
@@ -416,7 +441,7 @@ header .profile .profile_skill ul li p img {
 }
 .portpolio_con > ul > li {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .popol {
@@ -710,6 +735,19 @@ header .profile .profile_skill ul li p img {
     text-align: center;
     gap: 20px;
   }
+  .contact_wrap .menu {
+    top: 50px !important;
+  }
+  .main .menu,
+  .skill-wrap .menu,
+  .portpolio-wrap .menu,
+  .contact_wrap .menu {
+    left: 15%;
+    top: 40px;
+    flex-direction: row;
+    text-align: center;
+    gap: 20px;
+  }
   .main .menu a,
   .skill-wrap .menu a,
   .portpolio-wrap .menu a,
@@ -833,7 +871,7 @@ header .profile .profile_skill ul li p img {
   }
   .skill-wrap .skill_con {
     height: 100%;
-    padding: 0 20px;
+    padding: 30px 20px;
   }
   .skill_con ul {
     grid-template-columns: 1fr;

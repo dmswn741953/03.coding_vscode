@@ -267,6 +267,7 @@ a {
 
 .mainBg .swiper-slide a .slide_txt .bg_tit {
   font-size: 40px;
+  font-family: "noto-sans500";
 }
 .mainBg .swiper-slide a .slide_txt .bg_intro {
   font-size: 16px;
