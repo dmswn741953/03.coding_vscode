@@ -166,21 +166,79 @@ header nav .menu a {
   bottom: -100px;
   background: url(../images/wheat.png) center/cover no-repeat;
 }
-/* .ingredient h1 {
+.ingredient h1 {
   font-size: 40px;
-  padding-bottom: 60px;
-  box-sizing: border-box;
-} */
+}
 .ingredient ul {
-  height: 100%;
+  position: relative;
+  height: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 100px;
+  justify-content: space-around;
 }
+
 .ingredient ul li:nth-child(2) {
   align-self: flex-end;
 }
+.ingredient ul li:nth-child(3) {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #e3cfb8;
+  border-radius: 30px;
+  background: #e3cfb8;
+  transition: 0.5s;
+}
+.ingredient ul li:nth-child(3):hover {
+  background: #d3bca1;
+}
+.ingredient ul li:nth-child(3) a {
+  display: flex;
+  justify-content: center;
+  line-height: 50px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 22px;
+}
 .ingredient ul li p {
   font-size: 25px;
+}
+.give {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background: url(../images/give_bg.jpg) bottom/cover no-repeat;
+}
+.give::after {
+  content: "";
+  position: absolute;
+  background: url(../images/give_bread.png) center/cover no-repeat;
+  width: 500px;
+  height: 250px;
+  top: 100px;
+  left: 100px;
+}
+.give h1 {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+.give .giveTxt {
+  width: 100%;
+  height: 542px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-bottom: 40px;
+  box-sizing: border-box; */
+}
+.give p {
+  text-align: center;
+  font-size: 25px;
+  line-height: 45px;
 }
