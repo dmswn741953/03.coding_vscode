@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="" />
+    <!-------실전 시험에서는 css, js파일을 따로 만들어야함------->
+    >
     <style>
       * {
         margin: 0;
@@ -16,29 +19,29 @@
       a {
         text-decoration: none;
       }
-      .slidewrap {
+      .slideWrap {
         position: relative;
-        width: 218px;
+        width: 1200px;
         margin: 0 auto;
-        height: 218px;
+        height: 300px;
         overflow: hidden;
       }
-      .slidewrap .slide {
+      .slideWrap .slide {
         width: 100%;
         height: 100%;
       }
-      .slidewrap .slide li {
+      .slideWrap .slide li {
         position: absolute;
         top: 0;
         left: 0;
       }
-      .slidewrap .slide li img {
+      .slideWrap .slide li img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     </style>
-    <script src="../1.htmi5&css/웹디자인공개문제자료/01A-1/script/jquery-1.12.4.min.js"></script>
+    <script src="../script/jquery-1.12.4.min.js"></script>
     <script>
       $(function () {
         $(".slide li:gt(0)").fadeOut();
@@ -57,11 +60,11 @@
     </script>
   </head>
   <body>
-    <div class="slidewrap">
+    <div class="slideWrap">
       <ul class="slide">
-        <li><img src="./웅진식품/images/a01.png" alt="" /></li>
-        <li><img src="./웅진식품/images/a02.png" alt="" /></li>
-        <li><img src="./웅진식품/images/a03.png" alt="" /></li>
+        <li><img src="../images/slide01.jpg" alt="slide01" /></li>
+        <li><img src="../images/slide02.jpg" alt="slide02" /></li>
+        <li><img src="../images/slide03.jpg" alt="slide03" /></li>
       </ul>
     </div>
   </body>
